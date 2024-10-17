@@ -1,0 +1,1681 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>WATV 새노래 성가 스트리밍</title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="https://watvnewsong.org/favicon.ico">
+	<link rel="icon" sizes="32x32" href="https://watvnewsong.org/favicon/favicon-round-32.png">
+	<link rel="icon" sizes="48x48" href="https://watvnewsong.org/favicon/favicon-round-48.png">
+	<link rel="icon" sizes="57x57" href="https://watvnewsong.org/favicon/favicon-round-57.png">
+	<link rel="icon" sizes="64x64" href="https://watvnewsong.org/favicon/favicon-round-64.png">
+	<link rel="icon" sizes="72x72" href="https://watvnewsong.org/favicon/favicon-round-72.png">
+	<link rel="icon" sizes="96x96" href="https://watvnewsong.org/favicon/favicon-round-96.png">
+	<link rel="icon" sizes="114x114" href="https://watvnewsong.org/favicon/favicon-round-114.png">
+	<link rel="icon" sizes="120x120" href="https://watvnewsong.org/favicon/favicon-round-120.png">
+	<link rel="icon" sizes="144x144" href="https://watvnewsong.org/favicon/favicon-round-144.png">
+	<link rel="icon" sizes="152x152" href="https://watvnewsong.org/favicon/favicon-round-152.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://watvnewsong.org/favicon/favicon-152.png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://watvnewsong.org/favicon/favicon-152.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://watvnewsong.org/favicon/favicon-144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://watvnewsong.org/favicon/favicon-120.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://watvnewsong.org/favicon/favicon-114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="96x96" href="https://watvnewsong.org/favicon/favicon-96.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://watvnewsong.org/favicon/favicon-72.png">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://watvnewsong.org/favicon/favicon-57.png">
+	<link rel="apple-touch-icon-precomposed" sizes="48x48" href="https://watvnewsong.org/favicon/favicon-48.png">
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="https://watvnewsong.org/favicon/favicon-32.png">
+
+	<script>var contextPath = ""</script>
+	<!-- <link rel="shortcut icon" href="https://watvnewsong.org/images/favicon.ico.png"> -->
+	<link rel="stylesheet" href="https://watvnewsong.org/css/reset.css">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/font.css">
+	<link rel="stylesheet" type="text/css" href="https://wds.watv.org/css/logo.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/index.css?ver=202401195">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/modal.css?ver=202401195">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/POP.css">
+	<link rel="stylesheet" href="https://watvnewsong.org/scripts/watvplayer/watv-audio-player.css?ver=202401195">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/ko.css">
+	<script src="https://watvnewsong.org/scripts/sortable.min.js"></script>
+	<script src="https://watvnewsong.org/scripts/jquery-1.11.3.min.js"></script>
+	<script src="/common/fileManager.js"></script>
+	<script src="https://watvnewsong.org/scripts/jquery.cookie.js"></script>
+	<script src="https://watvnewsong.org/scripts/jquery.base64.js"></script>
+	<script src="https://watvnewsong.org/scripts/flowplayer/flowplayer.min.js?ver=20240119"></script>
+	<script src="https://watvnewsong.org/scripts/flowplayer/flowplayer.hlsjs.light.min.js"></script>
+	<script src="https://watvnewsong.org/scripts/flowplayer/flowplayer.audio.min.js"></script>
+	<script src="https://pic.watv.org/watvplayer/watvPlayer.js"></script>
+	<script src="https://watvnewsong.org/scripts/watvplayer/watv-audio-player.js?ver=20240119"></script>
+	<!-- <script src="https://watvnewsong.org/scripts/watvplayer/hls.0.13.3.min.js"></script> -->
+	<!-- <script src="https://watvnewsong.org/scripts/watvplayer/ios-audio-player.js"></script> -->
+	<!-- <script src="https://watvnewsong.org/scripts/watvplayer/custom-flowplayer.js"></script> -->
+	<script src="https://watvnewsong.org/scripts/marquee.js"></script>
+	<script src="/common/common.js"></script>
+	<script src="https://watvnewsong.org/scripts/ServiceCheck.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-64642624-33"></script>
+	<script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-64642624-33');</script>
+	<script>
+		var watvVodUrl = "https://vod.watv.org";
+		var g_session = true;
+		var g_projectName = "WATVNewsong";
+		var g_extensions = ".jpg,.jpeg,.png,.gif,.mp3,.m4a,.flac,.ogg,.wma,.avi,.mkv,.mp4,.pdf,.zip";
+	</script>
+	<script>
+		flowplayer.conf = {
+			key: "$842048350752056"
+		};
+	</script>
+	<script>
+		if (window.location.href.indexOf('watv') > -1 && window.location.href.indexOf('http://') == 0) window.location = window.location.href.replace('http://', 'https://');
+		if (window.location.href.indexOf('http://www') == 0) window.location = window.location.href.replace('http://www', 'https://');
+		if (window.location.href.indexOf('https://www') == 0) window.location = window.location.href.replace('https://www', 'https://');
+
+		$(document).ajaxError(function (event, jqxhr, settings, thrownError) {
+			if (jqxhr.status == 408 && g_session == false) {
+				g_session = true;
+				alert('Session이 종료되었습니다.');
+				top.location.href = contextPath;
+			}
+		});
+	</script>
+</head>
+
+<body id="ko">
+
+
+
+
+	<!-- 로고 -->
+	<div class="head-logo">
+		<a class="mobile-logo newsong-logo"></a>
+		<a class="link_watv"></a>
+		<a onclick="urlCall('/Choir_mr_25.htm','Y');return false;">
+			<h1 class="blind"></h1>
+			<h2>하나님의교회 세계복음선교협회</h2>
+		</a>
+	</div>
+
+	<!-- 메뉴 -->
+	<div class="modal m-full" id="Modal-menu" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+		aria-hidden="true" data-backdrop="false">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="nav">
+					<!-- 비로그인 -->
+
+					<!-- 로그인 -->
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="request"></div>
+	<div class="spinner-wrap">
+		<div class="spinner">
+			<div class="rect1"></div>
+			<div class="rect2"></div>
+			<div class="rect3"></div>
+			<div class="rect4"></div>
+			<div class="rect5"></div>
+		</div>
+	</div>
+
+	<script>
+		const PLAY_MODE = ['repeat_off', 'repeat_on', 'onlyOne_on', 'repeatOne_on'];
+
+		class MusicPlayer {
+
+			/******************************************************************
+			* 초기 세팅
+			******************************************************************/
+
+			constructor() {
+				this.player = null;
+				this.playerElem = null;
+				this.siteLang = $.cookie('WATVNewsongLang');
+				this.maxSongCnt = 1000;
+				this.myAlbumNo = '139793';
+				this.playListBox = document.querySelector('#playList');
+				this.onplay = null;
+
+				this.initPlayer();
+				this.init();
+			}
+
+			async init() {
+				const isThereSessionData = this.getPlayListFromSession();
+				if (this.myAlbumNo != '' && isThereSessionData === false) {
+					await this.fetchMyPlayList();
+				}
+				this.createSortTable();
+
+				this.playListBox.querySelectorAll('li').forEach((node) => {
+					$(node).on('click', this.selectSong.bind(this, node));
+				});
+				this.setSongDataInFooter();
+				this.setTotalNumberInPlayList();
+				const list = Array.from(this.playListBox.querySelectorAll('.playList-li')).map($l => this.player.method_getUrl($l));
+				this.player.player.setPlayList(list, 'audio');
+				this.player.updateUI();
+
+				$('.player-list img').each((idx, obj) => {
+					obj.src = this.encoding(obj.src);
+				});
+			}
+
+			// WatvAudioPlayer 초기 세팅
+			initPlayer() {
+				this.player = WatvAudioPlayer(this.playListBox, $('#player_audio')[0], this);
+				this.playerElem = $('.wap-player')[0];
+
+				this.initPlayMode();
+
+				this.player.setMethod_isSelect((elem) => { return $(elem).hasClass('on'); });
+				this.player.setMethod_setSelect((elem, active) => {
+					if (active) { $(elem).addClass('on'); }
+					else { $(elem).removeClass('on'); }
+				});
+				this.player.setMethod_getUrl((elem) => {
+					let songFileName = elem.querySelector('input[name="playList"]').getAttribute('value2');
+					const splitedFileNameList = songFileName.split('.');
+					const fileExtention = splitedFileNameList[1];
+					if (fileExtention != "m4a") {
+						songFileName = splitedFileNameList[0] + '.m4a';
+					}
+					return watvVodUrl + '/watv_media_newsong/_definst_/mp4:WATV_NEWSONG/' + songFileName + '/playlist.m3u8';
+				});
+				this.player.setMethod_isEnable((elem) => { return true; });
+
+				$('.wap-list').on('click', (e) => {
+					commonChangeBodyClass('show_playList');
+				});
+				$('.wap-info').on('click', (e) => {
+					this.showFullPlayer();
+				});
+				$('.wap-prev').on('click', (e) => {
+					this.player.playPrev();
+				});
+				$('.wap-next').on('click', (e) => {
+					this.player.playNext();
+				});
+				$('.wap-btns').on('click', (e) => {
+					if ($(e.target.closest('.wap-player')).hasClass('nolist')) {
+						commonSelectAlert('선택한 음악이 없습니다.');
+					}
+				});
+				$('.wap-list span')[0].innerText = '재생목록';
+
+				this.player.onplay = () => {
+					this.setSongDataInFooter();
+					this.updateNowPlaying();
+
+					if (this.onplay && (this.loggedSong != $("#playList li.on input[name='playList']").attr("no") || this.loggedIdx != this.player.getIndex(this.player.getSelectedElement()))) {
+						this.loggedSong = $("#playList li.on input[name='playList']").attr("no");
+						this.loggedIdx = this.player.getIndex(this.player.getSelectedElement());
+						this.onplay();
+					}
+				}
+				this.player.onstop = () => {
+					this.player.player.currentTime = 0;
+					this.player.updateProgress();
+					this.setSongDataInFooter();
+					this.updateNowPlaying();
+					commonSelectAlert('재생을 완료하였습니다.');
+				}
+				this.player.onerror = () => {
+					//alert('audio file not found.');
+					this.player.stop();
+					this.player.player.currentTime = 0;
+					this.setSongDataInFooter();
+					this.updateNowPlaying();
+				}
+				this.player.onchangemode = () => {
+					let mode = Number(this.player.getAutoNext()) + ',' + Number(this.player.getAutoCycle());
+					$.cookie('playMode', mode, { expires: 30 }); // 재생 모드 쿠키 저장
+					switch (mode) {
+						case '0,0':
+							commonSelectAlert('현재 음악 재생 후 정지합니다.');
+							break;
+						case '0,1':
+							commonSelectAlert('현재 음악을 반복합니다.');
+							break;
+						case '1,0':
+							commonSelectAlert('반복을 사용하지 않습니다.');
+							break;
+						case '1,1':
+							commonSelectAlert('전체 음악을 반복합니다.');
+							break;
+					}
+				}
+			}
+			initPlayMode() {
+				let mode = $.cookie('playMode');
+				if (mode == null || typeof mode != 'string') { mode = '1,0'; }
+				let parsed = mode.split(',');
+				if (parsed.length != 2) { parsed = [1, 0]; }
+
+				this.player.setAutoNext(Boolean(Number(parsed[0])));
+				this.player.setAutoCycle(Boolean(Number(parsed[1])));
+			}
+
+
+			/******************************************************************
+			* 재생목록 관련
+			******************************************************************/
+
+			// nowPlaying 애니메이션
+			updateNowPlaying() {
+				$('.nowPlaying').css('display', 'none');
+				let current = this.player.getSelectedElement();
+				if (current) {
+					$(current.querySelector('.nowPlaying')).css('display', 'flex');
+				}
+			}
+
+			// 전체 재생 버튼 클릭시
+			appendAllSong() {
+				const selectAllBtn = document.querySelector('.select-all.select_all');
+				selectAllBtn.classList.remove('select_off');
+				const songList = document.querySelectorAll('input[name="list"]');
+				songList.forEach(function (node) { node.checked = true })
+				this.appendSelectedSongList('play');
+				songList.forEach(function (node) { node.checked = false })
+			}
+
+			// 선택한 노래목록 재생목록에 추가
+			async appendSelectedSongList(mode) {
+				const selectedList = document.querySelectorAll('input[name="list"]:checked');
+
+				if (this.handleOverloadPlaylist(selectedList.length) === 'stop') return;
+
+				let current = this.player.getSelectedElement();
+				selectedList.forEach((selectedNode, index) => {
+					const data = this.extractDataFromNode(selectedNode);
+					const newIndex = this.playListBox.querySelectorAll('li').length;
+					const songLi = this.createSongLiElement(data, newIndex);
+
+					this.addSongToList(songLi);
+
+					if (mode === 'play' && index === 0) {
+						current = songLi;
+					} // mode === add 일 경우 그냥 넘어가기
+				})
+				if (current) this.player.selectElement(current);
+				await this.player.updatePlayList(current ? this.player.getIndex(current) : undefined);
+				if (mode === 'play' && !this.player.player.isPlaying) {
+					this.player.play();
+				}
+				commonSelectAlert('재생 목록에 추가하였습니다.');
+				this.updatePlayList();
+				this.player.updateUI();
+			}
+
+			// 버튼 눌러 재생 목록 추가
+			async appendOneSong(btnNode) {
+				if (this.handleOverloadPlaylist(1) === 'stop') return;
+
+				const node = btnNode.parentNode.querySelector('input[name="list"]');
+				const songData = this.extractDataFromNode(node);
+				const newIndex = this.playListBox.querySelectorAll('li').length;
+				const songLi = this.createSongLiElement(songData, newIndex);
+				this.addSongToList(songLi);
+				await this.player.updatePlayList();
+				await this.player.playElement(songLi);
+
+				commonSelectAlert('재생 목록에 추가하였습니다.');
+				this.updatePlayList();
+				this.player.updateUI();
+			}
+
+			// 재생목록에서 곡 클릭시 재생
+			selectSong(node) {
+				const bodyClassList = document.body.classList;
+				const input = node.querySelector('input[name="playList"]');
+				const songIndex = input.getAttribute('index');
+
+				// edit mode
+				if (bodyClassList.contains('show_playList_edit')) {
+					this.handleSongClickEventInEditMode(input);
+				} else { // play mode
+					this.player.playElement(node);
+				}
+				this.setSongDataInFooter();
+			}
+
+			// 편집 모드일때 재생 목록 클릭 이벤트 처리
+			handleSongClickEventInEditMode(input) {
+				if (input.checked === false) {
+					input.checked = true;
+				} else {
+					input.checked = false;
+				}
+			}
+
+			// 선택된 재생목록 제거
+			async deletePlayList() {
+				const selectedList = document.querySelectorAll('input[name="playList"]:checked');
+				if (selectedList.length === this.playListBox.querySelectorAll('li').length) {
+					this.emptyPlayList();
+					await this.player.updatePlayList();
+					this.sortTable();
+				} else {
+					let current = this.player.getSelectedElement();
+					let alternative = !current || current.querySelector('input[name="playList"]:checked') ? null : current;
+					if (current) {
+						if (!alternative) {
+							let next = current.nextElementSibling;
+							while (next) {
+								if (!next.querySelector('input[name="playList"]:checked')) {
+									alternative = next;
+									break;
+								}
+								next = next.nextElementSibling;
+							}
+						}
+						if (!alternative) {
+							let prev = current.previousElementSibling;
+							while (prev) {
+								if (!prev.querySelector('input[name="playList"]:checked')) {
+									alternative = prev;
+									break;
+								}
+								prev = prev.previousElementSibling;
+							}
+						}
+					}
+
+					selectedList.forEach((selectedSong) => {
+						let li = selectedSong.closest('li');
+						selectedSong.parentNode.remove();
+					});
+					this.sortTable();
+
+					await this.player.updatePlayList(alternative ? this.player.getIndex(alternative) : undefined);
+					if (alternative) this.player.selectElement(alternative);
+					this.setSongDataInFooter();
+				}
+
+				this.updatePlayList();
+				this.player.updateUI();
+				this.player.updateProgress();
+			}
+
+			// 전체 플레이 리스트 비우기
+			async emptyPlayList() {
+				this.player.stop();
+
+				this.playListBox.innerHTML = '';
+
+				let totalNumberNode = document.querySelector('.tabPlayListTotal.num');
+				totalNumberNode.innerText = this.playListBox.querySelectorAll('li').length;
+
+				this.setSongDataInFooter();
+				this.player.updateUI();
+
+				const formData = new FormData();
+				formData.append('SONG_LIST', JSON.stringify(''));
+				formData.append('MY_ALBUM_NO', this.myAlbumNo);
+				const response = await fetch(contextPath + '/playlist/update.ajax', { method: 'POST', body: formData });
+			}
+
+			// 재생 목록에 this.maxSongCnt곡이 초과됨
+			handleOverloadPlaylist(selectedListCnt) {
+				const items = this.playListBox.querySelectorAll('li');
+				const totalCount = selectedListCnt + items.length;
+				if (this.maxSongCnt >= totalCount) return 'continue';
+				if (!confirm('재생목록은 최대 1000곡까지 담을 수 있습니다. 1000곡이 넘으면 순차적으로 삭제됩니다.')) return 'stop';
+
+				const numberToDelete = totalCount - this.maxSongCnt;
+				let currentElem = this.player.getSelectedElement();
+
+				for (let i = 0; i < numberToDelete; i++) {
+					if (currentElem == items[i]) {
+						currentElem = items[i + 1];
+					}
+					items[i].remove();
+				}
+
+				// 삭제된 목록 중에 현재 재생 곡이 있다면 추가한 곡 중 가장 첫곡을 재생곡으로 한다.
+				if (currentElem != this.player.getSelectedElement()) {
+					this.player.playElement(currentElem);
+					this.setSongDataInFooter();
+				}
+
+				this.sortTable();
+				return 'continue';
+			}
+
+			// 내 재생 목록 불러오기
+			async fetchMyPlayList() {
+				const formData = new FormData();
+				formData.append('MY_ALBUM_NO', this.myAlbumNo);
+				formData.append('SITE_LANG', this.siteLang);
+				try {
+					const response = await fetch(contextPath + '/playlist/select.ajax', { method: 'POST', body: formData });
+					const data = await response.json();
+
+					let songData = JSON.parse(data.SONG_DATA);
+					let playList = data.PLAY_LIST;
+					this.makePlayList(songData, playList);
+				} catch (error) {
+
+				}
+			};
+
+			// 재생 목록 렌더링
+			makePlayList(songData, playList) {
+				if (!playList) return;
+				playList.forEach(function (jsonKey, index) {
+					if (songData[jsonKey]) {
+						const songLi = this.createSongLiElement(songData[jsonKey], index);
+						this.playListBox.appendChild(songLi);
+					}
+				}.bind(this))
+				this.storePlayListInSession();
+			};
+
+			// 재생 목록 데이터를 HTML 로 변환 
+			createSongLiElement(obj, index) {
+				const li = document.createElement('li');
+				li.className = 'playList-li';
+				li.setAttribute('value2', obj.MP3_CHG_FILE_NM);
+				li.setAttribute('no', obj.NEWSONG_SOURCE_NO);
+				obj.IMG = this.encoding(obj.IMG);
+				const SITE_TITLE = this.setSiteTitle(obj);
+				const GROUP_NM = this.setGroupNm(obj);
+				const DOWNLOAD_NM = obj.DOWNLOAD_YN == 1 ? '' : 'down-no';
+				const NEWSONG_GENRE_NM = this.setGenreNm(obj);
+				const newsongGroupNm = obj.NEWSONG_GROUP_GB == "10000" ? '{0}장'.replace('{0}', obj.NEWSONG_DISP_NUM) : GROUP_NM;
+				const HTML = `
+	            <input type='checkbox' name='playList' index=${index} value2=${obj.MP3_CHG_FILE_NM} no=${obj.NEWSONG_SOURCE_NO} language_gb_sn=${obj.LANGUAGE_GB_SN}  disabled>
+	            <label>
+	                <div>
+	                    <span class="thum ${DOWNLOAD_NM}"><div class='nowPlaying' style='display:none'><div class='play-song'></div></div><img src="${obj.IMG}" /></span>
+	                    <a class='song-info horizon'>
+	                        <div class='song-title-wrap'>
+	                            <h3 class='title hd-song song_title'>${obj.TITLE}</h3>
+	                            <h3 class='title hd-song site_title'>${SITE_TITLE}</h3>
+	                        </div>
+	                        <div>
+	                            <span class="newsong_group_nm">${newsongGroupNm}</span>
+	                            <span class="newsong_genre_nm">${NEWSONG_GENRE_NM}</span>
+	                            <span class='time'>${obj.PLAY_TIME}</span>
+	                        </div>
+	                    </a>
+	                    <a class='drag drag-handle' style='display:none'><span>Drag</span></a>
+	                </div>
+				</label>`;
+				li.innerHTML = HTML;
+				return li;
+			};
+			setSiteTitle(obj) {
+				let siteTilte = obj.SITE_TITLE;
+				if (obj.SITE_TITLE == null || obj.LANGUAGE_GB_SN == this.siteLang || obj.SITE_TITLE == obj.TITLE) {
+					siteTilte = '';
+				}
+				return siteTilte;
+			}
+
+			setGenreNm(obj) {
+				if (!obj.NEWSONG_GENRE_GB) return obj.NEWSONG_GENRE_NM
+
+				let NEWSONG_GENRE_NM = '';
+				if (obj.NEWSONG_GENRE_GB == '10') {
+					NEWSONG_GENRE_NM = '노래';
+				} else if (obj.NEWSONG_GENRE_GB == '20') {
+					NEWSONG_GENRE_NM = '경음악';
+				} else if (obj.NEWSONG_GENRE_GB == '30') {
+					NEWSONG_GENRE_NM = '가이드';
+				} else if (obj.NEWSONG_GENRE_GB == '40') {
+					NEWSONG_GENRE_NM = '성가';
+				} else if (obj.NEWSONG_GENRE_GB == '50') {
+					NEWSONG_GENRE_NM = '성극';
+				} else if (obj.NEWSONG_GENRE_GB == '60') {
+					NEWSONG_GENRE_NM = '반주';
+				} else if (obj.NEWSONG_GENRE_GB == '80') {
+					NEWSONG_GENRE_NM = '뮤지컬';
+				} else if (obj.NEWSONG_GENRE_GB == '90') {
+					NEWSONG_GENRE_NM = '묵상곡';
+				}
+				return NEWSONG_GENRE_NM;
+			}
+
+			setGroupNm(obj) {
+				if (!obj.NEWSONG_GROUP_GB) return obj.NEWSONG_GROUP_NM
+
+				let groupNm = '';
+				if (obj.NEWSONG_GROUP_GB == '10000') {
+					groupNm = ''; // 정규 - 삭제 요청
+				} else if (obj.NEWSONG_GROUP_GB == '20000') {
+					groupNm = '신곡';
+				} else if (obj.NEWSONG_GROUP_GB == '30000') {
+					groupNm = '행사';
+				} else if (obj.NEWSONG_GROUP_GB == '40000') {
+					groupNm = '어린이';
+				}
+				return groupNm;
+			}
+
+			// sortTable 적용
+			createSortTable() {
+				Sortable.create(this.playListBox, {
+					group: 'words',
+					handle: '.drag-handle',
+					animation: 150,
+					onEnd: function (event) {
+						this.updatePlayList.bind(this)();
+
+						let idx = this.player.getSelectedElement() ? this.player.getIndex(this.player.getSelectedElement()) : undefined;
+						this.player.updatePlayList(idx);
+					}.bind(this)
+
+				});
+			};
+
+			// 재생 목록 DB 업데이트 및 상단 곡 CNT 업데이트
+			async updatePlayList() {
+				this.setTotalNumberInPlayList();
+				if (this.myAlbumNo == "") return;
+
+				let playListData = '';
+				this.playListBox.querySelectorAll('input[name="playList"]').forEach((node, index) => {
+					const data = this.extractDataFromNode(node);
+					if (index == 0) {
+						playListData += data.LANGUAGE_GB_SN + data.NEWSONG_SOURCE_NO;
+					} else {
+						playListData += ',' + data.LANGUAGE_GB_SN + data.NEWSONG_SOURCE_NO;
+					}
+				})
+				const formData = new FormData();
+				formData.append('SONG_LIST', playListData);
+				formData.append('MY_ALBUM_NO', this.myAlbumNo);
+
+				this.storePlayListInSession();
+
+				try {
+					const response = await fetch(contextPath + '/playlist/update.ajax', { method: 'POST', body: formData });
+				} catch (error) {
+					alert(error);
+					location.reload();
+				}
+			}
+
+			setTotalNumberInPlayList() {
+				let totalNumberNode = document.querySelector('.tabPlayListTotal.num');
+				totalNumberNode.innerText = this.playListBox.querySelectorAll('li').length;
+			}
+
+			// 인자로 받은 LI node 를 playList 에 추가 , 클릭 이벤트도 적용
+			addSongToList(songLi) {
+				songLi.addEventListener('click', this.selectSong.bind(this, songLi));
+				this.playListBox.appendChild(songLi);
+			}
+
+
+			/* 
+				input을 기준으로 노래 데이터 추출 (재생목록에 추가하기 위한 데이터)
+				selectedNode 는 input Element 입니다.
+			*/
+			extractDataFromNode(selectedNode) {
+				const index = selectedNode.getAttribute('index');
+				const NEWSONG_SOURCE_NO = selectedNode.getAttribute('no');
+				const li = selectedNode.parentNode;
+				const NEWSONG_GROUP_NM = li.querySelector('.newsong_group_nm').innerText;
+				const NEWSONG_GENRE_NM = li.querySelector('.newsong_genre_nm').innerText;
+				const down_nm = li.querySelector('.down-no');
+				const IMG = li.querySelector('img').src;
+				const TITLE = li.querySelector('.song_title').innerText;
+				const SITE_TITLE = li.querySelector('.site_title') ? li.querySelector('.site_title').innerText : null;
+				const MP3_CHG_FILE_NM = selectedNode.getAttribute('value2');
+				const PLAY_TIME = li.querySelector('.time').innerText;
+				const LANGUAGE_GB_SN = selectedNode.getAttribute('language_gb_sn');
+				const data = {
+					// choir_no
+					NEWSONG_SOURCE_NO
+					// , seq_no
+					, NEWSONG_GROUP_NM
+					, NEWSONG_GENRE_NM
+					, 'DOWNLOAD_YN': down_nm ? 0 : 1
+					, IMG
+					, TITLE
+					, 'SITE_TITLE': SITE_TITLE ? SITE_TITLE : ''
+					, MP3_CHG_FILE_NM
+					, PLAY_TIME
+					, LANGUAGE_GB_SN
+				}
+				return data;
+			}
+
+			// 정렬 완료 될 때 이벤트 처리
+			sortTable(event) {
+				// index를 새롭게 부여
+				let playListNodes = this.playListBox.querySelectorAll('li');
+				playListNodes.forEach(function (node, index) {
+					const input = node.querySelector('input[name="playList"]');
+					input.setAttribute('index', index);
+				});
+			};
+
+			// footer player 에 재생 곡 데이터 보여주기 (currentSongNode 데이터 사용)
+			setSongDataInFooter() {
+				const info = this.playerElem.querySelector('.wap-info');
+
+				if (this.player.getSelectedElement() == null) {
+					info.innerHTML = '<a class="song-info"><h3>재생 중인 음악이 없습니다.</h3></a>';
+					this.setBackgroundAndJarket();
+					return;
+				} else {
+					const item = this.player.getSelectedElement();
+					const img = item.querySelector('img').src;
+					info.innerHTML =
+						'<a class="thum">' +
+						'<div class="playerBackImg"></div>' +
+						'</a>' +
+						'<a class="song-info">' +
+						'<h3 class="hd-song player_title"></h3>' +
+						'<div>' +
+						'<span class="player_newsong_group_nm"></span>' +
+						'<span class="player_newsong_genre_nm"></span>' +
+						'</div>' +
+						'</a>';
+
+					info.querySelector('.playerBackImg').style = 'background-image: url("' + img + '")';
+					info.querySelector('.player_title').innerText = item.querySelector('.song_title').innerText;
+					info.querySelector('.player_newsong_group_nm').innerText = item.querySelector('.newsong_group_nm').innerText;
+					info.querySelector('.player_newsong_genre_nm').innerHTML = item.querySelector('.newsong_genre_nm').innerText;
+					this.setBackgroundAndJarket();
+				}
+			};
+
+			// 백그라운드 이미지와 자켓 이미지 설정
+			setBackgroundAndJarket() {
+				const current = this.player.getSelectedElement();
+				const bgBlurs = document.querySelectorAll('.bg-blur2');
+				const jacket = document.querySelector('.pd-info-wrap');
+				const jarketInfoIcon = jacket.querySelector('.full_layerInfo.pd-info');
+				const jacketImg = jacket.querySelector('.player.playerBackImg');
+				const jarketTitle = jacket.querySelector('.player_title');
+				const jarketGroup = jacket.querySelector('.player_newsong_group_nm');
+				const jarketGenre = jacket.querySelector('.player_newsong_genre_nm');
+
+				if (current == null) {
+					bgBlurs.forEach(function (bgBlur) {
+						const img = bgBlur.querySelector('.playerBackImg');
+						if (img.classList[0] == "player") {
+							img.style = `background-image: url(${contextPath}https://watvnewsong.org/images/default.jpg);`;
+						}
+					}.bind(this));
+					jacketImg.style = `background-image: url(${contextPath}https://watvnewsong.org/images/default.jpg);`;
+					jarketTitle.innerText = '재생 중인 음악이 없습니다.';
+					jarketGroup.innerText = '';
+					jarketGenre.innerHTML = '';
+					jarketGroup.style.display = 'none';
+					jarketGenre.style.display = 'none';
+					jarketInfoIcon.style.display = 'none';
+					return;
+				}
+
+				const src = current.querySelector('img').src;
+				const currentSongTitle = current.querySelector('.song_title');
+				const currentSongThumImg = current.querySelector('img');
+				const currentSongGroupNm = current.querySelector('.newsong_group_nm');
+				const currentSongGenreNm = current.querySelector('.newsong_genre_nm');
+
+				bgBlurs.forEach(function (bgBlur) {
+					const img = bgBlur.querySelector('.playerBackImg');
+					if (img && img.classList[0] == "player") {
+						img.style = 'background-image: url(' + src + ');';
+					}
+				}.bind(this));
+
+				jacketImg.style = 'background-image: url(' + src + ');';
+				jarketTitle.innerText = currentSongTitle.innerText;
+				jarketGroup.innerText = currentSongGroupNm.innerText;
+				jarketGenre.innerHTML = currentSongGenreNm.innerText;
+
+				jarketGroup.style.display = 'inline';
+
+				jarketGenre.style.display = 'inline';
+				jarketInfoIcon.style.display = 'inline-block';
+				jarketInfoIcon.setAttribute('no', current.getAttribute('no'));
+			};
+
+			// 풀 이미지 보여주기
+			showFullPlayer() {
+				const body = document.body;
+				body.classList.remove('show_playList');
+				body.classList.remove('show_playList_edit');
+				body.classList.toggle('show_fullPlayer');
+			};
+
+			encoding(url) {
+				const a = ['(', ')'];
+				const b = ['%28', '%29'];
+				for (let i = 0; i < a.length; i++) {
+					url = this.replaceAll(url, a[i], b[i]);
+				}
+				return url;
+			}
+			replaceAll(str, a, b) {
+				while (str.indexOf(a) != -1) {
+					str = str.replace(a, b);
+				}
+				return str;
+			}
+
+
+
+			/*****************************************************************
+			* SESSION STORAGE
+			******************************************************************/
+
+
+
+			storePlayListInSession() {
+				const sessionStorage = window.sessionStorage;
+				let current = this.player.getSelectedElement();
+				if (current) {
+					current.querySelector('.nowPlaying').style.display = 'none';
+					current.classList.remove('on'); //전 재생곡에서는 클래스 제거
+				}
+				sessionStorage.setItem('playList', this.playListBox.innerHTML);
+				if (current) {
+					current.querySelector('.nowPlaying').style.display = 'flex';
+					current.classList.add('on'); // 새로운 곡에 클래스 추가
+				}
+			}
+
+			getPlayListFromSession() {
+				const sessionStorage = window.sessionStorage;
+				const playListInSession = sessionStorage.getItem('playList');
+
+				if (playListInSession !== null) {
+					this.playListBox.innerHTML = playListInSession;
+				}
+				return playListInSession !== null ? true : false;
+			}
+		}
+	</script>
+
+	<script>
+		class MyAlbum {
+			constructor() {
+				this.myAlbumData = null;
+				this.myAlbumUl = document.querySelector(".myAlbumList");
+				this.albumCreationBtn = document.querySelector(".new-my-album.btn-add");
+				this.albumAddBtn = document.querySelector(".btn-newAlbum");
+				this.newAlbumInputBox = document.querySelector(".input-newAlbum");
+				this.selectedList = [];
+				this.init();
+			}
+
+			init() {
+				this.registerEvent();
+			}
+
+			registerEvent() {
+				const inputDeleteBtn = document.querySelector('#searchCancel');
+				const closeMyAlbumBoxBtn = document.querySelector('.my-album-close');
+
+				this.albumCreationBtn.addEventListener('click', this.createNewMyAlbum.bind(this));
+				this.albumAddBtn.addEventListener('click', () => this.newAlbumInputBox.style.display = 'flex');
+				inputDeleteBtn.addEventListener('click', this.clearInputValue);
+				closeMyAlbumBoxBtn.addEventListener('click', this.closeMyAlbumBox.bind(this));
+			}
+
+			closeMyAlbumBox() {
+				const body = document.body;
+				const newMyAlbumTitle = document.querySelector(".newAlbumInput input");
+				body.classList.remove('albumShow');
+				this.newAlbumInputBox.style.display = 'none';
+				newMyAlbumTitle.value = '';
+			}
+
+			clearInputValue() {
+				const newMyAlbumTitle = document.querySelector(".newAlbumInput input");
+				newMyAlbumTitle.value = "";
+			}
+
+			async openMyAlbumPopupBox() {
+				this.selectedList = document.querySelectorAll('input[name="list"]:checked');
+				if (this.selectedList.length === 0) {
+					commonSelectAlert('선택한 음악이 없습니다.');
+					return false;
+				}
+
+				const response = await fetch(contextPath + "https://watvnewsong.org/my/albumSelect.ajax", { method: "POST" });
+				const data = await response.json();
+				this.myAlbumData = data;
+				this.renderMyAlbumList(data);
+			}
+
+			renderMyAlbumList(myAlbumData) {
+				this.myAlbumUl.innerHTML = '';
+
+				if (myAlbumData.length == 0) {
+					const noData = `
+						<div class="list-container">
+							<div class="album-empty myalbum">
+								앨범이 비어있습니다. 
+								<br>
+								나만의 앨범을 만들어보세요.
+								<a onclick="urlCall('https://watvnewsong.org/notice/detail.wmc?no=42&menu=','Y');return false;" class="btn">'MY 앨범' 사용 방법 안내 </a>
+							</div>
+						</div>
+					`;
+					document.querySelector('.myAlbumNoData').innerHTML = noData;
+					document.body.classList.add("albumShow");
+					return;
+				}
+
+				document.querySelector('.myAlbumNoData').innerHTML = '';
+				myAlbumData.forEach(data => {
+					const li = this.makeLiElement(data);
+					this.myAlbumUl.appendChild(li);
+				})
+				const list = this.myAlbumUl.querySelectorAll('li');
+				list.forEach(li => li.addEventListener('click', this.addSongToMyAlbum.bind(this, li)))
+				document.body.classList.add("albumShow");
+			}
+
+			makeLiElement(data) {
+				const li = document.createElement('li');
+
+				li.setAttribute('my_album_no', data.MY_ALBUM_NO);
+				let html = "";
+				html += "<label for=''>";
+				html += "<span class='thum thum-round'>";
+				html += "<span class='list-count'>" + data.TOTAL_CNT + "</span>";
+				html += "<div><img src='" + data.IMAGE_NM + "'></div>";
+				html += "</span>";
+				html += "<h3>" + data.TITLE + "</h3>";
+				html += "</label>";
+				li.innerHTML = html;
+				return li;
+			}
+
+			async createNewMyAlbum(mode = 'popup') {
+				document.querySelector('.myAlbumNoData').innerHTML = '';
+
+				const formData = new FormData();
+				const newMyAlbumTitle = document.querySelector(".newAlbumInput input");
+				formData.append('my_album_no', '');
+				formData.append('title', newMyAlbumTitle.value);
+				try {
+					const response = await fetch(contextPath + "https://watvnewsong.org/my/albumSave.ajax", { method: 'POST', body: formData });
+					const data = await response.json();
+					if (mode === 'page') location.reload();
+					const albumData = {
+						'MY_ALBUM_NO': data,
+						'TOTAL_CNT': 0,
+						'IMAGE_NM': 'https://watvnewsong.org/images/myalbum.jpg',
+						'TITLE': newMyAlbumTitle.value,
+						'SONG_LIST': ''
+					}
+					const li = this.makeLiElement(albumData);
+					li.addEventListener('click', this.addSongToMyAlbum.bind(this, li));
+					this.myAlbumUl.prepend(li);
+					this.newAlbumInputBox.style.display = 'none';
+					newMyAlbumTitle.value = '';
+				} catch (error) {
+					alert(error);
+					location.reload();
+				}
+			}
+
+			addSongToMyAlbum(node) {
+				const myAlbumNo = node.getAttribute('my_album_no');
+				const [albumData] = this.myAlbumData.filter((data) => data.MY_ALBUM_NO == myAlbumNo);
+
+				const songList = albumData ? albumData.SONG_LIST.split(',') : [];
+				if (songList[0] == "") songList.pop();
+
+				this.selectedList.forEach(song => {
+					const languageGbSn = song.getAttribute('language_gb_sn');
+					const songNo = song.getAttribute('no');
+					const songData = languageGbSn + songNo;
+					if (songNo != -1) songList.push(songData);
+				})
+				this.updateMyAlbumSongList(myAlbumNo, songList);
+				document.body.classList.remove('albumShow');
+				commonSelectAlert('저장하였습니다.');
+			}
+
+			async updateMyAlbumSongList(myAlbumNo, songList) {
+				const formData = new FormData();
+				formData.append('SONG_LIST', songList);
+				formData.append('MY_ALBUM_NO', myAlbumNo);
+				formData.append('TOTAL_CNT', songList.length);
+
+				try {
+					const response = await fetch(contextPath + '/playlist/update.ajax', { method: 'POST', body: formData });
+				} catch (error) {
+					alert(error);
+					location.reload();
+				}
+			}
+
+			async updateMyAlbumInfo(myAlbumNo) {
+				const title = document.querySelector('#album-titleInput').value;
+				const imageNo = document.querySelector('input[name="image_no"]').value;
+				const formData = new FormData();
+				formData.append('my_album_no', myAlbumNo);
+				formData.append('title', title);
+				formData.append('image_no', imageNo);
+				try {
+					const response = await fetch(contextPath + 'https://watvnewsong.org/my/albumSave.ajax', { method: 'POST', body: formData });
+					urlCall('/my/edit.wmc?no=' + myAlbumNo, 'Y');
+				} catch (error) {
+					alert(error);
+					location.reload();
+				}
+			}
+			async deleteMyAlbum(myAlbumNo) {
+				const result = confirm("이 앨범을 정말 삭제하시겠습니까?");
+				if (!result) return;
+				const formData = new FormData();
+				formData.append('MY_ALBUM_NO', myAlbumNo);
+
+				try {
+					const response = await fetch(contextPath + "https://watvnewsong.org/my/albumDel.ajax", { method: 'POST', body: formData });
+					urlCall('/my/album.wmc', 'Y');
+				} catch (error) {
+					alert(error);
+					location.reload();
+				}
+			}
+		}
+	</script>
+
+
+	<!-- 푸터 플레이어-->
+	<div class="player-bar">
+		<div id="player_audio" data-audio-only="true" class="fp-fat fp-edgy fp-outlined">
+			<video>
+				<source type="application/x-mpegurl" src="https://watvnewsong.watv.org/download/fake_song.m3u8">
+			</video>
+		</div>
+	</div>
+
+	<!-- 재생 목록 -->
+	<div class="pl-wrap">
+		<div class="player-list">
+			<div class="player-wrap">
+				<div class="head_title">
+					<h3>
+						재생목록
+					</h3>
+					<button class="btn-back modal-close" onclick="commonChangeBodyClass('show_playList')"><span
+							class="blind"></span></button>
+				</div>
+				<div class="nav-sub head_nav">
+					<div class="slide">
+						<ul class="tab-nav">
+							<li><a class="active" data-toggle="tab" href="#tab-song">
+									곡<span class="tabPlayListTotal num"></span></a>
+							</li>
+							<!-- 						<li><a data-toggle="tab" href="#tab-my">MY앨범<span class="tabMyAlbumTotal num"></span></a></li> -->
+							<!-- <li><a data-toggle="tab" href="#tab-play-like">좋아요<span class="TAB_LIKE_TOTAL num"></span></a></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="select-list bn-group">
+					<div class="select-bn">
+						<a class="select-all select_all playList_select_all"
+							onclick="commonCheckedList('playList', '', true, this)">
+							전체선택</a>
+						<button class="bn-list-edit playList_edit" onclick="funcChangeEditMode('playList')">
+							편집</button>
+						<!-- <a class="select-play">전체재생</a> -->
+					</div>
+				</div>
+				<div class="list_box">
+					<div class="tab-content">
+						<div class="tab-pane fade show active" id="tab-song">
+							<ul id="playList" class="tab_playList list-container"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bg-blur2">
+			<div class="player playerBackImg"
+				style="background-image:url('https://watvnewsong.org/images/default.jpg');"></div>
+		</div>
+	</div>
+
+	<!-- 풀스크린 플레이어 -->
+	<div class="pd-wrap">
+		<button class="btn-back modal-close" onclick="commonChangeBodyClass('show_fullPlayer')"><span
+				class="blind"></span></button>
+		<div class="pd-info-wrap">
+			<div class="pd-jacket">
+				<div class="player playerBackImg"
+					style="background-image:url('https://watvnewsong.org/images/default.jpg');"></div>
+			</div>
+			<div class="pd-tit">
+				<h2 class="line-clamp-2 player_title">
+					재생 중인 음악이 없습니다.
+				</h2>
+				<span class="player_newsong_group_nm"></span><span class="player_newsong_genre_nm"></span>
+			</div>
+			<div class="pd-ctl">
+				<span>
+					<a class="full_layerInfo pd-info" no="" style="display:none"><span class="blind"></span></a>
+					<a class="full_layerDown pd-down" onclick="funcAttachFileDown('full_layerDown', this);"
+						style="display:none"><span class="blind"></span></a>
+				</span>
+			</div>
+		</div>
+		<div class="bg-blur2">
+			<div class="player playerBackImg"
+				style="background-image:url('https://watvnewsong.org/images/default.jpg');"></div>
+		</div>
+	</div>
+
+	<!-- 목록 4개 버튼 레이어 -->
+	<div class="song-select-wrap">
+		<div class="bn-common bn-song-select line-clamp-1">
+			<span class="count layer_count">0</span>
+			<div class="layer bn-wrap">
+				<a class="now-play layer_play" onclick="musicPlayer.appendSelectedSongList('play')">
+					재생
+				</a>
+				<a class="add layer_add" onclick="musicPlayer.appendSelectedSongList('add')">
+					재생목록
+				</a>
+
+				<a class="myalbum layer_album" onclick="myAlbum.openMyAlbumPopupBox()">
+					MY 앨범
+				</a>
+
+
+				<a class="download layer_down" onclick="funcAttachFileDown('list', this)">
+					다운
+				</a>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- 재생목록 편집 버튼 레이어 1 -->
+	<div class="edit-select-wrap">
+		<div class="bn-common bn-pink bn-song-select line-clamp-1">
+			<span class="count layer_count">0</span>
+			<div class="bn-wrap">
+
+				<a class="download playList_layer_down" onclick="funcAttachFileDown('playList', this)">
+					다운
+				</a>
+
+				<a class="playListLayerDel delete" onclick="musicPlayer.deletePlayList()">
+					삭제
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 재생목록 편집 버튼 레이어 2 -->
+	<div class="edit-select-wrap_for_my_album">
+		<div class="bn-common bn-pink bn-song-select line-clamp-1">
+			<span class="count layer_count">0</span>
+			<div class="bn-wrap">
+
+				<a class="download playList_layer_down" onclick="funcAttachFileDown('list', this)">
+					다운
+				</a>
+
+				<a class="playListLayerDel my-album delete">
+					삭제
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- MY앨범 담기 팝업 -->
+	<div class="layerPop albumPop">
+		<div class="layerin">
+			<div class="layerCon">
+				<div class="header">
+					<h5>MY 앨범 담기</h5>
+					<button type="button" class="my-album-close close">Close</button>
+				</div>
+
+				<div class="contents">
+					<div class="btn-wrap">
+						<div class="btn-newAlbum">새 앨범</div>
+						<div class="input-newAlbum" style="display:none">
+							<div class="newAlbumInput">
+								<input type="text" name="" value="" placeholder="앨범 제목을 입력하세요." />
+								<a id="searchCancel" class="search-close" style="">X</a>
+							</div>
+							<div class="new-my-album btn-add">완료</div>
+						</div>
+					</div>
+					<ul class="myAlbumList"></ul>
+					<div class="myAlbumNoData list-container"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="gotop"><a>TOP</a></div>
+
+
+
+	<script>
+		const bodyClassName = document.querySelector('body').classList;
+		var count = 0; // Modal count (+ z-index)
+		$(document).on('show.bs.modal', '.modal', function () {
+			var zIndex = 180 + (1 * count);
+			$(this).css('z-index', zIndex);
+			setTimeout(function () {
+				$('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+			}, 0);
+			count = count + 1
+		});
+
+		function toggleSongSelectBox(event) {
+			const selectedList = document.querySelectorAll('input[name="list"]:checked');
+			const selectedPlayList = document.querySelectorAll('input[name="playList"]:checked');
+			const selectedMyAlbumSearchList = document.querySelectorAll('input[name="my_list"]:checked');
+			const counterBox = document.querySelectorAll('.count.layer_count');
+			if (selectedList.length <= 0) {
+				document.body.classList.remove('show');
+			} else {
+				if (bodyClassName != "show_playList_edit_for_my_album") {
+					document.body.classList.add('show');
+				}
+			}
+			if (selectedPlayList.length != 0) {
+				counterBox.forEach((box) => box.innerText = selectedPlayList.length)
+			} else if (selectedMyAlbumSearchList.length != 0) {
+				counterBox.forEach((box) => box.innerText = selectedMyAlbumSearchList.length)
+			} else {
+				counterBox.forEach((box) => box.innerText = selectedList.length)
+			}
+		};
+	</script>
+	<script>
+		$(document).ready(function () {
+			var agent = navigator.userAgent.toLowerCase();
+			if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
+				alert("인터넷 익스플로러는 지원하지 않습니다.\n Chrome 이나 최신 브라우저를 이용해주세요.");
+				window.location = 'microsoft-edge:' + window.location;
+				setTimeout(function () {
+					window.location = 'https://support.microsoft.com/ko-kr/office/%ec%97%b0%ea%b2%b0%ed%95%98%eb%a0%a4%eb%8a%94-%ec%9b%b9-%ec%82%ac%ec%9d%b4%ed%8a%b8%ea%b0%80-internet-explorer%ec%97%90%ec%84%9c-%ec%9e%91%eb%8f%99%ed%95%98%ec%a7%80-%ec%95%8a%ec%8a%b5%eb%8b%88%eb%8b%a4-8f5fc675-cd47-414c-9535-12821ddfc554?ui=ko-kr&rs=ko-kr&ad=kr';
+				}, 1000)
+			}
+
+			musicPlayer = new MusicPlayer();
+			myAlbum = new MyAlbum();
+			//Import Css SettingS
+			commonImportCss();
+
+			//Scroll Top
+			$("#gotop").hide();
+
+			//player Text Setting
+			$(".player_playList span").html("").html('재생목록');
+
+			const body = document.body;
+			// 곡 선택시 곡 선택 박스 등장
+			body.addEventListener('click', toggleSongSelectBox);
+
+			//Player Btn Hidden Setting
+			if ($("#playList li").length == 0) $(".player_none_play").show();
+			else $(".player_none_play").hide();
+
+			//Player 재생목록
+			$(document).on("click", ".player_playList", function () {
+				commonChangeBodyClass("show_playList");
+			})
+
+			//Footer > PlayStart
+			musicPlayer.onplay = function (e) {
+				if ($("#playList li").length > 0) {
+					var param = {};
+					$.extend(param, { type: "song" });
+					$.extend(param, { no: $("#playList li.on input[name='playList']").attr("no") });
+					$.extend(param, { stream_yn: "1" });
+					$.post(contextPath + "https://watvnewsong.org/log/save.ajax", param, function (data, status) { })
+
+					$(".player_none_play").hide();
+				}
+			};
+
+			//Other Document Click > Input checked False
+			$(document).on("click", "body", function (e) {
+				if ($("body").hasClass("show") == true) {
+					if ($(".container-body").has(e.target).length === 0) {
+						$("body").removeClass("show");
+						$(".select_all").text('전체선택').removeClass("select_off");
+						$("input").prop("checked", false);
+					}
+				}
+			})
+
+			//통합검색
+			$(document).on("keyup", "#search_total", function (e) {
+				if (event.keyCode == 13) funcSearchConfirm("search_total", $.trim($("#search_total").val()));
+			});
+
+
+			//FullScrean > Info
+			$(document).on("mouseup", ".full_layerInfo", function () {
+				if ($(this).attr("no") == '-1') {
+					commonSelectAlert('음악 정보가 없습니다.');
+					return false;
+				} else {
+					$("body").removeClass("show_fullPlayer");
+					urlCall('/info/song.wmc?no=' + $(this).attr("no"), 'Y');
+				}
+			})
+
+			//Notice HeadLine
+			$(document).on("click", "#notice_head, #notice_pop", function () {
+				urlCall("/notice/detail.wmc?no=" + $(this).attr("no") + "", "Y");
+			});
+
+			//Menu > 펼치기
+			$(".btn-arrow").click(function (e) {
+				e.preventDefault();
+				$(this).parents("li").toggleClass('open');
+				$(this).next('div').slideToggle(function () {
+					var state = [];
+					$('.nav').each(function (k, v) {
+						state[k] = [];
+						$(this).find('li > div').each(function (k2, v2) {
+							if ($(this).is(':visible')) {
+								state[k].push(k2);
+							}
+						});
+					});
+					var d = new Date();
+					d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+					var expires = "expires=" + d.toUTCString();
+					document.cookie = "nav" + "=" + JSON.stringify(state) + ";" + expires + ";path=/";
+				});
+			});
+
+			// Footer (Mobile Only)
+			$(document).on("mouseup", ".footer h3", function () {
+				$(".footer .container").toggleClass("on");
+			})
+
+			// MY Album > exit (닫기)
+			// 	$(document).on("mouseup", ".close", function(){
+			// 		$(".add-new-album").hide();
+			// 		$("body").removeClass("albumShow");
+			// 	})
+
+			//Scroll Top
+			var selectTarget = $(".selectbox select");
+			selectTarget.on("blur", function () {
+				$(this).parent().removeClass("focus");
+			});
+
+			//Scroll Top
+			selectTarget.change(function () {
+				var select_name = $(this).children("option:selected").text();
+				$(this).siblings("label").text(select_name);
+			});
+
+			//Scroll Top
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 200) {
+					$("#gotop").fadeIn();
+				} else {
+					$("#gotop").fadeOut();
+				}
+			});
+
+			//Scroll Top
+			$("#gotop a").click(function () {
+				$("body, html").animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+		})
+	</script>
+
+	<script>
+
+		//검색어 컨펌
+		function funcSearchConfirm(idName, input_search) {
+
+			if (input_search == "" || input_search == undefined) {
+				commonSelectAlert('검색어를 입력하세요.');
+				$("#" + idName).focus();
+				return false;
+			} else if (input_search.indexOf("%") != -1 || input_search.indexOf("_") != -1) {
+				$("#" + idName).val("")
+				commonSelectAlert('검색어를 입력하세요.');
+				$("#" + search_total).focus();
+				return;
+			}
+
+			//통합검색
+			if (idName === "search_total") {
+				urlCall("/search/song.wmc?search=" + input_search, 'Y');
+			}
+			//MY 앨범 내 곡 추가
+			else if (idName === "search_my") {
+				pageMySongSelect("search", input_search);
+			}
+
+			return;
+		}
+
+		//편집모드로 변경 (재생목록)
+		function funcChangeEditMode(inputName) {
+			var element = String.format("input:checkbox[name='{0}']", inputName);
+
+			$("body").removeClass("show")
+			$("input").prop("checked", false);
+			$(".select_all, .playList_select_all").text('전체선택').removeClass("select_off"); //목록, 재생목록
+			$(".layer_count").text("0");
+
+			if ($("button.bn-list-edit").hasClass("bn-list-complete")) {
+				$("body").removeClass("show_playList_edit");
+				$(element).prop("checked", false).attr("disabled", true);
+				$("button.bn-list-edit").removeClass("bn-list-complete").text('편집');
+				$(".drag.drag-handle").hide();
+			}
+			else {
+				$("body").addClass("show_playList_edit");
+				$(element).attr("disabled", false);
+				$("button.bn-list-edit").addClass("bn-list-complete");
+				$(".drag.drag-handle").show();
+			}
+		}
+
+		// 편집모드로 변경 (마이앨범)
+		function funcChangeEditModeForMyAlbum() {
+			var element = "input:checkbox[name='list']";
+			$("body").removeClass("show")
+			$("input").prop("checked", false);
+			$(".select_all, .playList_select_all").text('전체선택').removeClass("select_off"); //목록, 재생목록
+			$(".layer_count").text("0");
+
+			if ($("button.bn-list-edit").hasClass("bn-list-complete")) {
+				$(".bn-common-play").show();
+				$("body").removeClass("show_playList_edit_for_my_album");
+				$(element).prop("checked", false);
+				$("button.bn-list-edit").removeClass("bn-list-complete").text('편집');
+				$(".drag.drag-handle").hide();
+			}
+			else {
+				$(".bn-common-play").hide();
+				$("body").addClass("show_playList_edit_for_my_album");
+				$(element).attr("disabled", false);
+				$("button.bn-list-edit").addClass("bn-list-complete");
+				$(".drag.drag-handle").show();
+			}
+		}
+
+
+		//파일 다운로드 (응모, 곡)
+		function funcAttachFileDown(inputName, item) {
+			//inputName:input name/class 네임, item:this
+
+			var info = { file: [] };
+
+			//풀스크린 플레이어
+			if (inputName == "full_layerDown") {
+				var data = new Object();
+				data.MP3_CHG_FILE_NM = $(item).attr("value2").replace(".m4a", ".mp3");
+				info.file.push(data);
+				info = JSON.stringify(info);
+
+				if (info.file == "[]") {
+					commonSelectAlert('다운로드할 음악을 선택하세요.');
+				} else {
+					commonSelectAlert('다운로드 금지 음악은 제외하고 다운로드됩니다.');
+					getFileDown('normal', info);
+				}
+				return;
+			}
+			//응모
+			else if (inputName == "collect") {
+				var data = new Object();
+
+				data.yyyymm = $(item).attr("value1");
+				data.mp3_chg_file_nm = $(item).attr("chg_nm");
+				data.mp3_down_nm = $(item).attr("org_nm");
+				info.file.push(data);
+				info = JSON.stringify(info);
+
+				getFileDown('collect', info);
+				return;
+			}
+			//other
+			else {
+				var element = String.format("input:checkbox[name='{0}']", inputName);
+
+				if ($(element + ":checked").length === 0) {
+					commonSelectAlert('선택한 음악이 없습니다.');
+					return false;
+				} else {
+					$(element + ":checked").each(function (i) {
+						var data = new Object();
+
+						data.MP3_CHG_FILE_NM = $(this).attr("value2").replace(".m4a", ".mp3");
+						data.LANGUAGE_GB_SN = $(this).attr("language_gb_sn");
+						info.file.push(data);
+					});
+					info = JSON.stringify(info);
+
+					if (info.file == "[]") {
+						commonSelectAlert('다운로드할 음악을 선택하세요.');
+					} else {
+						commonSelectAlert('다운로드 금지 음악은 제외하고 다운로드됩니다.');
+						getFileDown('normal', info);
+					}
+					return;
+				}
+			}
+		}
+
+
+		$('.close').click(function () {
+			$('html').removeClass('albumShow')
+		});
+
+		$('.layerPop').on('click', function (e) {
+			if (!$('.layerPop').has(e.target).length) {
+				$('html').removeClass('albumShow')
+			}
+		})
+
+	</script> <!-- OnlyDebugging -->
+</body>
+<script>
+	let musicPlayer = null;
+	let myAlbum = null;
+	let myAlbumEdit = null;
+	window.onpopstate = function (event) {
+		urlCall(document.location.pathname);
+	};
+
+	//MovePage
+	$(document).ready(function () {
+
+		// commonSelectPlayList(); //PlayList
+
+		urlCall("/Choir_mr_25.htm", ''); //PageRefresh
+
+		var message = "";
+		if (message != '') {
+			alert(message);
+		}
+
+		var code = "";
+		if (code === '40') {
+			window.location.href = 'https://guide.watv.org';
+		}
+
+		//Login EnterId
+		$(document).on("keyup", "#id", function (event) {
+			if (event.keyCode == 13) {
+				$("#password").focus();
+			}
+		});
+
+		//Login EnterPw
+		$(document).on("keyup", "#password", function (event) {
+			if (event.keyCode == 13) {
+				if (pageLoginConfirm() == false) {
+					return;
+				}
+				else {
+					pageLogin();
+				}
+			}
+		});
+
+		//LoginClick
+		$(document).on("click", "#btnLogin", function () {
+			if (pageLoginConfirm() == false) {
+				return;
+			} else {
+				pageLogin();
+			}
+		});
+	});
+</script>
+<script>
+	var g_url = ""; //ChangeLanguage
+	const myAlbumBtn = document.querySelector(".myalbum.layer_album");
+
+	function urlCall(url, storageResetGB) {
+		$("#request").empty();	//ContentsEmpty
+		$("body").removeClass("show").removeClass("menuFull").removeClass("show_playList_edit_for_my_album").removeClass('albumShow');
+		$("#Modal-menu").hide();	//Mobile -> MenuHidden
+		// 	$("#Modal-menu").modal("hide");
+		$(".spinner-wrap").show();	//spinnerShow
+
+		var param_url = "";
+
+		if (storageResetGB == 'Y') {
+			sessionStorage.removeItem("pageParam");
+			param_url = url;
+
+		} else {
+			//PageRefresh
+			var pageParam = sessionStorage.getItem("pageParam");
+			if (pageParam === null) {
+				param_url = url;
+			} else {
+				if (url.indexOf("?") > -1) {
+					param_url = url + "&" + pageParam;
+				} else {
+					param_url = url + "?" + pageParam;
+				}
+			}
+		}
+
+		//IE 한글깨짐 문제 해결
+		var ua = window.navigator.userAgent;
+		if (ua.indexOf('MSIE') > 0 || ua.indexOf('Trident') > 0) param_url = encodeURI(param_url);
+		else param_url = param_url;
+
+		$.ajax({
+			type: "GET",
+			url: "/call" + param_url,
+			dataType: "html",
+			error: function () {
+				history.pushState(null, "Newsong", "/error.wmc");
+			},
+			success: function (data, status) {
+				var n = param_url.indexOf("?");
+				var setParam = ""
+				if (n > -1) {
+					if (storageResetGB != 'SKIP') {
+						setParam = param_url.substring(n + 1, param_url.length);
+						sessionStorage.setItem("pageParam", setParam);
+					}
+
+					var cutUrl = param_url.substring(0, n);
+					g_url = cutUrl;
+					history.pushState(null, "Newsong", cutUrl);
+
+				} else {
+					history.pushState(null, "Newsong", param_url);
+					g_url = param_url;
+				}
+
+				$("#request").html(data);
+				const currentUrl = url.split('?')[0];
+				if (myAlbumBtn) {
+					if (currentUrl == "https://watvnewsong.org/info/choir.wmc") {
+						myAlbumBtn.style.display = "none";
+					} else {
+						myAlbumBtn.style.display = "block";
+					}
+				}
+
+
+				//DeleteOverlap
+				$("#request").find("title").remove();
+				$("#request").find("meta").remove();
+				$("#request").find("link").remove();
+				$("#request").find("script").remove();
+				$(".spinner-wrap").hide();
+
+				commonImportCss();
+
+				//NoticeHeadLine
+				$.post(contextPath + "/notice/headLine.ajax", function (data, status) {
+					var url = window.location.pathname;
+					if ((url == "/home.wmc" && data.NO != undefined && data.POPUP_NO == undefined) || (url != "/home.wmc" && data.NO != undefined)) {
+						$(".notice_head_line").html('').html('<a id="notice_head" no="' + data.NO + '"><span class="badge green">공지</span>' + data.TITLE + '</a>');
+					} else {
+						$(".notice_head_line").remove();
+					}
+					//팝업공지
+					if (data.POPUP_NO != undefined) {
+						$("#notice_pop").attr("no", data.POPUP_NO);
+						$("#notice_pop").children("h5").text(data.POPUP_TITLE);
+						$("#notice_pop").children("p").html(data.POPUP_SUMMARY.replace(/(?:\r\n|\r|\n)/g, '<br>'));
+						$("#notice_pop").addClass(data.POPUP_STYLE_GB);
+						$("#notice_pop").show();
+					} else {
+						$("#notice_pop").remove();
+					}
+				})
+			}
+		});
+	}
+	//LoginCheck
+	function pageLoginConfirm() {
+		if ($("#id").val() == "") {
+			alert('아이디를 입력하세요.');
+			$("#id").focus();
+			return false;
+		}
+		if ($("#password").val() == "") {
+			alert('비밀번호를 입력하세요.');
+			$("#password").focus();
+			return false;
+		}
+		return true;
+	}
+
+	function pageLogin() {
+		sessionStorage.clear();
+		var params = { id: $("#id").val(), pass: $("#password").val(), saveId: $("#watvIdSaveCheck").is(":checked"), referer: window.location.pathname };
+		commonNewWindow("/login_do.wmc", "self", params);
+	}
+</script>
+
+
+<script src="https://watvnewsong.org/scripts/bootstrap.min.js"></script>
+
+</html>

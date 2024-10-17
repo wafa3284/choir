@@ -1,0 +1,34 @@
+<script language="Javascript">
+    <!-
+        
+    var password =  prompt("비밀번호를 입력해주세요.","")
+    
+        if (password == null)  {
+            alert("출입금지")
+            location  =  "index.html"         // 실패시 이동 주소       history.back();를 넣어도 됨
+        }
+        else  {
+            var  combo =  password
+            var  total =  combo.toLowerCase()
+    
+        if  (total == "th34ip*!")  {                // 비밀번호
+            location  =  "iindex.html"
+        }
+        else  {
+            alert("출입금지")
+            location  =  "Index.html"    // 실패시 이동 주소      history.back();를 넣어도 됨
+        }
+    }
+    //-->
+</script>
+
+<?php include("./pass.php") ?>
+<html>
+
+<head></head>
+
+<body>
+    입장성공...
+</body>
+
+</html>

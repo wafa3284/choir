@@ -1,0 +1,2293 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>WATV 새노래 성가 스트리밍</title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="https://watvnewsong.org/favicon.ico">
+	<link rel="icon" sizes="32x32" href="https://watvnewsong.org/favicon/favicon-round-32.png">
+	<link rel="icon" sizes="48x48" href="https://watvnewsong.org/favicon/favicon-round-48.png">
+	<link rel="icon" sizes="57x57" href="https://watvnewsong.org/favicon/favicon-round-57.png">
+	<link rel="icon" sizes="64x64" href="https://watvnewsong.org/favicon/favicon-round-64.png">
+	<link rel="icon" sizes="72x72" href="https://watvnewsong.org/favicon/favicon-round-72.png">
+	<link rel="icon" sizes="96x96" href="https://watvnewsong.org/favicon/favicon-round-96.png">
+	<link rel="icon" sizes="114x114" href="https://watvnewsong.org/favicon/favicon-round-114.png">
+	<link rel="icon" sizes="120x120" href="https://watvnewsong.org/favicon/favicon-round-120.png">
+	<link rel="icon" sizes="144x144" href="https://watvnewsong.org/favicon/favicon-round-144.png">
+	<link rel="icon" sizes="152x152" href="https://watvnewsong.org/favicon/favicon-round-152.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://watvnewsong.org/favicon/favicon-152.png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://watvnewsong.org/favicon/favicon-152.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://watvnewsong.org/favicon/favicon-144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://watvnewsong.org/favicon/favicon-120.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://watvnewsong.org/favicon/favicon-114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="96x96" href="https://watvnewsong.org/favicon/favicon-96.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://watvnewsong.org/favicon/favicon-72.png">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://watvnewsong.org/favicon/favicon-57.png">
+	<link rel="apple-touch-icon-precomposed" sizes="48x48" href="https://watvnewsong.org/favicon/favicon-48.png">
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="https://watvnewsong.org/favicon/favicon-32.png">
+
+	<script>var contextPath = ""</script>
+	<!-- <link rel="shortcut icon" href="https://watvnewsong.org/images/favicon.ico.png"> -->
+	<link rel="stylesheet" href="https://watvnewsong.org/css/reset.css">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/font.css">
+	<link rel="stylesheet" type="text/css" href="https://wds.watv.org/css/logo.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/index.css?ver=202306095">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/modal.css?ver=202306095">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/POP.css">
+	<link rel="stylesheet" href="https://watvnewsong.org/scripts/watvplayer/watv-audio-player.css?ver=202306095">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/ko.css">
+	<script src="https://watvnewsong.org/scripts/sortable.min.js"></script>
+	<script src="https://watvnewsong.org/scripts/jquery-1.11.3.min.js"></script>
+	<script src="/common/fileManager.js"></script>
+	<script src="https://watvnewsong.org/scripts/jquery.cookie.js"></script>
+	<script src="https://watvnewsong.org/scripts/jquery.base64.js"></script>
+	<script src="https://watvnewsong.org/scripts/flowplayer/flowplayer.min.js?ver=20230609"></script>
+	<script src="https://watvnewsong.org/scripts/flowplayer/flowplayer.hlsjs.light.min.js"></script>
+	<script src="https://watvnewsong.org/scripts/flowplayer/flowplayer.audio.min.js"></script>
+	<script src="https://pic.watv.org/watvplayer/watvPlayer.js"></script>
+	<style>
+		.noselect {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: nones
+		}
+
+		/*
+    Watv Player Common
+*/
+		.svp-invisible {
+			display: none !important
+		}
+
+		.wap-divline {
+			width: 2px;
+			height: 23px;
+			background-color: #d5d5d5;
+			margin: 0 8px
+		}
+
+		.wap-repeat,
+		.wap-autonext {
+			fill: #797979;
+			stroke: #797979
+		}
+
+		.wap-repeat.active,
+		.wap-autonext.active {
+			fill: rgb(92, 143, 255);
+			stroke: rgb(92, 143, 255)
+		}
+
+		/*
+    Watv Video Player
+*/
+
+		/* svp common styles */
+		.svp-root {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			color: white;
+			min-width: 285px
+		}
+
+		.svp-root * {
+			box-sizing: border-box;
+			font-size: 13px;
+			color: white
+		}
+
+		.svp-root button {
+			background: none;
+			border: none;
+			width: 0;
+			height: 0;
+			padding: 0;
+			min-width: 30px;
+			min-height: 30px;
+			cursor: pointer;
+			color: white;
+			transition: color 0.2s;
+			position: relative
+		}
+
+		.svp-root svg {
+			fill: white;
+			transition: fill 0.2s;
+			vertical-align: bottom
+		}
+
+		.svp-root .wap-repeat svg,
+		.svp-root .wap-autonext svg {
+			fill: #b3b3b3;
+			stroke: #b3b3b3
+		}
+
+		.svp-root .wap-repeat.active svg,
+		.svp-root .wap-autonext.active svg {
+			fill: white;
+			stroke: white
+		}
+
+		.svp-root .wap-divline {
+			background-color: #747474
+		}
+
+		/* player layout */
+		.svp-stage {
+			position: relative;
+			left: 0;
+			top: 0;
+			overflow: hidden
+		}
+
+		.svp-video {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #2a2a2a
+		}
+
+		.svp-video embed {
+			width: 100%;
+			height: 100%
+		}
+
+		.svp-audio-fl,
+		.svp-audio-fl * {
+			width: 0;
+			height: 0
+		}
+
+		.svp-controls {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			transition: opacity 0.2s
+		}
+
+		.svp-controls.hide {
+			opacity: 0
+		}
+
+		/* svp top, bottom*/
+		.svp-bottom,
+		.svp-top {
+			padding: 8px 5px;
+			background: rgba(0, 0, 0, 0.4)
+		}
+
+		/* svp top */
+		.svp-top {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			text-align: right;
+			background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0))
+		}
+
+		/* svp bottom */
+		/* bottom layout */
+		.svp-bottom {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: auto;
+			background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6))
+		}
+
+		.svp-details {
+			display: flex;
+			display: -webkit-flexbox;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flexbox;
+			justify-content: space-between;
+			-webkit-justify-content: space-between;
+			-moz-justify-content: space-between;
+			-ms-flex-pack: space-between
+		}
+
+		.svp-left,
+		.svp-right {
+			display: flex;
+			display: -webkit-flexbox;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flexbox;
+			align-items: center;
+			-webkit-align-items: center;
+			-moz-align-items: center;
+			-ms-flex-align: center
+		}
+
+		.svp-left>*,
+		.svp-right>* {
+			margin: 0 5px
+		}
+
+		/* bottom timeline */
+		.svp-timeline {
+			padding: 7px 0;
+			cursor: pointer;
+			transition: all .1s;
+		}
+
+		.svp-tl-back {
+			height: 3px;
+			background: rgba(255, 255, 255, .2);
+			position: relative;
+			transition: all .1s;
+		}
+
+		.svp-tl-buffer {
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: rgba(255, 255, 255, .4);
+			height: 100%;
+			width: 50%;
+			transition: background 0.2s, width 0.5s
+		}
+
+		.svp-tl-bar {
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: #f00;
+			height: 100%;
+			width: 50%;
+			transition: background 0.2s
+		}
+
+		.svp-timeline:hover .svp-tl-back {
+			height: 5px;
+			transition: all .1s
+		}
+
+		.svp-timeline:hover .svp-tl-bar {
+			background: #f00
+		}
+
+		/* bottom play, volume, playtime.... */
+		.svp-volume {
+			padding: 10px 0;
+			width: 80px;
+			cursor: pointer
+		}
+
+		.svp-vol-back {
+			height: 5px;
+			background-color: rgba(255, 255, 255, .4);
+			border-radius: 4px;
+			overflow: hidden
+		}
+
+		.svp-vol-bar {
+			height: 100%;
+			width: 50%;
+			background-color: white;
+			transition: background 0.2s
+		}
+
+		/* .svp-volume:hover .svp-vol-bar{background-color:rgb(149, 216, 255)} */
+		.svp-play svg {
+			display: none
+		}
+
+		.svp-play.play .svp-svg-pause {
+			display: inline
+		}
+
+		.svp-play:not(.play) .svp-svg-play {
+			display: inline
+		}
+
+		.svp-mute svg {
+			display: none
+		}
+
+		.svp-mute.mute .svp-svg-mute {
+			display: inline
+		}
+
+		.svp-mute:not(.mute) .svp-svg-volume {
+			display: inline
+		}
+
+		.svp-full svg {
+			display: none
+		}
+
+		.svp-full.full .svp-svg-min {
+			display: inline
+		}
+
+		.svp-full:not(.full) .svp-svg-full {
+			display: inline
+		}
+
+		.svp-cursor-time {
+			display: none;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background-color: #292929;
+			padding: 2px 6px;
+			border-radius: 3px
+		}
+
+		.svp-cursor-time.active {
+			display: inline-block
+		}
+
+		.svp-quality,
+		.svp-speed {
+			width: auto !important
+		}
+
+		.svp-quality {
+			display: none
+		}
+
+		.svp-quality.active {
+			display: block
+		}
+
+		.svp-time {
+			line-height: 0.9em
+		}
+
+
+		/* bottom popup panel */
+		.svp-panel {
+			visibility: hidden;
+			position: absolute;
+			padding: 10px;
+			right: 5px;
+			bottom: 50px;
+			background-color: rgba(0, 0, 0, 0.8);
+			border-radius: 5px;
+			text-align: center;
+			opacity: 0;
+			transition: opacity 0.2s, transform 0.2s, visibility 0.1s 0.2s;
+			transform: scale(90%, 90%)
+		}
+
+		.svp-panel.active {
+			visibility: visible;
+			display: block;
+			opacity: 1;
+			transform: none;
+			transition: opacity 0.2s, transform 0.2s
+		}
+
+		.svp-pn-title {
+			font-weight: bold;
+			padding-bottom: 3px;
+			margin-bottom: 5px;
+			border-bottom: solid 1px #b4dcff;
+			color: #b4dcff
+		}
+
+		.svp-pn-select>* {
+			display: block;
+			width: 0;
+			min-width: 75px;
+			color: white;
+			padding: 5px 5px;
+			border-radius: 3px;
+			cursor: pointer;
+			border-bottom: solid 1px rgba(255, 255, 255, .2)
+		}
+
+		.svp-pn-select>*:last-child {
+			border-bottom: none;
+			padding-bottom: 0
+		}
+
+		.svp-pn-select>*:hover {
+			background-color: rgba(255, 255, 255, 0.4)
+		}
+
+		@media(max-width:610px) {
+			.svp-left>*:not(.svp-volume) {
+				margin: 2px
+			}
+		}
+
+		@media(max-width:550px) {
+			.svp-left>*:not(.svp-volume) {
+				margin: 0
+			}
+		}
+
+		@media(max-width:460px) {
+			.svp-volume {
+				width: 55px
+			}
+
+			.svp-root * {
+				font-size: 13px
+			}
+
+			.svp-right>* {
+				margin: 0;
+				max-width: 55px
+			}
+
+			.svp-panel {
+				top: 3px;
+				right: 3px;
+				bottom: 44px
+			}
+
+			.svp-pn-select {
+				overflow-y: auto;
+				max-height: calc(100% - 26px)
+			}
+		}
+
+		@media(max-width:420px) {
+			.wap-divline:not(.svp-invisible)~.svp-volume {
+				display: none
+			}
+		}
+
+		@media(max-width:350px) {
+			.svp-volume {
+				display: none
+			}
+		}
+
+		/* alert */
+		.svp-alert {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			overflow: hidden;
+			background-color: rgba(0, 0, 0, 0.5)
+		}
+
+		.svp-alert.active {
+			display: block
+		}
+
+		.svp-al-content {
+			display: none;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50px;
+		}
+
+		.svp-al-content.active {
+			display: block
+		}
+
+		.svp-al-simbol {
+			width: 80px;
+			height: 80px;
+			background: rgba(0, 0, 0, .4);
+		}
+
+		.svp-al-simbol svg {
+			filter: drop-shadow(3px 5px 4px rgb(0 0 0 / 0.4))
+		}
+
+		.svp-al-simbol.active {
+			animation: simbol 0.7s;
+			-webkit-animation: simbol 0.7s;
+			-moz-animation: simbol 0.7s
+		}
+
+		.svp-al-title {
+			cursor: pointer
+		}
+
+		.svp-al-title svg {
+			filter: drop-shadow(2px 3px 3px rgb(0 0 0 / 0.4))
+		}
+
+		.svp-al-title .svp-al-content {
+			width: 100px;
+			height: 100px
+		}
+
+		.svp-al-error {
+			background-color: #2a2a2a
+		}
+
+		.svp-al-error .svp-al-content {
+			width: 60%;
+			display: flex;
+			display: -webkit-flexbox;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flexbox;
+			justify-content: center;
+			-webkit-justify-content: center;
+			-moz-justify-content: center;
+			-ms-flex-pack: center;
+			align-items: center;
+			-webkit-align-items: center;
+			-moz-align-items: center;
+			-ms-flex-align: center
+		}
+
+		.svp-al-error * {
+			line-break: anywhere
+		}
+
+		@media(max-width:500px) {
+			.svp-al-simbol {
+				width: 70px;
+				height: 70px
+			}
+
+			.svp-al-title .svp-al-content {
+				width: 70px;
+				height: 70px
+			}
+		}
+
+		@keyframes simbol {
+			0% {
+				transform: translate(-50%, -50%) scale(50%, 50%);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate(-50%, -50%) scale(100%, 100%);
+				opacity: 0
+			}
+		}
+
+		@-webkit-keyframes simbol {
+			0% {
+				transform: translate(-50%, -50%) scale(50%, 50%);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate(-50%, -50%) scale(100%, 100%);
+				opacity: 0
+			}
+		}
+
+		@-moz-keyframes simbol {
+			0% {
+				transform: translate(-50%, -50%) scale(50%, 50%);
+				opacity: 1
+			}
+
+			100% {
+				transform: translate(-50%, -50%) scale(100%, 100%);
+				opacity: 0
+			}
+		}
+
+		/* buffering */
+		.svp-buffering {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, 0.3);
+			pointer-events: none;
+			transition: opacity 0.3s;
+			opacity: 0
+		}
+
+		.svp-buffering.active {
+			display: block
+		}
+
+		.svp-buffering span {
+			color: white;
+			position: absolute;
+			display: block;
+			top: calc(51% + 30px);
+			left: 0;
+			width: 100%;
+			text-align: center;
+			line-height: 1.6em
+		}
+
+		.svp-loading {
+			position: relative;
+			top: calc(50% - 48px);
+			width: 96px;
+			height: 96px;
+			margin: 0 auto;
+			padding: 10px
+		}
+
+		.svp-dot div {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 20px;
+			height: 20px;
+			margin: auto;
+			border-radius: 10px;
+			background-color: #fff;
+			transform: scale(0);
+			animation: dot 1.5s linear infinite;
+			-webkit-animation: dot 1.5s linear infinite;
+			-moz-animation: dot 1.5s linear infinite
+		}
+
+		.svp-dot div:nth-child(1) {
+			left: -50px;
+			animation-delay: -0.1s;
+			-webkit-animation-delay: -0.1s;
+			-moz-animation-delay: -0.1s
+		}
+
+		.svp-dot div:nth-child(3) {
+			right: -50px;
+			animation-delay: 0.1s;
+			-webkit-animation-delay: 0.1s;
+			-moz-animation-delay: 0.1s
+		}
+
+		@keyframes dot {
+			0% {
+				transform: scale(0);
+			}
+
+			35% {
+				transform: scale(1);
+			}
+
+			70% {
+				transform: scale(0);
+			}
+
+			100% {
+				transform: scale(0);
+			}
+		}
+
+		@-webkit-keyframes dot {
+			0% {
+				transform: scale(0);
+			}
+
+			35% {
+				transform: scale(1);
+			}
+
+			70% {
+				transform: scale(0);
+			}
+
+			100% {
+				transform: scale(0);
+			}
+		}
+
+		@-moz-keyframes dot {
+			0% {
+				transform: scale(0);
+			}
+
+			35% {
+				transform: scale(1);
+			}
+
+			70% {
+				transform: scale(0);
+			}
+
+			100% {
+				transform: scale(0);
+			}
+		}
+
+		/* youtube */
+		.svp-iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%
+		}
+
+		.svp-cover-top {
+			width: 100%;
+			position: absolute
+		}
+
+		.svp-cover-bottom {
+			width: 100%;
+			bottom: 0px;
+			font-size: 0;
+			background: rgba(0, 0, 0, 0);
+			position: absolute;
+			left: 0px;
+			cursor: pointer
+		}
+
+		.svp-cover-shortcut {
+			display: inline-block;
+			width: 100%;
+			max-width: 210px;
+			bottom: 5px;
+			left: 0;
+			position: absolute;
+			text-align: center;
+			background-color: #333;
+			padding: 14px 0;
+			font-size: 17px;
+			cursor: pointer;
+			transition: color 0.25s;
+			text-decoration: none;
+			min-height: 20px
+		}
+
+		.svp-cover-shortcut * {
+			color: white
+		}
+
+		.svp-cover-shortcut:hover * {
+			color: rgb(165, 165, 165)
+		}
+
+		.svp-cover-fullscreen {
+			display: inline-block;
+			width: 52px;
+			height: 40px;
+			position: absolute;
+			bottom: 0;
+			right: 0px;
+			background-color: rgba(255, 0, 0, 0);
+			border: none;
+			padding-left: 0;
+			padding-top: 0;
+			text-align: left;
+			cursor: pointer;
+			opacity: 0
+		}
+
+		.svp-cover-fullscreen.mobile {
+			right: 4px;
+			bottom: 4px
+		}
+
+		.svp-cover-fullscreen svg {
+			fill: white;
+			width: 40px;
+			height: 40px;
+			pointer-events: none
+		}
+
+		@media(max-width:514px) {
+			.svp-cover-bottom {
+				display: none !important
+			}
+		}
+
+		@media(max-width:514px) {
+			.svp-cover-fullscreen:not(.mobile) {
+				width: 48px;
+				height: 36px;
+			}
+
+			.svp-cover-fullscreen:not(.mobile) svg {
+				width: 36px;
+				height: 36px;
+			}
+		}
+
+		.svp-root-youtube {
+			background-color: black;
+			width: 100%;
+			height: 100%
+		}
+
+		.svp-stage-youtube {
+			position: relative;
+			width: 100%
+		}
+
+		.svp-stage-youtube iframe {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0
+		}
+
+		.svp-stage-youtube.fp-wrap {
+			padding-bottom: 0
+		}
+
+
+		/*
+    Watv Audio Player
+*/
+		.wap-player {
+			width: 100%;
+			padding: 3px 8px;
+			background-color: rgb(255, 255, 255);
+			display: flex;
+			display: -webkit-flexbox;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flexbox;
+			align-items: center;
+			-webkit-align-items: center;
+			-moz-align-items: center;
+			-ms-flex-align: center
+		}
+
+		.wap-player,
+		.wap-player * {
+			box-sizing: border-box
+		}
+
+		.wap-player>* {
+			margin: 0 5px
+		}
+
+		.wap-player svg {
+			vertical-align: bottom
+		}
+
+		.wap-current-time,
+		.wap-duration {
+			color: rgb(116, 116, 116);
+			font-size: 14px;
+			position: relative;
+			top: 1px;
+			min-width: 40px
+		}
+
+		.wap-player:not(.play):not(.pause) .wap-duration {
+			display: none
+		}
+
+		.wap-btns {
+			margin: 0;
+			display: flex;
+			display: -webkit-flexbox;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flexbox;
+			align-items: center;
+			-webkit-align-items: center;
+			-moz-align-items: center;
+			-ms-flex-align: center
+		}
+
+		.wap-btns button {
+			background: none;
+			border: none;
+			color: #444;
+			cursor: pointer;
+			outline: none;
+			padding: 0;
+			margin-right: 8px
+		}
+
+		.wap-player.nodata .wap-btns button {
+			pointer-events: none;
+			opacity: 0.5;
+		}
+
+		.wap-btns .wap-play {
+			border: solid 1px #eee;
+			border-radius: 50%;
+			width: 39px;
+			height: 39px
+		}
+
+		.wap-play>* {
+			width: 25px;
+			height: 25px;
+			fill: #555;
+			position: relative;
+			left: 1px;
+			top: 0
+		}
+
+		.wap-player .wap-svg-pause {
+			display: none
+		}
+
+		.wap-player.play .wap-svg-pause {
+			display: inline;
+			left: auto
+		}
+
+		.wap-player.play .wap-svg-play {
+			display: none
+		}
+
+		.wap-time {
+			opacity: 1;
+			height: 6px;
+			background-color: #f5f5f5;
+			border-radius: 5px;
+			cursor: pointer;
+			overflow: hidden;
+			flex-grow: 1;
+			-webkit-flex-grow: 1;
+			-moz-flex-grow: 1;
+			-ms-flex-grow: 1
+		}
+
+		.wap-player:not(.play):not(.pause) .wap-time {
+			opacity: 0;
+			pointer-events: none
+		}
+
+		.wap-progress {
+			width: 0%;
+			height: 100%;
+			background-color: rgb(92, 143, 255);
+			pointer-events: none
+		}
+
+		.wap-mute {
+			cursor: pointer;
+			margin-right: 0
+		}
+
+		.wap-mute>* {
+			width: 23px;
+			height: 23px;
+			fill: #444
+		}
+
+		.wap-mute .wap-svg-mute {
+			display: none
+		}
+
+		.wap-player.mute .wap-svg-mute {
+			display: inline
+		}
+
+		.wap-player.mute .wap-svg-volume {
+			display: none
+		}
+
+		.wap-player.mute .wap-volume {
+			opacity: 0.5
+		}
+
+		.wap-volume {
+			width: 100%;
+			max-width: 50px;
+			height: 6px;
+			background-color: #f5f5f5;
+			border-radius: 5px;
+			cursor: pointer;
+			overflow: hidden;
+			margin-right: 2px
+		}
+
+		.wap-volume .wap-progress {
+			width: 50%
+		}
+
+		@media(max-width:450px) {
+			.wap-btns>button {
+				margin: 0
+			}
+		}
+
+		@media(max-width:400px) {
+			.wap-volume {
+				display: none
+			}
+		}
+
+		@media(max-width:315px) {
+			.wap-duration {
+				display: none
+			}
+		}
+
+		/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9yZXNvdXJjZXMvY29tbW9uLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxXQUFXLDJCQUEyQixFQUFFLHlCQUF5QixFQUFFLHdCQUF3QixFQUFFLHNCQUFzQixFQUFFLHFCQUFxQixFQUFFLGtCQUFrQjs7QUFFOUo7O0NBRUM7QUFDRCxlQUFlLHVCQUF1QjtBQUN0QyxhQUFhLFNBQVMsQ0FBQyxXQUFXLENBQUMsd0JBQXdCLENBQUMsWUFBWTtBQUN4RSwyQkFBMkIsWUFBWSxFQUFFLGNBQWM7QUFDdkQseUNBQXlDLHNCQUFzQixFQUFFLHdCQUF3Qjs7QUFFekY7O0NBRUM7O0FBRUQsc0JBQXNCO0FBQ3RCLFVBQVUsaUJBQWlCLEVBQUUsVUFBVSxFQUFFLFdBQVcsRUFBRSxzQkFBc0IsRUFBRSxXQUFXLEVBQUUsZUFBZTtBQUMxRyxZQUFZLHNCQUFzQixFQUFFLGNBQWMsRUFBRSxXQUFXO0FBQy9ELGlCQUFpQixlQUFlLEVBQUUsV0FBVyxFQUFFLE9BQU8sRUFBRSxRQUFRLEVBQUUsU0FBUyxFQUFFLGNBQWMsRUFBRSxlQUFlLEVBQUUsY0FBYyxFQUFFLFdBQVcsRUFBRSxxQkFBcUIsRUFBRSxpQkFBaUI7QUFDbkwsY0FBYyxVQUFVLEVBQUUsb0JBQW9CLEVBQUUscUJBQXFCO0FBQ3JFLHVEQUF1RCxZQUFZLEVBQUUsY0FBYztBQUNuRixxRUFBcUUsVUFBVSxFQUFFLFlBQVk7QUFDN0YsdUJBQXVCLHdCQUF3Qjs7QUFFL0Msa0JBQWtCO0FBQ2xCLFdBQVcsaUJBQWlCLEVBQUUsTUFBTSxFQUFFLEtBQUssRUFBRSxlQUFlO0FBQzVELFdBQVcsaUJBQWlCLEVBQUUsTUFBTSxFQUFFLEtBQUssRUFBRSxVQUFVLEVBQUUsV0FBVyxFQUFFLHdCQUF3QjtBQUM5RixpQkFBaUIsVUFBVSxFQUFFLFdBQVc7QUFDeEMsK0JBQStCLE9BQU8sRUFBRSxRQUFRO0FBQ2hELGNBQWMsaUJBQWlCLEVBQUUsS0FBSyxFQUFFLE1BQU0s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Z0JBQWdCLENBQUMsZUFBZTtBQUM1Syw4Q0FBOEMsVUFBVSxDQUFDLG9CQUFvQjtBQUM3RSxlQUFlLFFBQVEsQ0FBQyxXQUFXLENBQUMsa0NBQWtDLENBQUMsb0JBQW9CO0FBQzNGLFVBQVUsY0FBYyxFQUFFLGNBQWM7QUFDeEMsZUFBZSxVQUFVLEVBQUUsV0FBVyxFQUFFLFNBQVM7QUFDakQseUJBQXlCLFlBQVk7QUFDckMsK0JBQStCLGNBQWM7QUFDN0MsaUNBQWlDLFlBQVk7QUFDN0MsNkJBQTZCLFdBQVc7QUFDeEMsYUFBYSxVQUFVLENBQUMsY0FBYyxDQUFDLFVBQVUsQ0FBQyx3QkFBd0IsQ0FBQyxpQkFBaUIsQ0FBQyxlQUFlLENBQUMsZUFBZSxFQUFFLGdCQUFnQjtBQUM5SSwyQkFBMkIsVUFBVTtBQUNyQztJQUNJLG9CQUFvQixRQUFRO0FBQ2hDO0FBQ0E7SUFDSSxZQUFZLFlBQVk7QUFDNUI7QUFDQTtJQUNJLGNBQWMsWUFBWTtBQUM5QiIsInNvdXJjZXNDb250ZW50IjpbIi5ub3NlbGVjdCB7LXdlYmtpdC10b3VjaC1jYWxsb3V0OiBub25lOyAtd2Via2l0LXVzZXItc2VsZWN0OiBub25lOyAta2h0bWwtdXNlci1zZWxlY3Q6IG5vbmU7IC1tb3otdXNlci1zZWxlY3Q6IG5vbmU7IC1tcy11c2VyLXNlbGVjdDogbm9uZTsgdXNlci1zZWxlY3Q6IG5vbmVzfVxuXG4vKlxuICAgIFdhdHYgUGxheWVyIENvbW1vblxuKi9cbi5zdnAtaW52aXNpYmxle2Rpc3BsYXk6bm9uZSAhaW1wb3J0YW50fVxuLndhcC1kaXZsaW5le3dpZHRoOjJweDtoZWlnaHQ6MjNweDtiYWNrZ3JvdW5kLWNvbG9yOiNkNWQ1ZDU7bWFyZ2luOjAgOHB4fVxuLndhcC1yZXBlYXQsIC53YXAtYXV0b25leHR7ZmlsbDojNzk3OTc5OyBzdHJva2U6Izc5Nzk3OX1cbi53YXAtcmVwZWF0LmFjdGl2ZSwgLndhcC1hdXRvbmV4dC5hY3RpdmV7ZmlsbDpyZ2IoOTIsIDE0MywgMjU1KTsgc3Ryb2tlOnJnYig5MiwgMTQzLCAyNTUpfVxuXG4vKlxuICAgIFdhdHYgVmlkZW8gUGxheWVyXG4qL1xuXG4vKiBzdnAgY29tbW9uIHN0eWxlcyAqL1xuLnN2cC1yb290e3Bvc2l0aW9uOnJlbGF0aXZlOyB3aWR0aDoxMDAlOyBoZWlnaHQ6MTAwJTsgYmFja2dyb3VuZC1jb2xvcjpibGFjazsgY29sb3I6d2hpdGU7IG1pbi13aWR0aDoyODVweH1cbi5zdnAtcm9vdCAqe2JveC1zaXppbmc6IGJvcmRlci1ib3g7IGZvbnQtc2l6ZToxM3B4OyBjb2xvcjp3aGl0ZX1cbi5zdnAtcm9vdCBidXR0b257YmFja2dyb3VuZDpub25lOyBib3JkZXI6bm9uZTsgd2lkdGg6MDsgaGVpZ2h0OjA7IHBhZGRpbmc6MDsgbWluLXdpZHRoOjMwcHg7IG1pbi1oZWlnaHQ6MzBweDsgY3Vyc29yOnBvaW50ZXI7IGNvbG9yOndoaXRlOyB0cmFuc2l0aW9uOmNvbG9yIDAuMnM7IHBvc2l0aW9uOnJlbGF0aXZlfVxuLnN2cC1yb290IHN2Z3tmaWxsOndoaXRlOyB0cmFuc2l0aW9uOmZpbGwgMC4yczsgdmVydGljYWwtYWxpZ246Ym90dG9tfVxuLnN2cC1yb290IC53YXAtcmVwZWF0IHN2ZywgLnN2cC1yb290IC53YXAtYXV0b25leHQgc3Zne2ZpbGw6I2IzYjNiMzsgc3Ryb2tlOiNiM2IzYjN9XG4uc3ZwLXJvb3QgLndhcC1yZXBlYXQuYWN0aXZlIHN2ZywgLnN2cC1yb290IC53YXAtYXV0b25leHQuYWN0aXZlIHN2Z3tmaWxsOndoaXRlOyBzdHJva2U6d2hpdGV9XG4uc3ZwLXJvb3QgLndhcC1kaXZsaW5le2JhY2tncm91bmQtY29sb3I6Izc0NzQ3NH1cblxuLyogcGxheWVyIGxheW91dCAqL1xuLnN2cC1zdGFnZXtwb3NpdGlvbjpyZWxhdGl2ZTsgbGVmdDowOyB0b3A6MDsgb3ZlcmZsb3c6aGlkZGVufVxuLnN2cC12aWRlb3twb3NpdGlvbjphYnNvbHV0ZTsgbGVmdDowOyB0b3A6MDsgd2lkdGg6MTAwJTsgaGVpZ2h0OjEwMCU7IGJhY2tncm91bmQtY29sb3I6IzJhMmEyYX1cbi5zdnAtdmlkZW8gZW1iZWR7d2lkdGg6MTAwJTsgaGVpZ2h0OjEwMCV9XG4uc3ZwLWF1ZGlvLWZsLCAuc3ZwLWF1ZGlvLWZsICp7d2lkdGg6MDsgaGVpZ2h0OjB9XG4uc3ZwLWNvbnRyb2xze3Bvc2l0aW9uOmFic29sdXRlOyB0b3A6MDsgbGVmdDowOyBib3R0b206MDsgcmlnaHQ6MDsgdHJhbnNpdGlvbjpvcGFjaXR5IDAuMnN9XG4uc3ZwLWNvbnRyb2xzLmhpZGV7b3BhY2l0eTowfVxuXG4vKiBzdnAgdG9wLCBib3R0b20qL1xuLnN2cC1ib3R0b20sIC5zdnAtdG9wIHtwYWRkaW5nOjhweCA1cHg7IGJhY2tncm91bmQ6cmdiYSgwLDAsMCwwLjQpfVxuXG4vKiBzdnAgdG9wICovXG4uc3ZwLXRvcHtwb3NpdGlvbjphYnNvbHV0ZTsgbGVmdDowOyB0b3A6MDsgd2lkdGg6MTAwJTsgdGV4dC1hbGlnbjpyaWdodDsgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHJnYmEoMCwgMCwgMCwgMC42KSwgcmdiYSgwLCAwLCAwLCAwKSl9XG5cbi8qIHN2cCBib3R0b20gKi9cbi8qIGJvdHRvbSBsYXlvdXQgKi9cbi5zdnAtYm90dG9te3Bvc2l0aW9uOmFic29sdXRlOyBsZWZ0OjA7IGJvdHRvbTowOyB3aWR0aDoxMDAlOyBoZWlnaHQ6YXV0bzsgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHJnYmEoMCwgMCwgMCwgMCksIHJnYmEoMCwgMCwgMCwgMC42KSl9XG4uc3ZwLWRldGFpbHN7ZGlzcGxheTpmbGV4OyBkaXNwbGF5Oi13ZWJraXQtZmxleGJveDsgZGlzcGxheTotd2Via2l0LWZsZXg7IGRpc3BsYXk6LW1vei1mbGV4OyBkaXNwbGF5Oi1tcy1mbGV4Ym94OyBqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjsgLXdlYmtpdC1qdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjsgLW1vei1qdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjsgLW1zLWZsZXgtcGFjazpzcGFjZS1iZXR3ZWVufVxuLnN2cC1sZWZ0LCAuc3ZwLXJpZ2h0e2Rpc3BsYXk6ZmxleDsgZGlzcGxheTotd2Via2l0LWZsZXhib3g7IGRpc3BsYXk6LXdlYmtpdC1mbGV4OyBkaXNwbGF5Oi1tb3otZmxleDsgZGlzcGxheTotbXMtZmxleGJveDsgYWxpZ24taXRlbXM6Y2VudGVyOyAtd2Via2l0LWFsaWduLWl0ZW1zOmNlbnRlcjsgLW1vei1hbGlnbi1pdGVtczpjZW50ZXI7IC1tcy1mbGV4LWFsaWduOmNlbnRlcn1cbi5zdnAtbGVmdCA+ICosIC5zdnAtcmlnaHQgPiAqe21hcmdpbjowIDVweH1cblxuLyogYm90dG9tIHRpbWVsaW5lICovXG4uc3ZwLXRpbWVsaW5le3BhZGRpbmc6N3B4IDA7IGN1cnNvcjpwb2ludGVyOyB0cmFuc2l0aW9uOmFsbCAuMXM7fVxuLnN2cC10bC1iYWNre2hlaWdodDozcHg7IGJhY2tncm91bmQ6cmdiYSgyNTUsMjU1LDI1NSwuMik7IHBvc2l0aW9uOnJlbGF0aXZlOyB0cmFuc2l0aW9uOmFsbCAuMXM7fVxuLnN2cC10bC1idWZmZXJ7cG9zaXRpb246YWJzb2x1dGU7IGxlZnQ6MDsgdG9wOjA7IGJhY2tncm91bmQ6cmdiYSgyNTUsMjU1LDI1NSwuNCk7IGhlaWdodDoxMDAlOyB3aWR0aDo1MCU7IHRyYW5zaXRpb246YmFja2dyb3VuZCAwLjJzLCB3aWR0aCAwLjVzfVxuLnN2cC10bC1iYXJ7cG9zaXRpb246YWJzb2x1dGU7IGxlZnQ6MDsgdG9wOjA7IGJhY2tncm91bmQ6I2YwMDsgaGVpZ2h0OjEwMCU7IHdpZHRoOjUwJTsgdHJhbnNpdGlvbjpiYWNrZ3JvdW5kIDAuMnN9XG4uc3ZwLXRpbWVsaW5lOmhvdmVyIC5zdnAtdGwtYmFja3toZWlnaHQ6NXB4OyB0cmFuc2l0aW9uOmFsbCAuMXN9XG4uc3ZwLXRpbWVsaW5lOmhvdmVyIC5zdnAtdGwtYmFye2JhY2tncm91bmQ6I2YwMH1cblxuLyogYm90dG9tIHBsYXksIHZvbHVtZSwgcGxheXRpbWUuLi4uICovXG4uc3ZwLXZvbHVtZXtwYWRkaW5nOjEwcHggMDsgd2lkdGg6ODBweDsgY3Vyc29yOnBvaW50ZXJ9XG4uc3ZwLXZvbC1iYWNre2hlaWdodDo1cHg7IGJhY2tncm91bmQtY29sb3I6cmdiYSgyNTUsMjU1LDI1NSwuNCk7IGJvcmRlci1yYWRpdXM6NHB4OyBvdmVyZmxvdzpoaWRkZW59XG4uc3ZwLXZvbC1iYXJ7aGVpZ2h0OjEwMCU7IHdpZHRoOjUwJTsgYmFja2dyb3VuZC1jb2xvcjp3aGl0ZTsgdHJhbnNpdGlvbjpiYWNrZ3JvdW5kIDAuMnN9XG4vKiAuc3ZwLXZvbHVtZTpob3ZlciAuc3ZwLXZvbC1iYXJ7YmFja2dyb3VuZC1jb2xvcjpyZ2IoMTQ5LCAyMTYsIDI1NSl9ICovXG4uc3ZwLXBsYXkgc3Zne2Rpc3BsYXk6bm9uZX1cbi5zdnAtcGxheS5wbGF5IC5zdnAtc3ZnLXBhdXNle2Rpc3BsYXk6aW5saW5lfVxuLnN2cC1wbGF5Om5vdCgucGxheSkgLnN2cC1zdmctcGxheXtkaXNwbGF5OmlubGluZX1cbi5zdnAtbXV0ZSBzdmd7ZGlzcGxheTpub25lfVxuLnN2cC1tdXRlLm11dGUgLnN2cC1zdmctbXV0ZXtkaXNwbGF5OmlubGluZX1cbi5zdnAtbXV0ZTpub3QoLm11dGUpIC5zdnAtc3ZnLXZvbHVtZXtkaXNwbGF5OmlubGluZX1cbi5zdnAtZnVsbCBzdmd7ZGlzcGxheTpub25lfVxuLnN2cC1mdWxsLmZ1bGwgLnN2cC1zdmctbWlue2Rpc3BsYXk6aW5saW5lfVxuLnN2cC1mdWxsOm5vdCguZnVsbCkgLnN2cC1zdmctZnVsbHtkaXNwbGF5OmlubGluZX1cbi5zdnAtY3Vyc29yLXRpbWV7ZGlzcGxheTpub25lOyBwb3NpdGlvbjphYnNvbHV0ZTsgbGVmdDowOyBib3R0b206MDsgYmFja2dyb3VuZC1jb2xvcjojMjkyOTI5OyBwYWRkaW5nOjJweCA2cHg7IGJvcmRlci1yYWRpdXM6M3B4fVxuLnN2cC1jdXJzb3ItdGltZS5hY3RpdmV7ZGlzcGxheTppbmxpbmUtYmxvY2t9XG4uc3ZwLXF1YWxpdHksIC5zdnAtc3BlZWR7d2lkdGg6YXV0byAhaW1wb3J0YW50fVxuLnN2cC1xdWFsaXR5e2Rpc3BsYXk6bm9uZX1cbi5zdnAtcXVhbGl0eS5hY3RpdmV7ZGlzcGxheTpibG9ja31cbi5zdnAtdGltZXtsaW5lLWhlaWdodDogMC45ZW19XG5cblxuLyogYm90dG9tIHBvcHVwIHBhbmVsICovXG4uc3ZwLXBhbmVse3Zpc2liaWxpdHk6aGlkZGVuOyBwb3NpdGlvbjphYnNvbHV0ZTsgcGFkZGluZzoxMHB4OyByaWdodDo1cHg7IGJvdHRvbTo1MHB4OyBiYWNrZ3JvdW5kLWNvbG9yOnJnYmEoMCwgMCwgMCwgMC44KTsgYm9yZGVyLXJhZGl1czo1cHg7IHRleHQtYWxpZ246Y2VudGVyOyBvcGFjaXR5OjA7IHRyYW5zaXRpb246b3BhY2l0eSAwLjJzLCB0cmFuc2Zvcm0gMC4ycywgdmlzaWJpbGl0eSAwLjFzIDAuMnM7IHRyYW5zZm9ybTpzY2FsZSg5MCUsIDkwJSl9XG4uc3ZwLXBhbmVsLmFjdGl2ZXt2aXNpYmlsaXR5OnZpc2libGU7IGRpc3BsYXk6YmxvY2s7IG9wYWNpdHk6MTsgdHJhbnNmb3JtOm5vbmU7IHRyYW5zaXRpb246b3BhY2l0eSAwLjJzLCB0cmFuc2Zvcm0gMC4yc31cbi5zdnAtcG4tdGl0bGV7Zm9udC13ZWlnaHQ6Ym9sZDsgcGFkZGluZy1ib3R0b206M3B4OyBtYXJnaW4tYm90dG9tOjVweDsgYm9yZGVyLWJvdHRvbTpzb2xpZCAxcHggI2I0ZGNmZjsgY29sb3I6I2I0ZGNmZn1cbi5zdnAtcG4tc2VsZWN0ID4gKiB7ZGlzcGxheTpibG9jazsgd2lkdGg6MDsgbWluLXdpZHRoOjc1cHg7IGNvbG9yOndoaXRlOyBwYWRkaW5nOjVweCA1cHg7IGJvcmRlci1yYWRpdXM6M3B4OyBjdXJzb3I6cG9pbnRlcjsgYm9yZGVyLWJvdHRvbTpzb2xpZCAxcHggcmdiYSgyNTUsIDI1NSwgMjU1LCAuMil9XG4uc3ZwLXBuLXNlbGVjdCA+ICo6bGFzdC1jaGlsZCB7Ym9yZGVyLWJvdHRvbTpub25lOyBwYWRkaW5nLWJvdHRvbTowfVxuLnN2cC1wbi1zZWxlY3QgPiAqOmhvdmVyIHtiYWNrZ3JvdW5kLWNvbG9yOnJnYmEoMjU1LCAyNTUsIDI1NSwgMC40KX1cblxuQG1lZGlhKG1heC13aWR0aDo2MTBweCl7XG4gICAgLnN2cC1sZWZ0ID4gKjpub3QoLnN2cC12b2x1bWUpIHttYXJnaW46MnB4fVxufVxuQG1lZGlhKG1heC13aWR0aDo1NTBweCl7XG4gICAgLnN2cC1sZWZ0ID4gKjpub3QoLnN2cC12b2x1bWUpIHttYXJnaW46MH1cbn1cbkBtZWRpYShtYXgtd2lkdGg6NDYwcHgpe1xuICAgIC5zdnAtdm9sdW1le3dpZHRoOjU1cHh9XG4gICAgLnN2cC1yb290ICp7Zm9udC1zaXplOjEzcHh9XG4gICAgLnN2cC1yaWdodCA+ICoge21hcmdpbjowOyBtYXgtd2lkdGg6NTVweH1cblxuICAgIC5zdnAtcGFuZWx7dG9wOjNweDsgcmlnaHQ6M3B4OyBib3R0b206NDRweH1cbiAgICAuc3ZwLXBuLXNlbGVjdCB7b3ZlcmZsb3cteTphdXRvOyBtYXgtaGVpZ2h0OmNhbGMoMTAwJSAtIDI2cHgpfVxufVxuQG1lZGlhKG1heC13aWR0aDo0MjBweCl7XG4gICAgLndhcC1kaXZsaW5lOm5vdCguc3ZwLWludmlzaWJsZSkgfiAuc3ZwLXZvbHVtZXtkaXNwbGF5Om5vbmV9XG59XG5AbWVkaWEobWF4LXdpZHRoOjM1MHB4KXtcbiAgICAuc3ZwLXZvbHVtZXtkaXNwbGF5Om5vbmV9XG59XG5cbi8qIGFsZXJ0ICovXG4uc3ZwLWFsZXJ0e2Rpc3BsYXk6bm9uZTsgcG9zaXRpb246YWJzb2x1dGU7IGxlZnQ6MDsgdG9wOjA7IHJpZ2h0OjA7IGJvdHRvbTowOyBvdmVyZmxvdzpoaWRkZW47IGJhY2tncm91bmQtY29sb3I6cmdiYSgwLCAwLCAwLCAwLjUpfVxuLnN2cC1hbGVydC5hY3RpdmV7ZGlzcGxheTpibG9ja31cbi5zdnAtYWwtY29udGVudHtkaXNwbGF5Om5vbmU7IHBvc2l0aW9uOmFic29sdXRlOyBsZWZ0OjUwJTsgdG9wOjUwJTsgdHJhbnNmb3JtOnRyYW5zbGF0ZSgtNTAlLCAtNTAlKTsgYm9yZGVyLXJhZGl1czo1MHB4O31cbi5zdnAtYWwtY29udGVudC5hY3RpdmV7ZGlzcGxheTpibG9ja31cbi5zdnAtYWwtc2ltYm9se3dpZHRoOjgwcHg7IGhlaWdodDo4MHB4OyBiYWNrZ3JvdW5kOnJnYmEoMCwwLDAsLjQpO31cbi5zdnAtYWwtc2ltYm9sIHN2Z3tmaWx0ZXI6IGRyb3Atc2hhZG93KDNweCA1cHggNHB4IHJnYigwIDAgMCAvIDAuNCkpfVxuLnN2cC1hbC1zaW1ib2wuYWN0aXZle2FuaW1hdGlvbjpzaW1ib2wgMC43czstd2Via2l0LWFuaW1hdGlvbjpzaW1ib2wgMC43czstbW96LWFuaW1hdGlvbjpzaW1ib2wgMC43c31cbi5zdnAtYWwtdGl0bGV7Y3Vyc29yOnBvaW50ZXJ9XG4uc3ZwLWFsLXRpdGxlIHN2Z3tmaWx0ZXI6IGRyb3Atc2hhZG93KDJweCAzcHggM3B4IHJnYigwIDAgMCAvIDAuNCkpfVxuLnN2cC1hbC10aXRsZSAuc3ZwLWFsLWNvbnRlbnR7d2lkdGg6MTAwcHg7IGhlaWdodDoxMDBweH1cbi5zdnAtYWwtZXJyb3J7YmFja2dyb3VuZC1jb2xvcjojMmEyYTJhfVxuLnN2cC1hbC1lcnJvciAuc3ZwLWFsLWNvbnRlbnR7d2lkdGg6NjAlOyBkaXNwbGF5OmZsZXg7IGRpc3BsYXk6LXdlYmtpdC1mbGV4Ym94OyBkaXNwbGF5Oi13ZWJraXQtZmxleDsgZGlzcGxheTotbW96LWZsZXg7IGRpc3BsYXk6LW1zLWZsZXhib3g7XG4gICAgIGp1c3RpZnktY29udGVudDpjZW50ZXI7IC13ZWJraXQtanVzdGlmeS1jb250ZW50OmNlbnRlcjsgLW1vei1qdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyOyAtbXMtZmxleC1wYWNrOmNlbnRlcjtcbiAgICAgYWxpZ24taXRlbXM6Y2VudGVyOyAtd2Via2l0LWFsaWduLWl0ZW1zOmNlbnRlcjsgLW1vei1hbGlnbi1pdGVtczpjZW50ZXI7IC1tcy1mbGV4LWFsaWduOmNlbnRlcn1cbi5zdnAtYWwtZXJyb3IgKntsaW5lLWJyZWFrOmFueXdoZXJlfVxuQG1lZGlhKG1heC13aWR0aDo1MDBweCl7XG4gICAgLnN2cC1hbC1zaW1ib2x7d2lkdGg6NzBweDsgaGVpZ2h0OjcwcHh9XG4gICAgLnN2cC1hbC10aXRsZSAuc3ZwLWFsLWNvbnRlbnR7d2lkdGg6NzBweDsgaGVpZ2h0OjcwcHh9XG59XG5cbkBrZXlmcmFtZXMgc2ltYm9sIHtcbiAgICAwJSB7dHJhbnNmb3JtOnRyYW5zbGF0ZSgtNTAlLCAtNTAlKSBzY2FsZSg1MCUsIDUwJSk7IG9wYWNpdHk6MX1cbiAgICAxMDAlIHt0cmFuc2Zvcm06dHJhbnNsYXRlKC01MCUsIC01MCUpIHNjYWxlKDEwMCUsIDEwMCUpOyBvcGFjaXR5OjB9XG59XG5ALXdlYmtpdC1rZXlmcmFtZXMgc2ltYm9sIHtcbiAgICAwJSB7dHJhbnNmb3JtOnRyYW5zbGF0ZSgtNTAlLCAtNTAlKSBzY2FsZSg1MCUsIDUwJSk7IG9wYWNpdHk6MX1cbiAgICAxMDAlIHt0cmFuc2Zvcm06dHJhbnNsYXRlKC01MCUsIC01MCUpIHNjYWxlKDEwMCUsIDEwMCUpOyBvcGFjaXR5OjB9XG59XG5ALW1vei1rZXlmcmFtZXMgc2ltYm9sIHtcbiAgICAwJSB7dHJhbnNmb3JtOnRyYW5zbGF0ZSgtNTAlLCAtNTAlKSBzY2FsZSg1MCUsIDUwJSk7IG9wYWNpdHk6MX1cbiAgICAxMDAlIHt0cmFuc2Zvcm06dHJhbnNsYXRlKC01MCUsIC01MCUpIHNjYWxlKDEwMCUsIDEwMCUpOyBvcGFjaXR5OjB9XG59XG5cbi8qIGJ1ZmZlcmluZyAqL1xuLnN2cC1idWZmZXJpbmcge3Bvc2l0aW9uOmFic29sdXRlOyB3aWR0aDoxMDAlOyBoZWlnaHQ6MTAwJTsgdG9wOjA7IGxlZnQ6MDsgYmFja2dyb3VuZC1jb2xvcjpyZ2JhKDAsIDAsIDAsIDAuMyk7IHBvaW50ZXItZXZlbnRzOm5vbmU7IHRyYW5zaXRpb246b3BhY2l0eSAwLjNzOyBvcGFjaXR5OjB9XG4uc3ZwLWJ1ZmZlcmluZy5hY3RpdmUge2Rpc3BsYXk6YmxvY2t9XG4uc3ZwLWJ1ZmZlcmluZyBzcGFue2NvbG9yOndoaXRlOyBwb3NpdGlvbjphYnNvbHV0ZTsgZGlzcGxheTpibG9jazsgdG9wOmNhbGMoNTElICsgMzBweCk7IGxlZnQ6MDsgd2lkdGg6MTAwJTsgdGV4dC1hbGlnbjpjZW50ZXI7IGxpbmUtaGVpZ2h0OjEuNmVtfVxuLnN2cC1sb2FkaW5nIHtwb3NpdGlvbjogcmVsYXRpdmU7IHRvcDogY2FsYyg1MCUgLSA0OHB4KTsgd2lkdGg6IDk2cHg7IGhlaWdodDogOTZweDsgbWFyZ2luOiAwIGF1dG87IHBhZGRpbmc6IDEwcHh9XG4uc3ZwLWRvdCBkaXYge3Bvc2l0aW9uOiBhYnNvbHV0ZTsgbGVmdDogMDsgcmlnaHQ6IDA7IHRvcDogMDsgYm90dG9tOiAwOyB3aWR0aDogMjBweDsgaGVpZ2h0OiAyMHB4OyBtYXJnaW46IGF1dG87IGJvcmRlci1yYWRpdXM6IDEwcHg7IGJhY2tncm91bmQtY29sb3I6ICNmZmY7IHRyYW5zZm9ybTogc2NhbGUoMCk7IGFuaW1hdGlvbjogZG90IDEuNXMgbGluZWFyIGluZmluaXRlOy13ZWJraXQtYW5pbWF0aW9uOiBkb3QgMS41cyBsaW5lYXIgaW5maW5pdGU7LW1vei1hbmltYXRpb246IGRvdCAxLjVzIGxpbmVhciBpbmZpbml0ZX1cbi5zdnAtZG90IGRpdjpudGgtY2hpbGQoMSkge2xlZnQ6IC01MHB4OyBhbmltYXRpb24tZGVsYXk6IC0wLjFzOy13ZWJraXQtYW5pbWF0aW9uLWRlbGF5OiAtMC4xczstbW96LWFuaW1hdGlvbi1kZWxheTogLTAuMXN9XG4uc3ZwLWRvdCBkaXY6bnRoLWNoaWxkKDMpIHtyaWdodDogLTUwcHg7IGFuaW1hdGlvbi1kZWxheTogMC4xczstd2Via2l0LWFuaW1hdGlvbi1kZWxheTogMC4xczstbW96LWFuaW1hdGlvbi1kZWxheTogMC4xc31cbkBrZXlmcmFtZXMgZG90IHtcbiAgICAwJSB7dHJhbnNmb3JtOiBzY2FsZSgwKTt9XG4gICAgMzUlIHt0cmFuc2Zvcm06IHNjYWxlKDEpO31cbiAgICA3MCUge3RyYW5zZm9ybTogc2NhbGUoMCk7fVxuICAgIDEwMCUge3RyYW5zZm9ybTogc2NhbGUoMCk7fVxufVxuQC13ZWJraXQta2V5ZnJhbWVzIGRvdCB7XG4gICAgMCUge3RyYW5zZm9ybTogc2NhbGUoMCk7fVxuICAgIDM1JSB7dHJhbnNmb3JtOiBzY2FsZSgxKTt9XG4gICAgNzAlIHt0cmFuc2Zvcm06IHNjYWxlKDApO31cbiAgICAxMDAlIHt0cmFuc2Zvcm06IHNjYWxlKDApO31cbn1cbkAtbW96LWtleWZyYW1lcyBkb3Qge1xuICAgIDAlIHt0cmFuc2Zvcm06IHNjYWxlKDApO31cbiAgICAzNSUge3RyYW5zZm9ybTogc2NhbGUoMSk7fVxuICAgIDcwJSB7dHJhbnNmb3JtOiBzY2FsZSgwKTt9XG4gICAgMTAwJSB7dHJhbnNmb3JtOiBzY2FsZSgwKTt9XG59XG5cbi8qIHlvdXR1YmUgKi9cbi5zdnAtaWZyYW1lIHtwb3NpdGlvbjphYnNvbHV0ZTsgdG9wOjA7IGxlZnQ6MDsgd2lkdGg6MTAwJTsgaGVpZ2h0OjEwMCV9XG4uc3ZwLWNvdmVyLXRvcHt3aWR0aDoxMDAlOyBwb3NpdGlvbjphYnNvbHV0ZX1cbi5zdnAtY292ZXItYm90dG9te3dpZHRoOjEwMCU7IGJvdHRvbTowcHg7IGZvbnQtc2l6ZTowOyBiYWNrZ3JvdW5kOnJnYmEoMCwwLDAsMCk7IHBvc2l0aW9uOmFic29sdXRlOyBsZWZ0OjBweDsgY3Vyc29yOnBvaW50ZXJ9XG4uc3ZwLWNvdmVyLXNob3J0Y3V0e2Rpc3BsYXk6aW5saW5lLWJsb2NrOyB3aWR0aDoxMDAlOyBtYXgtd2lkdGg6MjEwcHg7IGJvdHRvbTo1cHg7IGxlZnQ6MDsgcG9zaXRpb246YWJzb2x1dGU7IHRleHQtYWxpZ246Y2VudGVyOyBiYWNrZ3JvdW5kLWNvbG9yOiMzMzM7IHBhZGRpbmc6MTRweCAwOyBmb250LXNpemU6MTdweDsgY3Vyc29yOnBvaW50ZXI7IHRyYW5zaXRpb246Y29sb3IgMC4yNXM7IHRleHQtZGVjb3JhdGlvbjogbm9uZTsgbWluLWhlaWdodDoyMHB4fVxuLnN2cC1jb3Zlci1zaG9ydGN1dCAqe2NvbG9yOndoaXRlfVxuLnN2cC1jb3Zlci1zaG9ydGN1dDpob3ZlciAqe2NvbG9yOiByZ2IoMTY1LCAxNjUsIDE2NSl9XG4uc3ZwLWNvdmVyLWZ1bGxzY3JlZW57ZGlzcGxheTppbmxpbmUtYmxvY2s7IHdpZHRoOjUycHg7IGhlaWdodDo0MHB4OyBwb3NpdGlvbjphYnNvbHV0ZTsgYm90dG9tOjA7IHJpZ2h0OjBweDsgYmFja2dyb3VuZC1jb2xvcjpyZ2JhKDI1NSwwLDAsMCk7IGJvcmRlcjpub25lOyBwYWRkaW5nLWxlZnQ6MDsgcGFkZGluZy10b3A6MDsgdGV4dC1hbGlnbjpsZWZ0OyBjdXJzb3I6cG9pbnRlcjsgb3BhY2l0eTowfVxuLnN2cC1jb3Zlci1mdWxsc2NyZWVuLm1vYmlsZXtyaWdodDo0cHg7IGJvdHRvbTo0cHh9XG4uc3ZwLWNvdmVyLWZ1bGxzY3JlZW4gc3ZnIHtmaWxsOndoaXRlOyB3aWR0aDo0MHB4OyBoZWlnaHQ6NDBweDsgcG9pbnRlci1ldmVudHM6bm9uZX1cbkBtZWRpYShtYXgtd2lkdGg6NTE0cHgpe1xuICAgIC5zdnAtY292ZXItYm90dG9te2Rpc3BsYXk6bm9uZSAhaW1wb3J0YW50fVxufVxuQG1lZGlhKG1heC13aWR0aDo1MTRweCl7XG4gICAgLnN2cC1jb3Zlci1mdWxsc2NyZWVuOm5vdCgubW9iaWxlKXt3aWR0aDo0OHB4OyBoZWlnaHQ6MzZweDt9XG4gICAgLnN2cC1jb3Zlci1mdWxsc2NyZWVuOm5vdCgubW9iaWxlKSBzdmd7d2lkdGg6MzZweDsgaGVpZ2h0OjM2cHg7fVxufVxuXG4uc3ZwLXJvb3QteW91dHViZXtiYWNrZ3JvdW5kLWNvbG9yOmJsYWNrOyB3aWR0aDoxMDAlOyBoZWlnaHQ6MTAwJX1cbi5zdnAtc3RhZ2UteW91dHViZXtwb3NpdGlvbjpyZWxhdGl2ZTsgd2lkdGg6MTAwJX1cbi5zdnAtc3RhZ2UteW91dHViZSBpZnJhbWV7cG9zaXRpb246YWJzb2x1dGU7IHdpZHRoOjEwMCU7IGhlaWdodDoxMDAlOyBsZWZ0OjB9XG4uc3ZwLXN0YWdlLXlvdXR1YmUuZnAtd3JhcHtwYWRkaW5nLWJvdHRvbTowfVxuXG5cbi8qXG4gICAgV2F0diBBdWRpbyBQbGF5ZXJcbiovXG4ud2FwLXBsYXllciB7d2lkdGg6MTAwJTtwYWRkaW5nOiAzcHggOHB4O2JhY2tncm91bmQtY29sb3I6cmdiKDI1NSwgMjU1LCAyNTUpO2Rpc3BsYXk6ZmxleDsgZGlzcGxheTotd2Via2l0LWZsZXhib3g7IGRpc3BsYXk6LXdlYmtpdC1mbGV4OyBkaXNwbGF5Oi1tb3otZmxleDsgZGlzcGxheTotbXMtZmxleGJveDsgYWxpZ24taXRlbXM6IGNlbnRlcjsgLXdlYmtpdC1hbGlnbi1pdGVtczpjZW50ZXI7IC1tb3otYWxpZ24taXRlbXM6Y2VudGVyOyAtbXMtZmxleC1hbGlnbjpjZW50ZXJ9XG4ud2FwLXBsYXllciwgLndhcC1wbGF5ZXIgKntib3gtc2l6aW5nOmJvcmRlci1ib3h9XG5cbi53YXAtcGxheWVyID4gKiB7bWFyZ2luOjAgNXB4fVxuLndhcC1wbGF5ZXIgc3Zne3ZlcnRpY2FsLWFsaWduOmJvdHRvbX1cbi53YXAtY3VycmVudC10aW1lLCAud2FwLWR1cmF0aW9uIHtjb2xvcjpyZ2IoMTE2LCAxMTYsIDExNik7IGZvbnQtc2l6ZToxNHB4OyBwb3NpdGlvbjpyZWxhdGl2ZTsgdG9wOjFweDsgbWluLXdpZHRoOjQwcHh9XG4ud2FwLXBsYXllcjpub3QoLnBsYXkpOm5vdCgucGF1c2UpIC53YXAtZHVyYXRpb24ge2Rpc3BsYXk6bm9uZX1cbi53YXAtYnRuc3ttYXJnaW46MDsgZGlzcGxheTpmbGV4OyBkaXNwbGF5Oi13ZWJraXQtZmxleGJveDsgZGlzcGxheTotd2Via2l0LWZsZXg7IGRpc3BsYXk6LW1vei1mbGV4OyBkaXNwbGF5Oi1tcy1mbGV4Ym94OyBhbGlnbi1pdGVtczpjZW50ZXI7IC13ZWJraXQtYWxpZ24taXRlbXM6Y2VudGVyOyAtbW96LWFsaWduLWl0ZW1zOmNlbnRlcjsgLW1zLWZsZXgtYWxpZ246Y2VudGVyfVxuLndhcC1idG5zIGJ1dHRvbiB7YmFja2dyb3VuZDogbm9uZTtib3JkZXI6bm9uZTtjb2xvcjojNDQ0O2N1cnNvcjpwb2ludGVyO291dGxpbmU6bm9uZTtwYWRkaW5nOjA7IG1hcmdpbi1yaWdodDo4cHh9XG4ud2FwLXBsYXllci5ub2RhdGEgLndhcC1idG5zIGJ1dHRvbntwb2ludGVyLWV2ZW50czogbm9uZTtvcGFjaXR5OjAuNTt9XG4ud2FwLWJ0bnMgLndhcC1wbGF5e2JvcmRlcjpzb2xpZCAxcHggI2VlZTsgYm9yZGVyLXJhZGl1czo1MCU7IHdpZHRoOjM5cHg7IGhlaWdodDozOXB4fVxuLndhcC1wbGF5ID4gKnt3aWR0aDoyNXB4OyBoZWlnaHQ6MjVweDsgZmlsbDojNTU1OyBwb3NpdGlvbjpyZWxhdGl2ZTsgbGVmdDoxcHg7IHRvcDowfVxuLndhcC1wbGF5ZXIgLndhcC1zdmctcGF1c2V7ZGlzcGxheTpub25lfVxuLndhcC1wbGF5ZXIucGxheSAud2FwLXN2Zy1wYXVzZXtkaXNwbGF5OmlubGluZTsgbGVmdDphdXRvfVxuLndhcC1wbGF5ZXIucGxheSAud2FwLXN2Zy1wbGF5e2Rpc3BsYXk6bm9uZX1cbi53YXAtdGltZSB7b3BhY2l0eTogMTtoZWlnaHQ6NnB4O2JhY2tncm91bmQtY29sb3I6I2Y1ZjVmNTtib3JkZXItcmFkaXVzOjVweDtjdXJzb3I6cG9pbnRlcjtvdmVyZmxvdzogaGlkZGVuO2ZsZXgtZ3JvdzoxOy13ZWJraXQtZmxleC1ncm93OjE7LW1vei1mbGV4LWdyb3c6MTstbXMtZmxleC1ncm93OjF9XG4ud2FwLXBsYXllcjpub3QoLnBsYXkpOm5vdCgucGF1c2UpIC53YXAtdGltZSB7b3BhY2l0eTogMDtwb2ludGVyLWV2ZW50czogbm9uZX1cbi53YXAtcHJvZ3Jlc3Mge3dpZHRoOjAlO2hlaWdodDoxMDAlO2JhY2tncm91bmQtY29sb3I6cmdiKDkyLCAxNDMsIDI1NSk7cG9pbnRlci1ldmVudHM6IG5vbmV9XG4ud2FwLW11dGV7Y3Vyc29yOnBvaW50ZXI7IG1hcmdpbi1yaWdodDowfVxuLndhcC1tdXRlID4gKiB7d2lkdGg6MjNweDsgaGVpZ2h0OjIzcHg7IGZpbGw6IzQ0NH1cbi53YXAtbXV0ZSAud2FwLXN2Zy1tdXRlIHtkaXNwbGF5Om5vbmV9XG4ud2FwLXBsYXllci5tdXRlIC53YXAtc3ZnLW11dGV7ZGlzcGxheTppbmxpbmV9XG4ud2FwLXBsYXllci5tdXRlIC53YXAtc3ZnLXZvbHVtZXtkaXNwbGF5Om5vbmV9XG4ud2FwLXBsYXllci5tdXRlIC53YXAtdm9sdW1le29wYWNpdHk6MC41fVxuLndhcC12b2x1bWUge3dpZHRoOjEwMCU7bWF4LXdpZHRoOjUwcHg7aGVpZ2h0OjZweDtiYWNrZ3JvdW5kLWNvbG9yOiNmNWY1ZjU7Ym9yZGVyLXJhZGl1czo1cHg7Y3Vyc29yOiBwb2ludGVyO292ZXJmbG93OmhpZGRlbjsgbWFyZ2luLXJpZ2h0OjJweH1cbi53YXAtdm9sdW1lIC53YXAtcHJvZ3Jlc3Mge3dpZHRoOiA1MCV9XG5AbWVkaWEobWF4LXdpZHRoOjQ1MHB4KXtcbiAgICAud2FwLWJ0bnMgPiBidXR0b24ge21hcmdpbjowfVxufVxuQG1lZGlhKG1heC13aWR0aDo0MDBweCl7XG4gICAgLndhcC12b2x1bWV7ZGlzcGxheTpub25lfVxufVxuQG1lZGlhKG1heC13aWR0aDozMTVweCl7XG4gICAgLndhcC1kdXJhdGlvbntkaXNwbGF5Om5vbmV9XG59Il0sInNvdXJjZVJvb3QiOiIifQ== */
+	</style>
+	<script src="https://watvnewsong.org/scripts/marquee.js"></script>
+	<script src="/common/common.js"></script>
+	<script src="https://watvnewsong.org/scripts/ServiceCheck.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-64642624-33"></script>
+	<script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-64642624-33');</script>
+	<script>
+		var watvVodUrl = "https://vod.watv.org";
+		var g_session = true;
+		var g_projectName = "WATVNewsong";
+		var g_extensions = ".jpg,.jpeg,.png,.gif,.mp3,.m4a,.flac,.ogg,.wma,.avi,.mkv,.mp4,.pdf,.zip";
+	</script>
+	<script>
+		flowplayer.conf = {
+			key: "$842048350752056"
+		};
+	</script>
+	<script>
+		if (window.location.href.indexOf('watv') > -1 && window.location.href.indexOf('http://') == 0) window.location = window.location.href.replace('http://', 'https://');
+		if (window.location.href.indexOf('http://www') == 0) window.location = window.location.href.replace('http://www', 'https://');
+		if (window.location.href.indexOf('https://www') == 0) window.location = window.location.href.replace('https://www', 'https://');
+
+		$(document).ajaxError(function (event, jqxhr, settings, thrownError) {
+			if (jqxhr.status == 408 && g_session == false) {
+				g_session = true;
+				alert('Session이 종료되었습니다.');
+				top.location.href = contextPath;
+			}
+		});
+	</script>
+</head>
+
+<body>
+	<div class="head-wrap">
+
+
+
+		<!-- 메뉴 제목 -->
+		<div class="head_title">
+			<a class="btn-back" onclick="urlCall('/Choir/mr/Choir_mr_25.htm', 'Y');"><span class="blind"></span></a>
+			<h3>혼성4부 반주</h3>
+			<a class="btn-menu" data-toggle="modal" data-target="#Modal-menu"><span class="blind"></span></a>
+		</div>
+
+		<!-- 공지사항 -->
+
+
+		<div class="nav-sub head_nav">
+			<div class="slide">
+				<ul>
+					<li><a onclick="urlCall('/Choir_mr_25.htm','Y');return false;" class="on">~25</a></li>
+					<li><a onclick="urlCall('/Choir_mr_50.htm','Y');return false;" class="">~50</a></li>
+					<li><a onclick="urlCall('/Choir_mr_75.htm','Y');return false;" class="">~75</a></li>
+					<li><a onclick="urlCall('/Choir_mr_100.htm','Y');return false;" class="">~100</a></li>
+					<li><a onclick="urlCall('/Choir_mr_125.htm','Y');return false;" class="">~125</a></li>
+					<li><a onclick="urlCall('/Choir_mr_150.htm','Y');return false;" class="">~150</a></li>
+					<li><a onclick="urlCall('/Choir_mr_175.htm','Y');return false;" class="">~175</a></li>
+					<li><a onclick="urlCall('/Choir_mr_200.htm','Y');return false;" class="">~200</a></li>
+					<li><a onclick="urlCall('/Choir_mr_225.htm','Y');return false;" class="">~225</a></li>
+					<li><a onclick="urlCall('/Choir_mr_250.htm','Y');return false;" class="">~250</a></li>
+					<li><a onclick="urlCall('/Choir_mr_275.htm','Y');return false;" class="">~275</a></li>
+					<li><a onclick="urlCall('/Choir_mr_300.htm','Y');return false;" class="">~300</a></li>
+					<li><a onclick="urlCall('/Choir_mr_325.htm','Y');return false;" class="">~325</a></li>
+					<li><a onclick="urlCall('/Choir_mr_350.htm','Y');return false;" class="">~350</a></li>
+					<li><a onclick="urlCall('/Choir_mr_375.htm','Y');return false;" class="">~375</a></li>
+					<li><a onclick="urlCall('/Choir_mr_400.htm','Y');return false;" class="">~400</a></li>
+					<li><a onclick="urlCall('/Choir_mr_425.htm','Y');return false;" class="">~425</a></li>
+					<li><a onclick="urlCall('/Choir_mr_450.htm','Y');return false;" class="">~450</a></li>
+					<li><a onclick="urlCall('/Choir_mr_475.htm','Y');return false;" class="">~475</a></li>
+					<li><a onclick="urlCall('/Choir_mr_485.htm','Y');return false;" class="">~485</a></li>
+					<li><a onclick="urlCall('/Choir_mr_appendix.htm','Y');return false;" class="">부록</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container-body">
+		<div class="list_box">
+			<div class="select-list bn-group">
+
+				<div class="select-bn">
+					<a class="select-all select_all" onclick="commonCheckedList('list', 'show', true, this)">전체선택</a>
+					<a class="select-play select_all_play" onclick="musicPlayer.appendAllSong()">전체재생</a>
+				</div>
+			</div>
+			<ul class="list-container accompanist">
+
+				<li>
+					<input>
+					<label>
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg">
+						</span>
+						<em>1</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">거룩하고 존귀한 날</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>미등록</span>
+
+								<span class="newsong_group_nm" style="display:none">1장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">00:00</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on" style="filter: grayscale(1.0) opacity(30%);"></a>
+							<a class="view"></a>
+							<a class="view"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list"
+						id="list9a979fbaa1a26db9cb72dfbf3a73fce2696bf5fd23a3d0838f5533f918780d1c"
+						value2="2021_06_22_100952_534.m4a" no="-1" choir_no="517" language_gb_sn="ko" seq_no="">
+					<label for="list9a979fbaa1a26db9cb72dfbf3a73fce2696bf5fd23a3d0838f5533f918780d1c">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>2</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">안식일의 축복</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>517번</span>
+
+								<span class="newsong_group_nm" style="display:none">2장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:59</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('715533')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('715531')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input>
+					<label>
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>3</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">축복의 안식일</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>미등록</span>
+
+								<span class="newsong_group_nm" style="display:none">3장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">00:00</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on" style="filter: grayscale(1.0) opacity(30%);"></a>
+							<a class="view"></a>
+							<a class="view"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" href="" target="_blank"><span class="blind"></span></a>
+						<a class="video btn-box"><span class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input>
+					<label>
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>4</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">창조주의 기념일</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>미등록</span>
+
+								<span class="newsong_group_nm" style="display:none">4장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">00:00</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on" style="filter: grayscale(1.0) opacity(30%);"></a>
+							<a class="view"></a>
+							<a class="view"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list"
+						id="liste2dc4d29195c57049262ace0e58722fb297a93a71ccf7a59cd34e4c85d6137ad"
+						value2="2020_06_08_141644_405.m4a" no="-1" choir_no="19" language_gb_sn="ko" seq_no="">
+					<label for="liste2dc4d29195c57049262ace0e58722fb297a93a71ccf7a59cd34e4c85d6137ad">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>5</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">나그넷길 정처 없이</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>19번</span>
+
+								<span class="newsong_group_nm" style="display:none">5장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">03:32</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('715538')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('715537')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list"
+						id="liste2dc4d29195c57049262ace0e58722fb64de059ee4444b841bfa3d3685f0b8bf"
+						value2="2020_06_03_143950_661.m4a" no="-1" choir_no="209" language_gb_sn="ko" seq_no="">
+					<label for="liste2dc4d29195c57049262ace0e58722fb64de059ee4444b841bfa3d3685f0b8bf">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>6</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">거룩한 축복의 날</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>209번</span>
+
+								<span class="newsong_group_nm" style="display:none">6장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">03:31</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('551350')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('551348')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list"
+						id="list18314cbb074e17686a713dfc0161335bf22093492fe5318e05c82f3fae48cd06"
+						value2="2021_03_23_101059_344.m4a" no="-1" choir_no="515" language_gb_sn="ko" seq_no="">
+					<label for="list18314cbb074e17686a713dfc0161335bf22093492fe5318e05c82f3fae48cd06">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>7</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">유월절 떡과 포도주</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>515번</span>
+
+								<span class="newsong_group_nm" style="display:none">7장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">03:52</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('674932')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('674930')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list"
+						id="liste2dc4d29195c57049262ace0e58722fb1cec7f51771b89ba065ecfcc80f7c825"
+						value2="2020_06_08_145641_597.m4a" no="-1" choir_no="22" language_gb_sn="ko" seq_no="">
+					<label for="liste2dc4d29195c57049262ace0e58722fb1cec7f51771b89ba065ecfcc80f7c825">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>7</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">유월절 떡과 포도주 B</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>22번</span>
+
+								<span class="newsong_group_nm" style="display:none">7장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">03:37</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('715543')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('715541')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list551410" value2="2020_06_03_150213_578.m4a" no="-1"
+						choir_no="238" language_gb_sn="ko" seq_no="">
+					<label for="list551410">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>8</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">희생으로 세우신 새 언약</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>238번</span>
+
+								<span class="newsong_group_nm" style="display:none">8장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">04:47</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('551413')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('551411')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list386731" value2="2019_07_03_101424_438.m4a" no="-1"
+						choir_no="23" language_gb_sn="ko" seq_no="">
+					<label for="list386731">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>9</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">구속주의 노래</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>23번</span>
+
+								<span class="newsong_group_nm" style="display:none">9장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">04:18</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('388144')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('388145')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input>
+					<label for="list10">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>10</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">유월절의 희생으로</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>미등록</span>
+
+								<span class="newsong_group_nm" style="display:none">10장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">00:00</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on" style="filter: grayscale(1.0) opacity(30%);"></a>
+							<a class="view"></a>
+							<a class="view"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list386738" value2="2019_07_03_101733_375.m4a" no="-1"
+						choir_no="24" language_gb_sn="ko" seq_no="">
+					<label for="list11">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>11</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">무교절의 희생</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>24번</span>
+
+								<span class="newsong_group_nm" style="display:none">11장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">03:26</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('388148')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box"><span class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list551423" value2="2020_06_03_150441_224.m4a" no="-1"
+						choir_no="20" language_gb_sn="ko" seq_no="">
+					<label for="list12">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>12</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">오순절</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>20번</span>
+
+								<span class="newsong_group_nm" style="display:none">12장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:46</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('551350')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('551348')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input>
+					<label for="list13">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>13</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">나팔절</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>미등록</span>
+
+								<span class="newsong_group_nm" style="display:none">13장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">00:00</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on" style="filter: grayscale(1.0) opacity(30%);"></a>
+							<a class="view"></a>
+							<a class="view"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input>
+					<label for="list14">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>14</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">대속죄일</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>미등록</span>
+
+								<span class="newsong_group_nm" style="display:none">14장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">00:00</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on" style="filter: grayscale(1.0) opacity(30%);"></a>
+							<a class="view"></a>
+							<a class="view"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input>
+					<label for="list15">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>15</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">초막절</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>미등록</span>
+
+								<span class="newsong_group_nm" style="display:none">15장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">00:00</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on" style="filter: grayscale(1.0) opacity(30%);"></a>
+							<a class="view"></a>
+							<a class="view"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input>
+					<label for="list16">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>16</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">초막절의 축복으로</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>미등록</span>
+
+								<span class="newsong_group_nm" style="display:none">16장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">00:00</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on" style="filter: grayscale(1.0) opacity(30%);"></a>
+							<a class="view"></a>
+							<a class="view"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list559880" value2="2020_07_01_083615_671.m4a" no="-1"
+						choir_no="25" language_gb_sn="ko" seq_no="">
+					<label for="list17">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>17</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">감취었던 일곱 우뢰</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>25번</span>
+
+								<span class="newsong_group_nm" style="display:none">17장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:07</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('559883')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('559881')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list"
+						id="list6715e29209bbf75e822233ed09b34896f153a392198eba9f86c4ffae9cf1162f"
+						value2="2019_07_03_102515_703.m4a" no="-1" choir_no="28" language_gb_sn="ko" seq_no="">
+					<label for="list18">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>18</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">높은 산 올라가</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>28번</span>
+
+								<span class="newsong_group_nm" style="display:none">18장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">03:39</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('388161')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('388162')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list"
+						id="list9a979fbaa1a26db9cb72dfbf3a73fce2bef7203c70d6e45c04cbfa8b038534c7"
+						value2="2021_07_08_133246_297.m4a" no="-1" choir_no="17" language_gb_sn="ko" seq_no="">
+					<label for="list19">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>19</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">호산나 하나님 영접하여라</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>17번</span>
+
+								<span class="newsong_group_nm" style="display:none">19장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">03:01</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('716455')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('716453')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list386791" value2="2019_07_03_103217_334.m4a" no="-1"
+						choir_no="32" language_gb_sn="ko" seq_no="">
+					<label for="list20">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>20</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">온 세계여 잠잠치 말아라</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>32번</span>
+
+								<span class="newsong_group_nm" style="display:none">20장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:42</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('388177')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('388178')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input>
+					<label for="list21">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>21</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">찬양하여라</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>미등록</span>
+
+								<span class="newsong_group_nm" style="display:none">21장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">00:00</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on" style="filter: grayscale(1.0) opacity(30%);"></a>
+							<a class="view"></a>
+							<a class="view"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input>
+					<label for="list22">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>22</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">택하신 백성 모인 곳</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>미등록</span>
+
+								<span class="newsong_group_nm" style="display:none">22장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">00:00</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on" style="filter: grayscale(1.0) opacity(30%);"></a>
+							<a class="view"></a>
+							<a class="view"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+						<a class="view_pdf btn-box" target="_blank"><span class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list"
+						id="list9a979fbaa1a26db9cb72dfbf3a73fce27632dcc4bdaca86721c2904a52e5baa7"
+						value2="2021_07_08_135501_964.m4a" no="-1" choir_no="26" language_gb_sn="ko" seq_no="">
+					<label for="list23">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>23</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">전능하신 하나님의 예언</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>26번</span>
+
+								<span class="newsong_group_nm" style="display:none">23장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:40</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('716488')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('716486')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list"
+						id="list9a979fbaa1a26db9cb72dfbf3a73fce2458d8ad5a6c2d35293eb63e214fd695a"
+						value2="2021_07_08_135139_986.m4a" no="-1" choir_no="27" language_gb_sn="ko" seq_no="">
+					<label for="list24">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>24</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">온 세상이 빛이 없어</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>27번</span>
+
+								<span class="newsong_group_nm" style="display:none">24장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">03:27</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('716476')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('716474')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list"
+						id="list18314cbb074e17686a713dfc0161335b59379b0a88d498904bf02a7bf3cb23e3"
+						value2="2020_11_18_090738_528.m4a" no="-1" choir_no="29" language_gb_sn="ko" seq_no="">
+					<label for="list25">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>25</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">다윗으로 오신 안상홍님 A</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>29번</span>
+
+								<span class="newsong_group_nm" style="display:none">25장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:21</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('715547')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('715546')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list"
+						id="list18314cbb074e17686a713dfc0161335b075e7d512c026f8e829bdb8f4f7cdc4c"
+						value2="2020_11_18_091053_659.m4a" no="-1" choir_no="30" language_gb_sn="ko" seq_no="">
+					<label for="list25">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>25</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">다윗으로 오신 안상홍님 B</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>30번</span>
+
+								<span class="newsong_group_nm" style="display:none">25장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:45</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('715552')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('715551')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list"
+						id="list18314cbb074e17686a713dfc0161335b2dc2a5967e86cc0ca8f47a14cc051ef1"
+						value2="2020_11_18_091412_442.m4a" no="-1" choir_no="31" language_gb_sn="ko" seq_no="">
+					<label for="list25">
+						<span class="thum drag-handle">
+							<img class="main_img" src="https://watvnewsong.org/images/default.jpg" />
+						</span>
+						<em>25</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">다윗으로 오신 안상홍님 C</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>31번</span>
+
+								<span class="newsong_group_nm" style="display:none">25장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">03:02</span>
+							</div>
+						</a>
+						<div class="list-ico">
+
+							<a class="play-btn on"></a>
+							<a class="view on"></a>
+							<a class="view on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('614428')"><span
+								class="blind"></span></a>
+						<a class="view_pdf btn-box" onclick="commonSelectMusicPaper('614427')"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+
+
+
+
+
+	<!-- 푸터 -->
+	<div class="footer">
+		<div class="container">
+			<div class="foot-warning">본 음악의 저작권은 하나님의 교회에 있습니다. <br>저작권자의 허락 없이 무단 복제 및 재배포를 금합니다.</div>
+
+
+			<h3 class="btn-adress">Contact</h3>
+			<div class="adress">
+				<p>경기도 성남시 분당구 성남분당우체국 사서함 119 <br>Tel 031-738-5999 Fax 031-738-5998</p>
+				<p>총회: 경기도 성남시 분당구 수내로 50(수내동)</p>
+				<p>대표교회: 경기도 성남시 분당구 판교역로 35(백현동 526)</p>
+				<p>ⓒ World Mission Society Church of God. 모든 권리 보유. <a
+						href="https://guide.watv.org/pledge/agreePrivacy.jsp" target="_blank">개인정보처리방침</a></p>
+			</div>
+		</div>
+	</div>
+
+	<!-- 로그인 -->
+	<div class="modal modal-basic" id="Modal-login" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content login-contents">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						class="blind"></span></button>
+				<div class="login-wrap">
+					<div class="logo"><span class="blind"></span></div>
+					<input placeholder='아이디' id="id" type="text" value="" required autocomplete="username"
+						autocorrect="off" autocapitalize="off" spellcheck="false">
+					<input placeholder='비밀번호' id="password" type="password" required autocomplete="new-password"
+						autocorrect="off" autocapitalize="off" spellcheck="false">
+					<div class="bn-common song-select bn-layer"><a id="btnLogin">로그인</a></div>
+					<div class="id-check">
+						<input name="remember" id="watvIdSaveCheck" type="checkbox">
+						<label for="watvIdSaveCheck">아이디 저장</label>
+					</div>
+					<div class="index-banner">
+						<a href="/song.wmc" class="ico-headphones">로그인없이 경음악 듣기</a>
+						<a href="/newsong.wmc" class="ico-music">새노래란?</a>
+					</div>
+					<a class="copy-logo" href="https://watv.org" target="searchWatvId"><span class="blind"></span></a>
+					<div class="site-link">
+						<a href="https://guide.watv.org/member/id.wmc" target="searchWatvId">아이디 찾기</a>
+						<a href="https://guide.watv.org/member/pw.wmc" target="searchWatvPw">비밀번호 찾기</a>
+						<a href="https://join.watv.org/step01.wmc" target="watvJoin">회원가입</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="alertWatch"></div>
+
+	<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+	<script type="text/javascript">
+		if (!wcs_add) var wcs_add = {};
+		wcs_add["wa"] = "ab0fe094ecf078";
+		if (window.wcs) {
+			wcs_do();
+		}
+	</script>
+</body>
+
+</html>
