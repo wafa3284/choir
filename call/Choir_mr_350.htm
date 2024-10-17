@@ -1,0 +1,1084 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>WATV 새노래 성가 스트리밍</title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="https://watvnewsong.org/favicon.ico">
+	<link rel="icon" sizes="32x32" href="https://watvnewsong.org/favicon/favicon-round-32.png">
+	<link rel="icon" sizes="48x48" href="https://watvnewsong.org/favicon/favicon-round-48.png">
+	<link rel="icon" sizes="57x57" href="https://watvnewsong.org/favicon/favicon-round-57.png">
+	<link rel="icon" sizes="64x64" href="https://watvnewsong.org/favicon/favicon-round-64.png">
+	<link rel="icon" sizes="72x72" href="https://watvnewsong.org/favicon/favicon-round-72.png">
+	<link rel="icon" sizes="96x96" href="https://watvnewsong.org/favicon/favicon-round-96.png">
+	<link rel="icon" sizes="114x114" href="https://watvnewsong.org/favicon/favicon-round-114.png">
+	<link rel="icon" sizes="120x120" href="https://watvnewsong.org/favicon/favicon-round-120.png">
+	<link rel="icon" sizes="144x144" href="https://watvnewsong.org/favicon/favicon-round-144.png">
+	<link rel="icon" sizes="152x152" href="https://watvnewsong.org/favicon/favicon-round-152.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://watvnewsong.org/favicon/favicon-152.png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://watvnewsong.org/favicon/favicon-152.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://watvnewsong.org/favicon/favicon-144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://watvnewsong.org/favicon/favicon-120.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://watvnewsong.org/favicon/favicon-114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="96x96" href="https://watvnewsong.org/favicon/favicon-96.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://watvnewsong.org/favicon/favicon-72.png">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://watvnewsong.org/favicon/favicon-57.png">
+	<link rel="apple-touch-icon-precomposed" sizes="48x48" href="https://watvnewsong.org/favicon/favicon-48.png">
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="https://watvnewsong.org/favicon/favicon-32.png">
+
+	<script>var contextPath = ""</script>
+	<!-- <link rel="shortcut icon" href="https://watvnewsong.org/images/favicon.ico.png"> -->
+	<link rel="stylesheet" href="https://watvnewsong.org/css/reset.css">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/font.css">
+	<link rel="stylesheet" type="text/css" href="https://wds.watv.org/css/logo.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/index.css?ver=202306095">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/modal.css?ver=202306095">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/POP.css">
+	<link rel="stylesheet" href="https://watvnewsong.org/scripts/watvplayer/watv-audio-player.css?ver=202306095">
+	<link rel="stylesheet" href="https://watvnewsong.org/css/ko.css">
+	<script src="https://watvnewsong.org/scripts/sortable.min.js"></script>
+	<script src="https://watvnewsong.org/scripts/jquery-1.11.3.min.js"></script>
+	<script src="/common/fileManager.js"></script>
+	<script src="https://watvnewsong.org/scripts/jquery.cookie.js"></script>
+	<script src="https://watvnewsong.org/scripts/jquery.base64.js"></script>
+	<script src="https://watvnewsong.org/scripts/flowplayer/flowplayer.min.js?ver=20230609"></script>
+	<script src="https://watvnewsong.org/scripts/flowplayer/flowplayer.hlsjs.light.min.js"></script>
+	<script src="https://watvnewsong.org/scripts/flowplayer/flowplayer.audio.min.js"></script>
+	<script src="https://watvnewsong.org/scripts/watvplayer/hls.0.13.3.min.js"></script>
+	<script src="https://watvnewsong.org/scripts/watvplayer/watv-audio-player.js"></script>
+	<script src="https://watvnewsong.org/scripts/watvplayer/ios-audio-player.js"></script>
+	<script src="https://watvnewsong.org/scripts/watvplayer/custom-flowplayer.js"></script>
+	<script src="https://watvnewsong.org/scripts/marquee.js"></script>
+	<script src="/common/common.js"></script>
+	<script src="https://watvnewsong.org/scripts/ServiceCheck.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-64642624-33"></script>
+	<script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-64642624-33');</script>
+	<script>
+		var watvVodUrl = "https://vod.watv.org";
+		var g_session = true;
+		var g_projectName = "WATVNewsong";
+		var g_extensions = ".jpg,.jpeg,.png,.gif,.mp3,.m4a,.flac,.ogg,.wma,.avi,.mkv,.mp4,.pdf,.zip";
+	</script>
+	<script>
+		flowplayer.conf = {
+			key: "$842048350752056"
+		};
+	</script>
+	<script>
+		if (window.location.href.indexOf('watv') > -1 && window.location.href.indexOf('http://') == 0) window.location = window.location.href.replace('http://', 'https://');
+		if (window.location.href.indexOf('http://www') == 0) window.location = window.location.href.replace('http://www', 'https://');
+		if (window.location.href.indexOf('https://www') == 0) window.location = window.location.href.replace('https://www', 'https://');
+
+		$(document).ajaxError(function (event, jqxhr, settings, thrownError) {
+			if (jqxhr.status == 408 && g_session == false) {
+				g_session = true;
+				alert('Session이 종료되었습니다.');
+				top.location.href = contextPath;
+			}
+		});
+	</script>
+</head>
+
+<body>
+	<div class="head-wrap">
+
+
+
+		<!-- 메뉴 제목 -->
+		<div class="head_title">
+			<a class="btn-back" onclick="urlCall('Choir/mr/Choir_mr_25.htm', 'Y');"><span class="blind"></span></a>
+			<h3>혼성4부 반주</h3>
+			<a class="btn-menu" data-toggle="modal" data-target="#Modal-menu"><span class="blind"></span></a>
+		</div>
+
+		<!-- 공지사항 -->
+
+
+		<div class="nav-sub head_nav">
+			<div class="slide">
+				<ul>
+					<li><a onclick="urlCall('/Choir_mr_25.htm','Y');return false;" class="">~25</a></li>
+					<li><a onclick="urlCall('/Choir_mr_50.htm','Y');return false;" class="">~50</a></li>
+					<li><a onclick="urlCall('/Choir_mr_75.htm','Y');return false;" class="">~75</a></li>
+					<li><a onclick="urlCall('/Choir_mr_100.htm','Y');return false;" class="">~100</a></li>
+					<li><a onclick="urlCall('/Choir_mr_125.htm','Y');return false;" class="">~125</a></li>
+					<li><a onclick="urlCall('/Choir_mr_150.htm','Y');return false;" class="">~150</a></li>
+					<li><a onclick="urlCall('/Choir_mr_175.htm','Y');return false;" class="">~175</a></li>
+					<li><a onclick="urlCall('/Choir_mr_200.htm','Y');return false;" class="">~200</a></li>
+					<li><a onclick="urlCall('/Choir_mr_225.htm','Y');return false;" class="">~225</a></li>
+					<li><a onclick="urlCall('/Choir_mr_250.htm','Y');return false;" class="">~250</a></li>
+					<li><a onclick="urlCall('/Choir_mr_275.htm','Y');return false;" class="">~275</a></li>
+					<li><a onclick="urlCall('/Choir_mr_300.htm','Y');return false;" class="">~300</a></li>
+					<li><a onclick="urlCall('/Choir_mr_325.htm','Y');return false;" class="">~325</a></li>
+					<li><a onclick="urlCall('/Choir_mr_350.htm','Y');return false;" class="on">~350</a></li>
+					<li><a onclick="urlCall('/Choir_mr_375.htm','Y');return false;" class="">~375</a></li>
+					<li><a onclick="urlCall('/Choir_mr_400.htm','Y');return false;" class="">~400</a></li>
+					<li><a onclick="urlCall('/Choir_mr_425.htm','Y');return false;" class="">~425</a></li>
+					<li><a onclick="urlCall('/Choir_mr_450.htm','Y');return false;" class="">~450</a></li>
+					<li><a onclick="urlCall('/Choir_mr_475.htm','Y');return false;" class="">~475</a></li>
+					<li><a onclick="urlCall('/Choir_mr_485.htm','Y');return false;" class="">~485</a></li>
+					<li><a onclick="urlCall('/Choir_mr_appendix.htm','Y');return false;" class="">부록</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-body">
+		<div class="list_box">
+			<div class="select-list bn-group">
+				<div class="select-bn">
+					<a class="select-all select_all" onclick="commonCheckedList('list', 'show', true, this)">전체선택</a>
+					<a class="select-play select_all_play" onclick="musicPlayer.appendAllSong()">전체재생</a>
+				</div>
+			</div>
+			<ul class="list-container accompanist">
+
+				<li>
+					<input type="checkbox" name="list" id="list1" value2="2020_05_15_113651_405.m4a" no="14746"
+						seq_no="2224" language_gb_sn="ko">
+					<label for="list1">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14746','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>326</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">진리로 우리 낳아주신</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">326장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">03:12</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14746', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list2" value2="2020_05_15_095449_367.m4a" no="14747"
+						seq_no="2225" language_gb_sn="ko">
+					<label for="list2">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14747','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>327</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">칠십억 전도하자</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">327장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:09</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14747', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list3" value2="2020_05_15_095509_033.m4a" no="14749"
+						seq_no="2227" language_gb_sn="ko">
+					<label for="list3">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14749','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>328</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">하나님 살과 피로</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">328장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:25</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14749', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list4" value2="2020_05_15_095539_120.m4a" no="14751"
+						seq_no="2229" language_gb_sn="ko">
+					<label for="list4">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14751','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>329</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">사랑의 보금자리로</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">329장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:20</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14751', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list5" value2="2020_05_15_095558_161.m4a" no="14752"
+						seq_no="2230" language_gb_sn="ko">
+					<label for="list5">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14752','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>330</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">하늘의 소망</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">330장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:26</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14752', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list6" value2="2020_05_15_095619_959.m4a" no="14755"
+						seq_no="2233" language_gb_sn="ko">
+					<label for="list6">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14755','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>331</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">예루살렘 성벽 위에</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">331장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:00</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14755', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list7" value2="2020_05_15_095642_298.m4a" no="14757"
+						seq_no="2235" language_gb_sn="ko">
+					<label for="list7">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14757','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>332</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">엘로힘 창조하신</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">332장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:16</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14757', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list8" value2="2020_05_15_095702_038.m4a" no="14759"
+						seq_no="2237" language_gb_sn="ko">
+					<label for="list8">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14759','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>333</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">하늘의 아버지</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">333장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:59</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14759', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list9" value2="2020_05_15_095720_933.m4a" no="14761"
+						seq_no="2239" language_gb_sn="ko">
+					<label for="list9">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14761','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>334</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">복음 나팔 불어라</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">334장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:11</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14761', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list10" value2="2020_05_15_095741_538.m4a" no="14763"
+						seq_no="2241" language_gb_sn="ko">
+					<label for="list10">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14763','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>335</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">온 세계를 구원하자</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">335장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">03:25</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14763', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list11" value2="2020_05_15_095804_209.m4a" no="14765"
+						seq_no="2243" language_gb_sn="ko">
+					<label for="list11">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14765','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>336</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">구원을 알리자</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">336장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:21</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14765', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list12" value2="2020_05_15_095824_099.m4a" no="14767"
+						seq_no="2245" language_gb_sn="ko">
+					<label for="list12">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14767','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>337</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">넓은 들판을 보라</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">337장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">01:56</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14767', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list13" value2="2020_05_15_095845_139.m4a" no="14770"
+						seq_no="2248" language_gb_sn="ko">
+					<label for="list13">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14770','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>338</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">타오르는 횃불 들고서</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">338장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:02</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14770', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list14" value2="2020_05_15_095908_751.m4a" no="14772"
+						seq_no="2250" language_gb_sn="ko">
+					<label for="list14">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14772','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>339</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">아버지 약속하신 성령을</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">339장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">01:56</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14772', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list15" value2="2020_05_15_095933_317.m4a" no="14774"
+						seq_no="2252" language_gb_sn="ko">
+					<label for="list15">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14774','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>340</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">천국 복음</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">340장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:32</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14774', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list16" value2="2020_05_15_095953_225.m4a" no="14776"
+						seq_no="2254" language_gb_sn="ko">
+					<label for="list16">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14776','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>341</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">하나님 말씀 들고</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">341장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:24</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14776', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list17" value2="2020_05_15_100016_848.m4a" no="14779"
+						seq_no="2257" language_gb_sn="ko">
+					<label for="list17">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14779','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>342</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">진리의 용사들이여</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">342장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:26</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14779', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list18" value2="2020_05_15_100040_868.m4a" no="14781"
+						seq_no="2259" language_gb_sn="ko">
+					<label for="list18">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14781','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>343</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">아버지 안상홍님 걸어가신 길</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">343장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:24</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14781', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list19" value2="2020_05_15_100102_490.m4a" no="14783"
+						seq_no="2261" language_gb_sn="ko">
+					<label for="list19">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14783','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>344</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">깨어라 일어나라</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">344장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:20</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14783', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list20" value2="2020_05_15_100122_942.m4a" no="14785"
+						seq_no="2263" language_gb_sn="ko">
+					<label for="list20">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14785','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>345</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">권능의 힘으로</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">345장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:35</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14785', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list21" value2="2020_05_15_100148_516.m4a" no="14786"
+						seq_no="2264" language_gb_sn="ko">
+					<label for="list21">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14786','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>346</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">가자 세계로</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">346장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:13</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14786', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list22" value2="2020_05_15_100219_831.m4a" no="14788"
+						seq_no="2266" language_gb_sn="ko">
+					<label for="list22">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14788','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>347</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">천국이 우리의 눈앞에 있도다</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">347장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:49</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14788', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list23" value2="2020_05_15_100246_276.m4a" no="14790"
+						seq_no="2268" language_gb_sn="ko">
+					<label for="list23">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14790','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>348</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">작은 나라 동방 땅끝</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">348장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:05</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14790', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list24" value2="2020_05_15_100308_440.m4a" no="14792"
+						seq_no="2270" language_gb_sn="ko">
+					<label for="list24">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14792','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>349</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">세계로 나아가자</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">349장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:13</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14792', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+				<li>
+					<input type="checkbox" name="list" id="list25" value2="2020_05_15_100330_291.m4a" no="14793"
+						seq_no="2271" language_gb_sn="ko">
+					<label for="list25">
+						<span class="thum drag-handle" onclick="urlCall('/info/song.wmc?no=14793','Y');return false;">
+							<img class="main_img" src="/images/default.jpg">
+						</span>
+						<em>350</em>
+						<a class="song-info">
+							<div class="song-title-wrap">
+								<h3 class="title hd-song song_title">우리에게 임하신</h3> <!-- 곡 언어 -->
+								<!-- 사이트 언어 -->
+							</div>
+							<div>
+
+								<span>전도</span>
+
+								<span class="newsong_group_nm" style="display:none">350장</span>
+								<span class="newsong_genre_nm" style="display:none">반주</span>
+								<span class="time">02:36</span>
+							</div>
+						</a>
+						<div class="list-ico">
+							<a class="like-btn"></a>
+							<a class="play-btn on"></a>
+						</div>
+					</label>
+					<div class="btnbox-wrap">
+						<button onclick="commonSaveMyLike('song', '14793', 'ko', this)"
+							class="like inlist accompanist"></button>
+						<a class="btn-box" onclick="musicPlayer.appendOneSong(this.parentNode)"><span
+								class="blind"></span></a>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+
+
+
+
+
+	<!-- 푸터 -->
+	<div class="footer">
+		<div class="container">
+			<div class="foot-warning">본 음악의 저작권은 하나님의 교회에 있습니다. <br>저작권자의 허락 없이 무단 복제 및 재배포를 금합니다.</div>
+
+
+			<h3 class="btn-adress">Contact</h3>
+			<div class="adress">
+				<p>경기도 성남시 분당구 성남분당우체국 사서함 119 <br>Tel 031-738-5999 Fax 031-738-5998</p>
+				<p>총회: 경기도 성남시 분당구 수내로 50(수내동)</p>
+				<p>대표교회: 경기도 성남시 분당구 판교역로 35(백현동 526)</p>
+				<p>ⓒ World Mission Society Church of God. 모든 권리 보유. <a
+						href="https://guide.watv.org/pledge/agreePrivacy.jsp" target="_blank">개인정보처리방침</a></p>
+			</div>
+		</div>
+	</div>
+
+	<!-- 로그인 -->
+	<div class="modal modal-basic" id="Modal-login" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content login-contents">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						class="blind"></span></button>
+				<div class="login-wrap">
+					<div class="logo"><span class="blind"></span></div>
+					<input placeholder='아이디' id="id" type="text" value="" required autocomplete="username"
+						autocorrect="off" autocapitalize="off" spellcheck="false">
+					<input placeholder='비밀번호' id="password" type="password" required autocomplete="new-password"
+						autocorrect="off" autocapitalize="off" spellcheck="false">
+					<div class="bn-common song-select bn-layer"><a id="btnLogin">로그인</a></div>
+					<div class="id-check">
+						<input name="remember" id="watvIdSaveCheck" type="checkbox">
+						<label for="watvIdSaveCheck">아이디 저장</label>
+					</div>
+					<div class="index-banner">
+						<a href="/song.wmc" class="ico-headphones">로그인없이 경음악 듣기</a>
+						<a href="/newsong.wmc" class="ico-music">새노래란?</a>
+					</div>
+					<a class="copy-logo" href="https://watv.org" target="searchWatvId"><span class="blind"></span></a>
+					<div class="site-link">
+						<a href="https://guide.watv.org/member/id.wmc" target="searchWatvId">아이디 찾기</a>
+						<a href="https://guide.watv.org/member/pw.wmc" target="searchWatvPw">비밀번호 찾기</a>
+						<a href="https://join.watv.org/step01.wmc" target="watvJoin">회원가입</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="alertWatch"></div>
+
+	<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+	<script type="text/javascript">
+		if (!wcs_add) var wcs_add = {};
+		wcs_add["wa"] = "ab0fe094ecf078";
+		if (window.wcs) {
+			wcs_do();
+		}
+	</script>
+</body>
+
+</html>

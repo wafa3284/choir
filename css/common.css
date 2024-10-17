@@ -1,0 +1,1938 @@
+body,
+#request{overflow-x:hidden}
+* {-webkit-text-size-adjust:none}
+
+@media (min-width:769px) {
+	body{margin-left:220px}
+}
+.footer h3,
+.btn-mylike a span,
+.count,
+.select-list .selectbox, .select-list .select-bn a{font-family:'roboto',Malgun Gothic,Arial,sans-serif}
+.index .round .list-container{margin:0}
+
+/* button color */
+a, button{-webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight-color:transparent; /* For some Androids */}
+p {line-height:1.8}
+
+/* button */
+.btnbox-wrap{position:absolute; right:-10px; top:0; height:100%; justify-content:flex-end; width:auto !important}
+.btn-box{width:82px; height:44px; cursor:pointer}
+
+/* --- LOGO --- */
+.ui-style {padding:15px !important; overflow:hidden}
+
+/*======= Typograph =======*/
+.hd-index {font-size:16px; font-weight:500; display:inline-block; letter-spacing:-.03em}
+.hd-song {font-size:14px; display:-webkit-box; -webkit-line-clamp:1; overflow:hidden; -webkit-box-orient:vertical; text-overflow:ellipsis}
+.hd3-album {font-size:18px; font-weight:500; letter-spacing:-.7em; margin-bottom:4px; line-height:1.2}
+.hd1-album {font-size:18px; letter-spacing:-0.04em; line-height:1.3; margin-bottom:3px; flex:1 100%; margin-bottom:5px; font-weight:500}
+.hd1-album span{font-size:14px; display:block; letter-spacing:0}
+.hd-ptit{font-size:0}
+.hd-info{font-size:16px; font-weight:600; margin-top:20px}
+.owl-banner h3{letter-spacing:-0.03em}
+@media(min-width:769px){
+	.hd-index{font-size:24px}
+	.hd-song {font-size:16px}
+	.hd1-album {font-size:26px; letter-spacing:-0.04em; line-height:1.4; margin-bottom:10px}
+	.hd1-album span{font-size:17px}
+	.hd-ptit{font-size:30px; padding-top:55px; font-weight:600}
+	.hd-info{font-size:24px; font-weight:500}
+}
+@media(max-width:768px) {
+  .hd-ptit{display:none}
+}
+
+/* --- all --- */
+.ellipsis {text-overflow:ellipsis; white-space:nowrap; overflow:hidden}
+.line-clamp-1,.line-clamp-1>* {display:-webkit-box; -webkit-line-clamp:1; overflow:hidden; -webkit-box-orient:vertical; text-overflow:ellipsis}
+.line-clamp-2,.line-clamp-2>* {overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2}
+.blind {position:absolute; width:0; height:0; overflow:hidden}
+.ico-new{font-size:0!important; display:inline-block!important; background:url(https://watvnewsong.org/images/ico_new@2x.png)center no-repeat; background-size:13px; width:13px; height:13px; margin-right:3px; vertical-align:2px; overflow:initial}
+
+/* --- input --- */
+input {width:100%; height:45px; border:0; margin-top:10px; font-size:15px; border-bottom:1px solid #F2F2F2; border-radius:0; padding:0; -webkit-appearance:none; -moz-appearance:none; appearance:none}
+input:focus {border-bottom:1px solid #4B5CFF}
+
+/* --- header --- */
+.notice-list {display:none;padding:13px 15px 13px;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;order:3;background-color:#EDF5FD; margin-left:-15px; margin-right:-15px; height:50px}
+.badge {font-size:12px;color:#fff;padding:3px 7px 1px;border-radius:30px;display:inline-block;margin-right:8px}
+.green {background-color:#1EC545}
+.page-full .notice-list {display:inline-block}
+
+@media(min-width:769px){
+	.notice-list{order:2;flex:1 100%;display:flex;margin-top:20px; margin-left:0; margin-right:0; border-radius:5px}/*height:auto;*/
+	.play-btn:hover{opacity:0.7}
+	.badge{margin-right:12px}
+}
+
+
+
+/* --- notice banner 200117 --- */
+.notice-banner{display:flex; justify-content:center; align-items:center; flex-direction:column; min-height:80px; overflow:hidden; padding:14px 10% 13px; background-color:#EEE; margin:10px -15px 0; text-align:center; position:relative}
+.notice-banner *{color:#FFF; line-height:1.25; max-width:450px; z-index:1}
+.notice-banner h5{font-size:16px; font-weight:600}
+.notice-banner p{font-size:13px; margin-top:2px}
+
+.notice-banner .bgL, .notice-banner .bgR{position:absolute; top:0; width:300px; height:100%; z-index:0}/*transition:all 0.3s ease*/
+.notice-banner .bgL{left:-160px; border-radius:5px 0 0 5px}
+.notice-banner .bgR{right:-160px; border-radius:0 5px 5px 0}
+.notice-banner .bgL:after, .notice-banner .bgR:after{position:absolute; content:''; top:0; width:50%; height:100%}
+.notice-banner .bgL:after{right:0}
+.notice-banner .bgR:after{left:0}
+
+/*blue*/
+.notice-banner.type1{background-color:#5555F7}
+.notice-banner.type1 .bgL, .notice-banner.type1 .bgR{background:url(https://watvnewsong.org/images/notice_bg1.png) no-repeat 0; background-size:cover}
+.notice-banner.type1 .bgL:after{background:linear-gradient(to right, rgba(85,85,247,0), rgba(85,85,247,1))}
+.notice-banner.type1 .bgR:after{background:linear-gradient(to right, rgba(85,85,247,1), rgba(85,85,247,0))}
+/*green*/
+.notice-banner.type2{background-color:#04A04D}
+.notice-banner.type2 .bgL,  .notice-banner.type2 .bgR{background:url(https://watvnewsong.org/images/notice_bg2.png) no-repeat 0; background-size:cover}
+.notice-banner.type2 .bgL:after{background:linear-gradient(to right, rgba(4,160,77,0), rgba(4,160,77,1))}
+.notice-banner.type2 .bgR:after{background:linear-gradient(to right, rgba(4,160,77,1), rgba(4,160,77,0))}
+/*dot*/
+.notice-banner.type3{background-color:#EF5B70}
+.notice-banner.type3 .bgL{left:-210px; background:url(https://watvnewsong.org/images/notice_bg3L.png) no-repeat right center}
+.notice-banner.type3 .bgR{right:-210px; background:url(https://watvnewsong.org/images/notice_bg3R.png) no-repeat left center}
+.notice-banner.type3 .bgL, .notice-banner.type3 .bgR{background-size:cover}
+/*heart*/
+.notice-banner.type4{background-color:#5555F7}
+.notice-banner.type4 .bgL{left:-190px; background:url(https://watvnewsong.org/images/notice_bg4L.png) no-repeat left bottom}
+.notice-banner.type4 .bgR{right:-190px; background:url(https://watvnewsong.org/images/notice_bg4R.png) no-repeat right bottom}
+.notice-banner.type4 .bgL, .notice-banner.type4 .bgR{background-size:250px}
+/*Christ*/
+.notice-banner.type5{background:url(https://watvnewsong.org/images/notice_bg5.jpg) no-repeat center; background-size:cover}
+.notice-banner.type5 h5{color:#594C44}
+.notice-banner.type5 p{color:#8A644D; opacity:.8}
+@media(min-width:769px){
+	.notice-banner{margin:0 0 -20px; padding:20px 20%; border-radius:5px}
+	.notice-banner.type1 .bgL,
+	.notice-banner.type2 .bgL{left:-100px}
+	.notice-banner.type1 .bgR,
+	.notice-banner.type2 .bgR{right:-100px}
+	.notice-banner.type3 .bgL{left:-160px}
+	.notice-banner.type3 .bgR{right:-160px}
+	.notice-banner.type4 .bgL{left:-160px}
+	.notice-banner.type4 .bgR{right:-160px}
+}
+@media(min-width:1280px){
+	.notice-banner .bgL:after, .notice-banner .bgR:after{width:80%}
+	.notice-banner.type1 .bgL,
+	.notice-banner.type2 .bgL,
+	.notice-banner.type3 .bgL,
+	.notice-banner.type4 .bgL{left:0}
+	.notice-banner.type1 .bgR,
+	.notice-banner.type2 .bgR,
+	.notice-banner.type3 .bgR,
+	.notice-banner.type4 .bgR{right:0}
+	.notice-banner.type4 .bgL, .notice-banner.type4 .bgR{background-size:300px}
+}
+
+
+/* --- main title --- */
+.hd-arrow::after {content:''; display:inline-block; width:7px; height:12px; margin:0 5px; background:url(https://watvnewsong.org/images/ico_arrow_right.png)no-repeat; background-size:100%}
+.hd-index span, .hd-info span {color:#4B5CFF; margin-left:2px; vertical-align:top}
+
+/* --- guide --- */
+.mainlink{display:block}
+.mainlink p {font-size:11px; color:#4d4d4d; padding:5px 0 5px}
+.mainlink-guide::before {content:''; width:10px; height:10px; display:inline-block; margin-right:5px; background:url(https://watvnewsong.org/images/ico_simple_music.png)center no-repeat; background-size:10px}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+  .hd-arrow::after {background:url(https://watvnewsong.org/images/ico_arrow_right@2x.png)no-repeat; background-size:100%}
+ }
+
+@media(min-width:769px){
+  .hd-arrow::after{width:16px; height:23px; margin:0 5px; background:url(https://watvnewsong.org/images/ico_arrow_right_pc.png)no-repeat; background-size:cover; position:relative; top:3px}
+  .mainlink p{font-size:13px; display:inline-block; margin-top:-3px; vertical-align:middle; padding:0 0 0 15px}
+
+	@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+	   .hd-arrow::after{background:url(https://watvnewsong.org/images/ico_arrow_right_pc@2x.png)no-repeat; background-size:cover}
+	}
+}
+
+/* --- ico --- */
+.index-banner a {display:flex; font-size:14px; padding:8px 0}
+.index-banner a::before {content:''; height:20px; position:relative; top:-1px; margin-right:5px; flex-basis:20px; flex-shrink:0}
+.ico-music::before {margin-right:5px; background:url(https://watvnewsong.org/images/ico_music.png)center no-repeat; background-size:20px}
+.ico-headphones::before {margin-right:5px; background:url(https://watvnewsong.org/images/ico_headphones.png)center no-repeat; background-size:20px}
+.ico-pencil::before {margin-right:5px; background:url(https://watvnewsong.org/images/ico_pencil.png)center no-repeat; background-size:20px}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+  .ico-music::before {background:url(https://watvnewsong.org/images/ico_music@3x.png)center no-repeat; background-size:20px}
+  .ico-headphones::before {background:url(https://watvnewsong.org/images/ico_headphones@3x.png)center no-repeat; background-size:20px}
+  .ico-pencil::before {background:url(https://watvnewsong.org/images/ico_pencil@3x.png)center no-repeat; background-size:20px}
+}
+
+
+/* ---  MY --- */
+.my-menu {display:-webkit-flex; display:flex; font-size:13px}
+.my-menu a {-webkit-flex:1; flex:1; text-align:center; padding:8px 10px; font-size:13px; color:#444; line-height:18px}
+.my-menu a::before {content:''; width:25px; height:25px; display:block; padding:5px 0; margin:0 auto}
+.my-menu .ico-my-music::before {background:url(https://watvnewsong.org/images/ico_my_music@3x.png)center no-repeat; background-size:25px}
+.my-menu .ico-my-album::before {background:url(https://watvnewsong.org/images/ico_my_album@3x.png)center no-repeat; background-size:25px}
+.my-menu .ico-my-heart::before {background:url(https://watvnewsong.org/images/ico_my_heart@3x.png)center no-repeat; background-size:25px}
+
+
+/* --- basic select --- */
+.select-list {font-size:12px; color:#59626F; line-height:1.8}
+.select-list a{max-width:150px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:inline-block; padding:0 5px; color:#333; padding-top:2px}
+.select-list button{font-size:12px; padding-top:2px; padding-bottom:0}
+.select-list a::before{content:'';height:20px;display:inline-block;vertical-align:-5px;margin-right:4px}
+.select_off {color:#4B5CFF}
+.select-all::before,
+.selectAll::before {background:url(https://watvnewsong.org/images/ico_check_off.png)center no-repeat; background-size:11px; width:11px; margin-right:3px}
+.select-play::before {background:url(https://watvnewsong.org/images/ico_allplay.png)center no-repeat; background-size:11px; width:11px; margin-right:3px}
+.select_off::before {background:url(https://watvnewsong.org/images/ico_check_on.png)center no-repeat; background-size:11px; width:11px}
+.blue {color:#4B5CFF}
+
+/* --- list select --- */
+.select-list .select-bn .select-all{padding-left:0}
+.select-list .select-bn{display:flex;align-items:center}
+.list-lang-select > div{position:relative; margin-top:0; padding-right:0; display:inline-block; margin-right:5px; font-size:inherit;min-width:110px;}
+.list-lang-select > div select{font-size:14px; background:transparent; padding:4px 10px; padding-left:0}
+.list-lang-select > div:last-child{margin-right:0}
+.list-lang-select > div::after {content:''; border-color:#333 transparent; border-style:solid; border-width:5px 4px 0 4px; width:0; height:0; margin-left:-2px; top:50%; right:0; margin-top:-2px; position:absolute; z-index:-1}
+/* .select-list .selectAllPlay{padding-right:0} */
+
+@media(min-width:769px){
+	.select-list .select-bn{margin-left:auto}
+	.select-list .select-bn .select-all{padding-left:13px}
+	.list-lang-select{display:flex}
+	.list-lang-select > div select{padding:4px 10px}
+	.list-lang-select > div{height:30px;vertical-align:top;margin-right:1px;border:1px solid rgba(0,0,0,.11);padding:0; border-radius:2px;align-items:center;display:flex}
+	.list-lang-select > div::after {right:10px}
+	.select-list .selectAllPlay{padding-right:13px}
+}
+
+.titlang{font-size:13px; color:#666666; line-height:normal}
+
+.select_off::before {background:url(https://watvnewsong.org/images/ico_check_on@3x.png)center no-repeat; background-size:11px}
+.select-list a.select_off{border-color:#4B5CFF; color:#4B5CFF}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+  .select-all::before,
+  .selectAll::before {background:url(https://watvnewsong.org/images/ico_check_off@3x.png)center no-repeat; background-size:11px}
+  .select-play::before {background:url(https://watvnewsong.org/images/ico_allplay@3x.png)center no-repeat; background-size:11px}
+  .select_off::before {background:url(https://watvnewsong.org/images/ico_check_on@3x.png)center no-repeat; background-size:11px}
+ }
+
+@media(min-width:769px) {
+	.select-list{font-size:13px; margin:0}
+	.select-list a,
+	.select-list button{border-radius:25px; border:1px solid rgba(0,0,0,.11); padding:4px 13px; margin-right:3px; min-height:30px; font-size:13px;}
+	.select-list a:hover{opacity:0.7}
+	.select-list a:last-child{margin-right:0}
+}
+
+/* --- list 1 --- */
+.list-container li {display:flex; width:100%; align-items:center; position:relative}
+.list-container input:checked ~ label:after{pointer-events:none; content:''; display:block; background:rgba(0,0,0,.03); width:110%; position:absolute; height:100%; top:0; left:0; margin-left:-15px; margin-right:-5px}
+.list-container input {display:none}
+.list-container label {display:flex; width:100%; align-items:center; cursor:pointer}
+.list-container label span{transition:none}
+.list-container li:last-child label{border:0}
+.list-container label a {display:block; transition:none}
+.list-container div {display:flex; width:100%; align-items:center; text-align:center}
+.list-container .thum {width:46px;max-width:46px;height:46px;display:inline-block;margin-right:0;position:absolute;font-size:0;cursor:pointer;left:0px;top:50%;margin-top:-23px;background-color:#f8f9fa}
+.list-container .thum:before{content:''; position:absolute; top:0; left:0; border:1px solid #00000004; width:100%; height:100%; box-sizing:border-box}
+.list-container .song-info {flex:1; font-size:0; cursor:default}
+.list-container .song-info h3,
+.list-container .song-info div{text-align:left}
+.list-container .song-info div{display:flex}
+.list-container .song-info > *,
+.song-info span{position:relative; display:-webkit-box; -webkit-line-clamp:1; overflow:hidden; -webkit-box-orient:vertical; text-overflow:ellipsis; word-wrap:break-word}
+.list-container .song-info span {font-size:12px; color:rgba(0,0,0,.5)}
+.list-container .song-info span::after{content:''; display:inline-block; width:1px; height:10px; background-color:rgba(0,0,0,.1); position:relative; right:0; top:1px; margin:0 5px}
+.list-container .song-info span.bf-none::before{display:none}
+.list-container .song-info h3 .ico-new{flex:none}
+
+@media(min-width:769px) {
+	.list-container .song-info span::after{display:none}
+}
+
+.list-container .thum.down-no:after{content:''; position:absolute; right:3px; bottom:3px; width:20px; height:20px; border-radius:4px; background-color:rgba(0,0,0,0.7);
+background-image:url(https://watvnewsong.org/images/ico_down_no.png); background-repeat:no-repeat; background-position:center; background-size:12px}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+	.list-container .thum.down-no:after{background-image:url(https://watvnewsong.org/images/ico_down_no@2x.png)}
+}
+
+.show_playList .list-container .song-info span::after,
+.main-list .song-info span::after{content:''; display:inline-block; width:1px; height:10px; background-color:rgba(0,0,0,.1); position:relative; right:0; top:1px; margin:0 5px}
+
+.title-info .newsong_genre_nm::after,
+.title-info .newsong_group_nm::after{content:''; display:inline-block; width:1px; height:10px; background-color:rgba(0,0,0,.1); position:relative; right:0; top:1px; margin:0 5px}
+
+.my-latest .song-info span::after,
+.mysong-like .song-info span::after,
+.info-li .song-info span::after{display:none}
+
+.list-container .song-info span:last-child::after,
+.player-bar .song-info span:last-child::after,
+.main-list .song-info span:last-child::after{display:none}
+
+@media(min-width:769px) {
+	.show_playList .list-container .song-info span::after{display:none}
+}
+
+.thum {display:inline-block; position:relative}
+.on .thum::before{background-color:rgba(0,0,0,.6)}
+
+.list-container label .view {flex-basis:35px; flex-shrink:0; height:44px; background:url(https://watvnewsong.org/images/ico_sheet_off.png)center no-repeat; margin-right:-7px}
+.list-container label .video{height:44px; background: url(https://watvnewsong.org/images/ico_video_off.png)center no-repeat;}
+.list-container label .view.on {background:url(https://watvnewsong.org/images/ico_sheet.png)center no-repeat;}
+.list-container label .video.on{background: url(https://watvnewsong.org/images/ico_video.png)center no-repeat;}
+.list-container .time{margin-top:0; color:rgba(0,0,0,.5)}
+.list-container .drag{font-size:0; position:relative; padding:20px; margin-left:10px; display:inline-block; height:100%; right:-15px}
+.list-container .drag span{background:rgba(0,0,0,.4); width:15px; height:1px; display:inline-block}
+.list-container .drag span::before, .list-container .drag span::after{content:''; width:15px; height:1px; background:rgba(0,0,0,.4); position:absolute; top:14px; left:20px}
+.list-container .drag span::after{bottom:14px; top:auto}
+.list-container .sortable-chosen{box-shadow:0 0 5px rgba(0,0,0,.11)}
+.list-container .song-info .song-title-wrap{display:flex; flex-flow:row wrap; -ms-flex-flow:row wrap; max-width:450px}
+.list-container .song-info .song-title-wrap h3{display:-webkit-box; flex:1 100%}
+.list-container .song-info .site_title{font-size:12px; opacity:0.75}
+.list-container .song-info > div {font-size:0}
+.list-container .song-info div > div{width:auto}
+.list-container .song-info .no_down{font-size:0}
+/* .list-container .song-info .lang_nm:after{content:'|';display:inline-block;font-size:12px;opacity:0.3;margin:0 6px} */
+.list-container .song-info .no_down::after{position:relative; top:0; margin:0 1px; width:21px; height:12px; background:url(https://watvnewsong.org/images/ico_downx_m@2x.png)center no-repeat; background-size:21px; display:inline-block; content:''; opacity:100}
+.list-container .song-info .no_down::before{content:'|'; font-size:12px; opacity:0.15; margin:0 6px}
+.list-container .song-info span.page-newsong_group_nm{display:none}
+.list-container.choir .song-info span.page-newsong_group_nm{display:block}
+.list-container.choir .song-info .page-newsong_group_nm:after{content:'|';display:inline-block;font-size:12px;opacity:0.3;margin:0 6px}
+
+
+/*Ã¬Â¢â€¹Ã¬â€¢â€žÃ¬Å¡â€/Ã¬Å¾Â¬Ã¬Æ’ÂÃ«Â²â€žÃ­Å Â¼ - Ã¬Å¾ÂÃ«Â¦Â¬Ã¬Å¾Â¡ÃªÂ¸Â°Ã¬Å¡Â©*/
+.list-container .like-btn {width:44px; flex-shrink:0; height:44px}
+.list-container .play-btn {width:44px; flex-shrink:0; height:44px; margin-right:-8px; background:url(https://watvnewsong.org/images/ico_play_now.png) no-repeat center}
+/*Ã¬â€¹Â¤Ã¬Â Å“Ã­ÂÂ´Ã«Â¦Â­Ã­Ë†Â¬Ã«Âªâ€¦*/
+.list-container .play-btn-area{position:absolute; width:44px; height:100%; right:-8px; top:0}
+
+
+/* icon all */
+.view{height:44px}
+.video{height:44px}
+
+@media(max-width:768px){
+	.list-container li label{padding-top:13px; padding-bottom:13px; padding-left:61px; padding-right:0; height:68px}
+	.guidelist .list-container > div{padding-top:6px; padding-bottom:6px}
+	.list-container .time{font-size:13px}
+}
+@media(min-width:769px) {
+	.list-container > li label {padding:10px 0 10px 70px; min-height:64px; height:64px}
+	.list-container > li label:before{content:''; display:block; width:100%; height:1px; position:absolute; bottom:-1px; left:0; background-color:rgba(0,0,0,.04)}
+	.list-container > li:last-child label:before{display:none}
+	.list-container input:checked ~ label:after{content:''; width:100%; height:101%; margin-left:0; margin-right:0}
+	.main-chart .list-container > li label{padding:10px 0 10px 46px}
+	.list-container label:hover:after{background:rgba(0,0,0,.02); content:''; width:100%; height:101%; position:absolute; left:0; top:0px; z-index:-1}
+	.list-container.album label:hover:after{background-color:transparent}
+	.list-container .choirNote label:hover:after{display:none}
+	.list-container .song-info div{flex:1}
+	.list-container .song-info .song-title-wrap{flex:2}
+	.list-container > li .artist{flex:1}
+	.list-container .thum{margin-right:20px}
+	.list-container .song-info {display:flex; /*line-height:1.3;*/ z-index:-1}
+	.list-container .song-info:lang(hi),
+	.list-container .song-info:lang(ne) {line-height:1.5}
+	.list-container .song-info h3 {flex:2; align-items:center; display:flex}
+	.list-container .song-info .site_title{font-size:12px}
+	.list-container .song-info span {flex:1; font-size:13px; padding:0 10px}
+	.list-container .song-info span:lang(ko),
+	.list-container .song-info span:lang(ja),
+	.list-container .song-info span:lang(cn){font-size:14px}
+	.list-container .song-info h3 .ico-new{top:-2px; vertical-align:middle}
+	.list-container .song-info span::before{display:none}
+	.list-container .song-info span.page-newsong_group_nm{display:block}
+	.list-container.choir .song-info .page-newsong_group_nm:after{display:none}
+	.basic .list-container .song-info span.page-newsong_group_nm,
+	.info-li .song-info span{flex:2; max-width:200px}
+	.basic .list-container .song-info .song-choir span.page-newsong_group_nm{flex:1}
+	.pl-wrap .list-container .song-info div.page-newsong_down_nm,
+	.basic .list-container .song-info div.page-newsong_down_nm,
+	.info-li .song-info div.page-newsong_down_nm{max-width:98px}
+	.list-container .song-info > div > div{flex:1}
+	.list:last-child, .album > div {border:none}
+	.album .song-info h3{color:#333}
+	.album .song-info {font-size:13px; color:rgba(0,0,0,.35)}
+	.list-container .song-info span::before,
+	.main-list .song-info span::before{margin:0 7px}
+	.show_playList .list-container .song-info span::before{content:none;}
+	.main-list .song-info span::before {display:inline-block}
+	.list-container .play-btn,
+	.list-container label .view{margin-right:0}
+	.list-container .play-btn-area{right:0}
+	.list-container .song-info .no_down::after{margin-left:0; width:24px; height:13px; background:url(https://watvnewsong.org/images/ico_downx@2x.png)center no-repeat; background-size:24px}
+	.list-container .song-info .no_down::before,
+	.list-container .song-info .lang_nm:after{display:none}
+	.info-li .desc{font-size:16px; padding:10px 0}
+	.list-container .drag{right:0}
+}
+
+
+/* --- list 2 --- */
+.round .thum img {border-radius:50%}
+.round .thum::before {border-radius:50%}
+
+/* --- list 3 --- */
+.song-info h3 strong {color:#4B5CFF; font-weight:500}
+
+/* --- list 4 --- */
+.nowplay h3 {color:#4B5CFF}
+
+/* --- list 5 --- */
+.list-container > div div.popular {align-items:initial}
+
+/*  --- list 6---  */
+.list-container > li label em {text-align:center; min-width:36px; margin-right:8px; height:20px; font-size:15px; line-height:1.5; padding:0 10px; margin-left:-10px}
+.guidelist .list-container > div{align-items:flex-start}
+.guidelist .list-container > li label{padding:14px 0 12px 46px}
+.guidelist .spot{font-size:14px}
+.guidelist .list-container .song-info .song-title-wrap{min-height:40px}
+
+/* --- list 7 --- */
+.list-container .accompanist > li label{border:0}
+.list-container .list-ico {width:120px;margin-right:-10px;flex:initial}
+.video::before {background:url(https://watvnewsong.org/images/ico_video.png)center no-repeat; background-size:20px}
+.list-container label .view.off{background:url(https://watvnewsong.org/images/ico_sheet_off.png)center no-repeat; background-size:20px}
+.list-container label .video.off{background:url(https://watvnewsong.org/images/ico_video_off.png)center no-repeat; background-size:20px}
+
+@media(min-width:769px) {
+    .list-container div.popular {align-items:center}
+	.guidelist .list-container > div{align-items:center}
+	.guidelist .list-container > li label{padding:14px 0 12px 46px}
+	.guidelist .spot{font-size:16px}
+	.list-container .list-ico {width:160px}
+}
+
+@media(min-width:1024px) {
+	.list-container > li label em{min-width:60px}
+}
+
+@media(max-width:375px) {
+	.list-container .list-ico a::before{width:35px}
+}
+
+
+
+/* accompanist list */
+.accompanist .btn-box{width:40px}
+.accompanist .btnbox-wrap{right:0}
+.accompanist .song-info > *,
+.accompanist .song-info span{-webkit-line-clamp:2; line-height:1.3}
+.accompanist .list-ico{margin-right:0; justify-content:right}
+.accompanist .list-ico a{width:40px; flex-basis:40px; margin:0}
+.accompanist.child .list-ico{width:75px}
+.accompanist label .view{margin-right:0}
+@media(max-width:768px){
+	.accompanist > li label{padding-top:3px; padding-bottom:3px}
+}
+@media(min-width:769px) {
+	.accompanist .btn-box{width:40px}
+	.accompanist .btnbox-wrap{right:0}
+	.accompanist.child .list-ico{width:120px}
+	.accompanist .list-ico a{width:40px; flex-basis:40px; margin:0}
+}
+@media(max-width:375px) {
+.accompanist > li .hd-song{font-size:14px}
+}
+
+
+/* --- list on --- */
+.list-container .on .thum:before{content:''; display:block; width:100%; height:100%; position:absolute; background:#1d246d75}
+.list-container .on .hd-song{color:#4B5CFF}
+.list-container .on span{color:#4B5CFF}
+
+
+/* --- input search --- */
+.input-search {position:relative; display:flex}
+.input-search input {flex-grow:1; margin-top:0; border:0; height:50px; margin-left:20px; padding-top:1px; background:0}
+.input-search input:focus{border:0}
+.input-search .bn-cancel{width:44px; height:44px; flex-basis:44px; display:inline-block}
+.bn-cancel {background:url(https://watvnewsong.org/images/ico_search_close.png)center no-repeat; background-size:16px; right:45px; width:38px; height:38px; display:inline-block}
+.input-search .search-close{height:auto; text-align:right; padding-top:3px; color:#888; font-size:0; max-width:72px;min-width:24px;width:45px;height:16px;background:url(https://watvnewsong.org/images/ico_search_close.png);background-size:16px;background-position:center;background-repeat:no-repeat}
+.input-search .btnSearch{background:url(https://watvnewsong.org/images/icon-search-btn.png)center no-repeat;background-size:17px;width:28px;height:50px;padding:0;display:inline-block;margin-right:15px;padding-left:49px}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+  .input-search .bn-search {background:url(https://watvnewsong.org/images/ico_search_on@2x.png)center no-repeat; background-size:19px}
+  .bn-cancel {background:url(https://watvnewsong.org/images/ico_search_close@2x.png)center no-repeat; background-size:16px}
+	.input-search .btnSearch{background:url(https://watvnewsong.org/images/icon-search-btn@2x.png)center no-repeat;background-size:17px; margin-right:6px}
+
+}
+
+@media(min-width:769px){
+	.input-search {width:270px; border:0; background:rgba(0,0,0,.03); border-radius:25px; height:38px; padding:0 10px 0 20px}
+	#Modal-songadd .input-search{background:inherit; padding:0; width:100%; padding-top:10px; margin-bottom:10px}
+	#Modal-songadd #myTabContent #searchBtn{width:100%; border-bottom:1px solid #4B5CFF}
+	.input-search input{font-size:14px; height:38px; margin-left:0}
+	.input-search .search-close{margin-right:0}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+	.input-search .bn-search{background:url(https://watvnewsong.org/images/ico_search_pc@2x.png)center no-repeat; background-size:18px}
+	.input-search .search-close {background:url(https://watvnewsong.org/images/ico_search_close@2x.png)center no-repeat; background-size:16px}
+}
+
+@media (min-width:969px) {
+	.input-search{width:320px}
+}
+
+
+/* --- player --- */
+.player {position:relative; overflow:hidden; text-align:center; height:100%; overflow-y:hidden!important; z-index:-1; padding:0 15px}
+.player > * {text-align:center; margin:0 auto}
+.player h2 {font-size:19px; font-weight:500; letter-spacing:-0.03em; overflow:hidden; line-height:1.3; padding:0 30px; margin-top:30px}
+.player span {font-size:14px; color:rgba(0,0,0,.5)}
+.player .play {margin:0 15px}
+.player img{border-radius:50%; max-width:170px; max-height:170px}
+.player .img-jacket{width:auto; padding-left:20px; padding-right:20px; max-height:initial; display:flex; align-items:center; padding-top:20px}
+.player .playwrp{flex:3; display:flex; flex-direction:column}
+.player .playwrp > div{margin-top:5px; margin-bottom:5px}
+.player .playwrp .play-hd{flex:1}
+.player .playwrp .play-control{flex:1}
+
+@media (min-width:375px) {
+.player img{border-radius:50%; max-width:250px; max-height:250px}
+.player .playwrp > div{margin-top:15px}
+}
+
+.player .play-control span {font-size:0}
+.player .play-control {justify-content:center}
+.player .play-control a {width:52px; height:52px; display:inline-block}
+.player .play-control .prev {background:url(https://watvnewsong.org/images/ico_prevbig@2x.png)center no-repeat; background-size:21px}
+.player .play-control .play {background:url(https://watvnewsong.org/images/ico_playbig@2x.png)center no-repeat; background-size:100%}
+.player .play-control .pause {background:url(https://watvnewsong.org/images/ico_pausebig@2x.png)center no-repeat; background-size:100%}
+.player .play-control .next {background:url(https://watvnewsong.org/images/ico_nextbig@2x.png)center no-repeat; background-size:21px}
+.player .progress-bar {position:relative}
+.player .progress-bar span {display:inline-block}
+.player .etcCtl {display:flex; width:100%; left:0; height:70px; margin-top:20px}
+.player .etcCtl > a, .player .etcCtl > span a {flex-basis:44px; align-items:center; width:44px; height:44px; display:inline-block; margin:0 5px}
+.player .etcCtl > span {flex-grow:1; font-size:0}
+.player .ico-more {margin-left:-12px}
+.player .playlist {margin-right:-12px}
+.Playscreen-wrap{height:100%; display:flex; flex-direction:column; justify-content:center; margin:0!important; align-items:center; padding-bottom:50px}
+.Playscreen-wrap > div{width:100%}
+
+/* --- time --- */
+.time {margin-top:8px; display:flex; -webkit-justify-content:space-between; justify-content:space-between}
+.time span {font-size:12px; color:rgba(0,0,0,.5)}
+
+.ico-more {background:url(https://watvnewsong.org/images/ico_more@2x.png)center no-repeat; background-size:18px; width:50px; height:50px; position:absolute; transform:rotate(90deg); right:12px; top:70px}
+.repeat {background:url(https://watvnewsong.org/images/ico-loop.png)center no-repeat; background-size:16px; background-position:center left 0px}
+.repeat.on {background:url(https://watvnewsong.org/images/ico-loop-on.png)center no-repeat; background-size:16px; background-position:center left 0px}
+.ico-heart label{background:url(https://watvnewsong.org/images/ico_like_off@3x.png)center no-repeat; background-size:25px; width:44px; height:44px; display:inline-block}
+.random {background:url(https://watvnewsong.org/images/ico_shuffle_off@3x.png)center no-repeat; background-size:25px}
+.pd-info {background:url(https://watvnewsong.org/images/ico_playdisplay_info@2x.png)center no-repeat; background-size:22px}
+.pd-heart {background:url(https://watvnewsong.org/images/ico_playdisplay_heart@2x.png)center no-repeat; background-size:25px}
+/*.pd-heart.like-light{background:url(https://watvnewsong.org/images/ico_playdisplay_heart_on@2x.png)center no-repeat; background-size:25px}*/
+.pd-myadd {background:url(https://watvnewsong.org/images/ico_playdisplay_myadd@2x.png)center no-repeat; background-size:25px}
+.pd-down {background:url(https://watvnewsong.org/images/ico_playdisplay_down@2x.png)center no-repeat; background-size:20px}
+@media(min-width:768px){
+	.repeat {background:url(https://watvnewsong.org/images/ico-loop.png)center no-repeat; background-size:16px; background-position:center center}
+	.repeat.on {background:url(https://watvnewsong.org/images/ico-loop-on.png)center no-repeat; background-size:16px; background-position:center center}
+}
+
+.ico-heart input{display:none}
+.ico-heart input:checked ~ label{background:url(https://watvnewsong.org/images/ico_like_on@3x.png)center no-repeat; background-size:25px}
+
+@media(min-width:768px) {
+	#Modal-Playscreen .modal-content{display:flex; align-items:center; justify-content:center}
+	.player img {border-radius:3px; max-width:320px; max-height:320px}
+	.player h2 {font-size:27px; letter-spacing:-0.06em; margin-top:40px}
+	.player span {font-size:15px; letter-spacing:-0.05em; margin-top:5px}
+	.player .time span{font-size:13px}
+	.player > div {width:447px}
+	.player .etcCtl {position:relative; padding:0}
+	.Playscreen-wrap{margin:0 auto!important; padding:0}
+	.Playscreen-wrap > div{padding:0}
+	.player .img-jacket{padding:0}
+	.player .playwrp > div{margin-top:40px}
+
+	.ico-more{right:16px}
+}
+
+
+/* --- repeat button --- */
+.player_option{background-size:19px; background-repeat:no-repeat; background-position:center}
+
+.repeat_off{background-image:url(https://watvnewsong.org/images/ico_repeat_off.png)}
+.repeat_on{background-image:url(https://watvnewsong.org/images/ico_repeat_on.png)}
+.repeatOne_on{background-image:url(https://watvnewsong.org/images/ico_repeat_1song.png)}
+.onlyOne_on{background-image:url(https://watvnewsong.org/images/ico_repeat_1play.png)}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+.repeat_off{background-image:url(https://watvnewsong.org/images/ico_repeat_off@2x.png)}
+.repeat_on{background-image:url(https://watvnewsong.org/images/ico_repeat_on@2x.png)}
+.repeatOne_on{background-image:url(https://watvnewsong.org/images/ico_repeat_1song@2x.png)}
+.onlyOne_on{background-image:url(https://watvnewsong.org/images/ico_repeat_1play@2x.png)}
+}
+
+
+/* --- popup layer --- */
+.dim-Bg {position:fixed; top:0; left:0; width:100%; height:100%; background:#000; opacity:.7; z-index:99; filter:alpha(opacity=70)s}
+.login-contents {background-color:#fff}
+.login-contents .login-wrap{max-width:360px; margin:0 auto; padding:0 30px 100px}
+.login-contents .logo{ margin:0 auto; width:143px; height:33px; background:url(https://watvnewsong.org/images/login_logo@2x.png)no-repeat; background-size:100%; margin-top:100px; margin-bottom:10px}
+.login-contents .userinfo a, .user-name, .user-name span{overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.login-contents .userinfo {background-color:#4B5CFF; color:#fff}
+.login-contents input{font-size:14px}
+.login-contents .bn-common{border-radius:2px; overflow:hidden; margin-top:20px}
+.login-contents .bn-common a{font-size:17px; padding:15px 15px}
+.login-contents .index-banner {margin-top:20px}
+.login-contents .index-banner a{padding:6px 0}
+.login-contents .user-name{color:#fff;position:relative;top:0px;overflow:visible;background-color:#2C3EEC;border:1px solid #202DE9;padding:0 9px;vertical-align:middle;border-radius:3px;font-size:14px;margin-right:11px;display:flex;align-items:center;height:36px}
+.login-contents .user-nick{margin-right:auto}
+.login-contents .userinfo span{font-size:12px;color:#fff;margin-right:auto;display:flex}
+.login-contents .user-name::before {content:'';width:22px;height:22px;vertical-align:middle;background:url(https://watvnewsong.org/images/ico_user@2x.png)no-repeat;background-size:100%;display:inline-block;margin-right:6px;position:relative;top:0px}
+.login-contents .user-name a, .login-contents .user-name span{color:#fff; position:relative; top:2px}
+.login-contents .pop-header{top:0;left:0;display:flex;width:100%;height:56px;align-items:center;padding:0 15px}
+.input-search{align-items:center; -webkit-animation-name:animatetop; -webkit-animation-duration:0.4s; animation-name:animatetop; animation-duration:0.4s}
+
+.id-check {margin-top:10px}
+.id-check input{display:none}
+.id-check input[type=checkbox] {position:absolute; top:4px; left:0; width:16px; height:16px; margin:0; border:0; cursor:pointer}
+.id-check input[type=checkbox] {-webkit-appearance:none; -moz-appearance:none}
+.id-check input[type=checkbox] + label {display:inline-block; cursor:pointer; position:relative; padding-left:24px; font-size:12px; color:#777; line-height:1.8}
+.id-check input[type=checkbox]+ label:before {content:""; display:inline-block; width:16px; height:16px; position:absolute; top:0; left:0; border-radius:10px; background-color:#fff; border:1px solid #d5dbe0}
+.id-check input[type=checkbox]:checked + label:before {border:1px solid #8FA8FF; background:url('https://watvnewsong.org/images/ico_lang_check@2x.png')no-repeat center; background-size:9px}
+
+.copy-logo {margin:0 auto; width:188px; height:26px; vertical-align:middle; background:url(https://watvnewsong.org/images/logo_church@2x.png) no-repeat; background-size:100%; margin-top:50px}
+.site-link {text-align:center}
+.site-link a{font-size:12px; color:#666666; padding:0 7px; display:inline-block}
+
+
+@media(min-width:769px){
+.login-contents .gray{background:url(https://watvnewsong.org/images/ico_close_grey@2x.png)center no-repeat; background-size:16px}
+.login-contents {max-width:400px; margin:0 auto; padding:30px}
+.login-contents .userinfo{background-color:#fff}
+.login-contents .user-name{display:none}
+.login-contents .logo{margin:30px 0 20px 0}
+.login-contents .login-wrap{padding:0 30px 50px}
+}
+
+/* --- 2x img --- */
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+  .list-container .play-btn{background:url(https://watvnewsong.org/images/ico_play_now@3x.png)center no-repeat; background-size:20px}
+  .list-container label .view {background:url(https://watvnewsong.org/images/ico_sheet_off@2x.png)center no-repeat; background-size:20px}
+  .video::before {background:url(https://watvnewsong.org/images/ico_video@2x.png)center no-repeat; background-size:20px}
+  .list-container label .video {background:url(https://watvnewsong.org/images/ico_video_off@2x.png)center no-repeat; background-size:20px}
+  .list-container label .video.on{background:url(https://watvnewsong.org/images/ico_video@2x.png)center no-repeat; background-size:20px}
+  .list-container label .view.on{background:url(https://watvnewsong.org/images/ico_sheet@2x.png)center no-repeat; background-size:20px}
+  .video.off::before {background:url(https://watvnewsong.org/images/ico_video_off@2x.png)center no-repeat; background-size:20px}
+  .all-select::before {background:url(https://watvnewsong.org/images/ico_check_off@2x.png)center no-repeat; background-size:11px}
+  .all-play::before {background:url(https://watvnewsong.org/images/ico_allplay@2x.png)center no-repeat; background-size:7px}
+  .select-on::before {background:url(https://watvnewsong.org/images/ico_check_on@2x.png)center no-repeat; background-size:11px}
+  .foot-info::before {background:url(https://watvnewsong.org/images/ico_alert@2x.png)center no-repeat; background-size:17px}
+  .mainlink-guide::before {background:url(https://watvnewsong.org/images/ico_simple_music@2x.png)center no-repeat; background-size:10px}
+  .repeat {background:url(https://watvnewsong.org/images/ico-loop@2x.png)center no-repeat; background-size:16px; background-position:center left 0px}
+  .repeat.on {background:url(https://watvnewsong.org/images/ico-loop-on@2x.png)center no-repeat; background-size:16px; background-position:center left 0px}
+	@media(min-width:768px){
+		.repeat {background:url(https://watvnewsong.org/images/ico-loop@2x.png)center no-repeat; background-size:16px; background-position:center center}
+		.repeat.on {background:url(https://watvnewsong.org/images/ico-loop-on@2x.png)center no-repeat; background-size:16px; background-position:center center}
+	}
+}
+
+/* Sub nav */
+.nav-sub {overflow:hidden}
+.nav-sub .slide {position:relative; width:100%; height:42px; text-align:left; border-bottom:1px solid rgba(0, 0, 0, .04)}
+.nav-sub ul {text-align:left; list-style:none}
+.nav-sub a.on,
+.nav-sub a.on span,
+.nav-sub .active{color:#3958F6!important}
+.nav-sub a:hover {color:#3958F6}
+.nav-sub a .num {display:none}
+.nav-sub a.low{color:#888}
+.nav-sub a.on span,.nav-sub a span {display:inline-block; color:inherit; margin-left:3px; font-size:14px; position:relative; top:-1px}
+.nav-sub .slide ul{width:100%; overflow:hidden; overflow-x:scroll; position:relative; white-space:nowrap; padding:0 12px 25px 0; -webkit-overflow-scrolling:touch}
+.nav-sub li {display:inline-block;  -webkit-animation:slide-nav-slidein 350ms backwards; animation:slide-nav-slidein 350ms backwards; padding:0 8px}
+.nav-sub li:last-child{padding-right:20px}
+.nav-sub .slide ul li a {font-size:16px; padding:10px 0; display:inline-block; position:relative}
+.nav-sub .slide a.on::after {content:''; position:absolute; width:100%; bottom:2px; left:0; height:1px; background:#506BF6}
+.nav-sub .new::after {content:''; position:relative; top:-2px; right:-2px; width:4px; height:4px; display:inline-block; background:red; border-radius:6px; vertical-align:super}
+.nav-sub .slide.second ul li a{font-size:15px}
+.nav-sub .slide.second ul{position:relative}
+.nav-sub .slide.second li > *,
+.nav-sub .slide.second li a > *{color:#AEAEAE}
+.nav-sub .slide.second a span {font-size:13px}
+.nav-sub .slide.second {border:none}
+.nav-sub .slide.second a.on::after{display:none}
+.nav-sub .second a{display:inline-block}
+
+@media(max-width:768px) {
+	.nav-sub li:first-child {padding-left:20px}
+	.nav-sub .slide.second{height:34px}
+}
+@media(min-width:769px) {
+	.nav-sub li{padding:0 12px}
+	.nav-sub .slide{border:0}
+    .nav-sub .slide ul li a {font-size:18px; padding:5px 0}
+    .nav-sub .slide ul li a:lang(ru){font-size:15px}
+	.nav-sub .slide a.on::after {bottom:7px}
+	.nav-sub .slide ul{margin:0 -10px; white-space:normal; overflow:hidden; padding-bottom:0; padding-top:5px}
+	.nav-sub .slide.second ul li a{font-size:17px}
+}
+
+/* btn */
+.bn-common {display:flex; position:relative}
+.bn-common a {flex:1; text-align:center; padding:17px 10px; color:#fff; background:#4B5CFF; font-size:16px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden}
+.bn-common a:hover {background:#3D4EF1}
+.bn-common a.disabled {color:rgba(255,255,255,.2); pointer-events:none}
+.bn-pink a {background:#ff3466}
+
+
+.count {background:#4B5CFF; color:#fff; font-size:14px; height:22px; display:inline-block; padding:0px 6px; border-radius:50px; position:absolute; top:-27px; margin-left:15px; min-width:22px; text-align:center; vertical-align:middle}
+.show_playList_edit .bn-common a{background:#ff3466}
+.show_playList_edit .bn-common a:hover{background:#ea3461}
+.bn-pink .count{background:#ff3466 !important}
+.show_playList_edit .playList_select_all{display:inline-block !important}
+.show_playList_edit .count{background:#ff3466}
+.show_playList_edit_for_my_album .bn-common a{background:#ff3466}
+.show_playList_edit_for_my_album .bn-common a:hover{background:#ea3461}
+.show_playList_edit_for_my_album .count{background:#ff3466}
+.bn-group {display:flex; flex-direction:column; align-items:flex-start; flex-wrap:wrap; padding:6px 0}
+.bn-group a {display:flex; align-items:center}
+.bn-group a:hover, .btn-mylike a:hover{opacity:0.7}
+
+
+.btn-mylike {margin-top:10px}
+.btn-mylike a{font-size:16px; display:block; padding:10px 0; position:relative; border-bottom:1px solid rgba(0,0,0,.04)}
+.btn-mylike a span{font-size:10px; color:#4B5CFF; border:1px solid #4B5CFF; border-radius:20px; padding:0 4px; height:14px; line-height:1.4; display:inline-block; margin-left:6px; vertical-align:text-top; margin-top:2px}
+.btn-mylike a::after{content:''; width:7px; height:22px; display:inline-block; position:absolute; right:0; background:url(https://watvnewsong.org/images/ico_mylike_left.png)center no-repeat; background-size:7px}
+
+.bn-song-select a{padding:6px 10px; font-size:12px}
+.bn-song-select a::before {content:''; display:block; padding:5px 0; width:20px; height:20px; margin:0 auto}
+
+.bn-list-edit {border-radius:25px;border:1px solid rgba(0,0,0,.15);font-size:11px;padding:4px 10px !important;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:inline-block!important;line-height:1.8}
+.show_playList_edit .bn-list-edit{border:1px solid #ff346680; color:#ff3466}
+.show_playList_edit_for_my_album .select-edit{color:#ff3466}
+.pl-wrap .select-all{display:none}
+
+@media(min-width:769px) {
+	.bn-group{
+	    flex-direction:row;
+	    align-items:center;
+	}
+	.bn-group a{height:30px; line-height:20px}
+	.bn-list-edit{border-radius:25px; border:1px solid rgba(0,0,0,.11); font-size:13px; height:30px; padding:3px 10px; line-height:1.7}
+	/*.count {margin-left:0}*/
+	.show_playList_edit_for_my_album .select-edit {border:1px solid #ff346680; color:#ff3466}
+}
+
+.bn-ico-rowlist{flex-direction:column; height:auto; align-items:initial}
+.bn-ico-rowlist a {font-size:15px; width:100%; padding:6px 0; align-items:start}
+.bn-ico-rowlist h4 {color:#4B5CFF; font-size:13px; font-weight:normal}
+
+.bn-group .ico-left {text-align:left}
+.bn-group .ico-left::before {content:''; display:inline-block; position:relative; margin-right:8px; flex-basis:20px; flex-shrink:0; height:22px; width:20px}
+.bn-group .bn-ico-rowlist::before {width:15px; height:16px}
+
+.bn-choir {margin-left:-2px; margin-right:-2px}
+.bn-choir a {display:inline-block; font-size:12px; border-radius:25px; border:1px solid; padding:2px 10px; height:25px; line-height:1.8; margin:0 2px; max-width:100px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.bn-choir .Skyblue {border-color:rgba(28,146,251,.2); color:#0084FA}
+.bn-choir .pink {border-color:rgba(255,50,98,.2); color:#FF3262}
+.bn-choir .purple {border-color:rgba(95,95,215,.2); color:#5F5FD7}
+
+.bn-group.bn-liststyle{font-size:13px}
+.bn-liststyle{justify-content:space-between}
+.bn-liststyle a {width:56px; height:17px; background:url(https://watvnewsong.org/images/ico_grid1@3x.png)center no-repeat; background-size:56px}
+.bn-liststyle a.on {background:url(https://watvnewsong.org/images/ico_grid2@3x.png)center no-repeat; background-size:56px}
+.bn-liststyle a:hover {opacity:100}
+
+.now-play::before {background:url(https://watvnewsong.org/images/ico_select_play@2x.png)center no-repeat; background-size:22px}
+.add::before {background:url(https://watvnewsong.org/images/ico_select_plus@2x.png)center no-repeat; background-size:22px}
+.myalbum::before {background:url(https://watvnewsong.org/images/ico_albumadd@2x.png)center no-repeat; background-size:22px}
+.download::before {background:url(https://watvnewsong.org/images/ico_select_down@2x.png)center no-repeat; background-size:22px}
+.delete::before {background:url(https://watvnewsong.org/images/ico_trash@2x.png)center no-repeat; background-size:22px}
+.down::before {background:url(https://watvnewsong.org/images/ico_down_n.png)center no-repeat; background-size:15px}
+.paper::before {background:url(https://watvnewsong.org/images/ico_paper_n.png)center no-repeat; background-size:15px}
+.songinfo::before {background:url(https://watvnewsong.org/images/ico_songinfo.png)center no-repeat; background-size:15px}
+.albumAdd::before {background:url(https://watvnewsong.org/images/ico_albumAdd.png)center no-repeat; background-size:22px}
+
+
+@media(min-width:769px) {
+  /* .addSong {font-size:17px; line-height:1.7} */
+	.bn-ico-rowlist a{font-size:17px}
+  .btn-mylike{display:flex; margin-left:-15px; margin-right:-15px}
+  .btn-mylike a{width:50%; font-size:19px; margin:0 15px}
+  .btn-mylike a span{font-size:11px; height:18px; line-height:1.6}
+}
+
+.down::before{content:''; display:inline-block; width:15px; height:16px; margin-right:7px; position:relative; top:3px}
+
+.line-bn a{border-radius:30px; min-width:100px; padding:8px 15px; justify-content:center}
+.bn-basic{border:1px solid #C0C0C0}
+.bn-line-blue{color:#4B5CFF; border:1px solid #4B5CFF}
+.desc{color:#888; font-size:13px}
+.info-li .desc{padding:10px 5px}
+
+@media(min-width:769px){
+	.line-bn a{min-width:120px; height:46px}
+}
+
+
+/* audio bar */
+#fpAudio{height:100% !important; width:100%}
+.fp-ui{position:relative; top:0}
+.fp-controls{background:0 !important; display:flex; width:100%; height:52px; align-items:center; padding:0 15px; position:fixed; bottom:0; left:0; z-index:200}
+.fp-controls:before {content:''; position:absolute; top:2px; left:0; right:0; bottom:0; background-color:rgba(255,255,255,.98); z-index:-99}
+.fp-controls:after{content:'';display:inline-block;position:absolute;top:0;left:0;height:2px;background-color:rgba(0, 0, 0, .08);width:100%}
+.fp-playbtn, .player_none_play{background:url(https://watvnewsong.org/images/ico_player_play.png)center no-repeat; background-size:28px}
+.is-playing .fp-playbtn, .is-playing .player_none_play{background:url(https://watvnewsong.org/images/ico_player_pause.png)center no-repeat; background-size:28px}
+.player_none_play{position:absolute}
+.fp-bar {height:2px; position:absolute; width:100%; left:0; top:-9px; padding-top:10px; padding-bottom:7px}
+.fp-bar .animated{position:absolute; transition:all 5s ease; left:0; top:50%; height:2px; width:62px; background-color:#4B5CFF; margin-top:0}
+.fp-bar .animated::before{content:''; width:9px; height:9px; display:inline-block; background-color:#4B5CFF; border:3px solid #fff; position:absolute; top:-6px; right:-15px; border-radius:50%}
+.fp-volume{display:none; font-size:14px}
+.show_fullPlayer .fp-duration,
+.show_fullPlayer .fp-elapsed{display:inline; position:absolute; top:-24px; font-size:14px}
+.show_fullPlayer .fp-duration{right:15px}
+.show_fullPlayer .fp-elapsed{left:15px}
+.fp-duration{color:#B2B2B2}
+.fp-elapsed{color:#333; padding-right:10px}
+.fp-menu, .fp-controls strong, #fpAudio video, .fp-remaining, .fp-timestamp{display:none}
+.fp-duration,
+.fp-elapsed{display:none}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+.fp-playbtn, .player_none_play{background:url(https://watvnewsong.org/images/ico_player_play@2x.png)center no-repeat; background-size:28px}
+.is-playing .fp-playbtn, .is-playing .player_none_play{background:url(https://watvnewsong.org/images/ico_player_pause@2x.png)center no-repeat; background-size:28px}
+}
+
+/* volume */
+.fp-volume{align-items:center}
+.fp-volumebtn{display:inline-block; font-size:0; background:url(https://watvnewsong.org/images/ico_vol.png)no-repeat; width:17px; background-size:17px; height:13px; position:relative; margin-right:10px}
+.is-muted .fp-volumebtn{background:url(https://watvnewsong.org/images/volume-muted.png)no-repeat; background-size:17px}
+.flowplayer .fp-bar-slider em{width:10px; transition:none}
+.fp-volumebar{background:rgba(0,0,0,.07);height:4px;display:flex;cursor:col-resize;border-radius: 50px;overflow: hidden;}
+.fp-color{background-color:#4B5CFF; width:3px; height:100%; display:inline-block}
+
+/* progress*/
+.progress-bar-played {height:2px; width:62px; background-color:#4B5CFF}
+.progress-handle {width:22px; height:18px; position:absolute; top:-8px; cursor:pointer; left:53px}
+.progress-handle::after {content:''; display:inline-block; background-color:#4B5CFF; width:9px; height:9px; border:3px solid #fff; padding:0; margin:0; left:0; top:1px; position:relative; border-radius:50%}
+
+/* player bar */
+.player-bar .thum, .play-control .repeat, .play-control .random{display:none}
+.player-bar .player-info{flex:1; display:flex; align-items:center; margin-top:2px; padding:0; overflow:hidden}
+.player-bar .player-info a{font-size:0}
+.player-bar .thum{display:none}
+.player-bar .player-info .song-info{width:100%}
+.player-bar .thum_none img{display:none}
+.player-bar .thum img{border-radius:3px; width:36px}
+.player-bar .song-info h3{font-size:13px; text-align:left}
+.player-bar .song-info > div,
+.player-bar .song-info h3 > div .js-marquee{display:flex; align-items:flex-end}
+.player-bar .song-info h3 span{display:inline; margin-left:6px}
+.player-bar .song-info span{font-size:11px; color:rgba(0,0,0,.5); text-align:left}
+.player-bar .song-info span::after{content:''; display:inline-block; width:1px; height:10px; background-color:rgba(0,0,0,.1); position:relative; right:0; top:1px; margin:0 5px}
+.player-bar .song-info span span{padding:0 5px; opacity:0.4; display:none}
+.fp-controls > a, .play-control a, .play-control span, .play-control2 button, .playBtnWrap{width:36px; height:44px; display:inline-block; transition:none}
+.player-bar .play-control {font-size:0; flex-basis:108px; flex-shrink:0}
+.player-bar .play-control2{margin-right:-8px; height:44px; flex-basis:36px; flex-shrink:0}
+.player-bar .play-control2 .time{display:none; min-width:89px}
+.Playbar-none .player-bar{display:none}
+.playerMediaServiceNm span{display:inline; padding:0 6px; font-size:4px !important; color:rgba(0,0,0,.3)!important}
+
+.prev {background:url(https://watvnewsong.org/images/ico_player_prev.png)center no-repeat; background-size:12px}
+.play {background:url(https://watvnewsong.org/images/ico_player_play.png)center no-repeat; background-size:28px}
+.next {background:url(https://watvnewsong.org/images/ico_player_next.png)center no-repeat; background-size:12px}
+.playlist{background:url(https://watvnewsong.org/images/ico_playlist.png)center no-repeat; background-size:19px}
+.show_playList .playlist{background:url(https://watvnewsong.org/images/ico_playlist_on.png)center no-repeat; background-size:19px}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+	.prev {background:url(https://watvnewsong.org/images/ico_player_prev@2x.png)center no-repeat; background-size:12px}
+	.play {background:url(https://watvnewsong.org/images/ico_player_play@2x.png)center no-repeat; background-size:28px}
+	.next {background:url(https://watvnewsong.org/images/ico_player_next@2x.png)center no-repeat; background-size:12px}
+	.playlist{background:url(https://watvnewsong.org/images/ico_playlist@2x.png)center no-repeat; background-size:19px}
+	.show_playList .playlist{background:url(https://watvnewsong.org/images/ico_playlist_on@2x.png)center no-repeat; background-size:19px}
+	.fp-volumebtn{background:url(https://watvnewsong.org/images/ico_vol@2x.png)no-repeat; background-size:17px}
+	.is-muted .fp-volumebtn{background:url(https://watvnewsong.org/images/volume-muted@2x.png)no-repeat; background-size:17px}
+
+}
+
+@media(min-width:375px) {
+  .player-bar .thum{display:inline-block; margin-right:10px}
+}
+
+@media(min-width:769px) {
+  .player-bar .player-info{margin-top:3px}
+  .player-bar .song-info h3{font-size:16px;height:22px;line-height:23px;letter-spacing:-.03em}
+  .player-bar .song-info span{font-size:13px}
+  .player-bar .random{opacity:0.5}
+  .player-bar .thum{display:inline-block; margin-right:20px}
+  .player-bar .thum_none img{display:none}
+  .player-bar .thum, .play-control .repeat, .play-control .random{display:block}
+  .player-bar .play-control, .play-control2, .player-bar .player-info{flex:1; display:flex; align-items:center}
+  .player-bar .play-control{flex:none}
+  .player-bar .play-control2{justify-content:flex-end; align-items:center; margin:0}
+  .player-bar .play-control2 a{width:auto; height:auto; background-position:left}
+  .player-bar .play-control2 .fp-volumebtn{width:17px; height:16px}
+  .player-bar .blind{position:relative; margin-left:21px; font-size:14px; width:auto; height:32px; display:inline-block; padding-top:6px}
+  .player-bar .playlist{background-position:left; height:auto; font-size:0; padding-left:30px; max-width:118px}
+  .player-bar .playlist .blind{display:flex; align-items:center;line-height:1.2; padding:0; margin:0; width:100%; white-space:nowrap; text-overflow:ellipsis}
+  .player-bar .playlist{max-width:170px; width:auto; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; text-align:left; margin-left:20px}
+  .fp-controls{height:67px}
+  .fp-controls > a, .play-control a, .play-control2 a, .play-control span, .playBtnWrap{width:44px}
+  .fp-duration, .fp-elapsed{display:block}
+  .fp-volume{display:flex; margin-left:25px}
+  .show_fullPlayer .fp-duration,
+  .show_fullPlayer .fp-elapsed{position:relative; top:auto; font-size:inherit}
+  .show_fullPlayer .fp-duration{right:0}
+  .show_fullPlayer .fp-elapsed{left:0}
+  .volume-bar-duration{height:4px; width:70px; background:rgba(0,0,0,.1); border-radius:5px; position:relative; overflow:hidden}
+  .volume-bar-played{display:block; width:30px; background-color:#4B5CFF; height:4px}
+  .volume-handle{position:absolute; width:12px; height:20px; top:-8px; left:23px}
+  .volume-bar::before{content:'volume'; display:inline-block; font-size:0; background:url(https://watvnewsong.org/images/ico_vol.png); width:17px; background-size:17px; height:13px; position:relative; top:-4px; margin-right:10px}
+  .fp-duration,
+  .fp-elapsed{display:inline-block; vertical-align:middle; line-height:1.2}
+}
+
+@media(min-width:1070px) {
+	.player-bar .playlist{max-width:200px}
+	.fp-controls{padding:0 30px}
+}
+
+@media(min-width:375px) {
+	.player-bar .thum_none{flex-basis:0; flex-shrink:0; display:none}
+}
+
+.player_newsong_group_nm,
+.player_newsong_genre_nm{display:none}
+
+/* newsong? */
+.page-newsong .container-body {font-size:15px; font-weight:400; line-height:1.8; max-width:810px; margin-left:auto; margin-right:auto}
+.page-newsong .container-body p {padding-top:40px}
+.page-newsong .container-body blockquote {color:#2D39AB; border-left:2px solid #EAEAEA; padding-left:20px; margin-top:50px; line-height:1.8}
+.page-newsong .container-body blockquote cite {color:rgba(70,85,222,0.61); font-size:13px; display:block; margin-top:10px}
+.page-newsong .container-body img{margin-top:30px}
+.page-newsong .selectbox div{padding-top:2px}
+.page-newsong .footer{max-width:810px}
+.page-newsong .head-logo{display:none}
+@media(min-width:769px) {
+  .page-newsong .head_title h3{max-width:750px; margin:0 auto}
+  .page-newsong .container-body {font-size:17px; line-height:2}
+  .page-newsong .head-logo{display:block}
+}
+
+
+/* album info */
+.album-info {display:flex; align-items:center; padding:30px 20px; width:100%; position:relative; overflow:hidden; margin:50px 0}
+.album-info .thum {width:114px; flex-basis:114px; flex-shrink:0; height:114px; position:relative}
+.album-info > div {margin-left:15px}
+.album-info > div.bg-after{margin:0}
+.album-info div > span, .album-info div > div{font-size:12px; color:#696969; flex:0 auto}
+.album-info div > span::after {content:''; display:inline-block; width:1px; height:9px; background-color:rgba(0,0,0,.1); margin:0 10px}
+.album-info div > span:nth-child(4)::after {display:none}
+.album-info div > span:last-child::after {display:none}
+.album-info .play_time{margin-top:5px;font-size:14px}
+@media(min-width:769px) {
+  .album-info .thum {width:225px; flex-basis:225px; flex-shrink:0; height:225px}
+  .album-info div > span, .album-info div > div{font-size:14px}
+  .album-info > div {margin-left:30px}
+  .album-info {border-radius:10px; padding:40px}
+	.album-info .play_time{margin-top:10px}
+}
+@media(max-width:768px) {
+  .album-info{padding-top:60px; margin:-50px -20px 0; width:auto}
+}
+
+
+/* modal player */
+.menuFull .fp-controls{z-index:1500}
+
+@media(max-width:768px) {
+	.modalPlayer .fp-controls{-webkit-justify-content:space-between; justify-content:space-between}
+	.modalPlayer .fp-controls .song-info{display:none}
+	.modalPlayer .player-bar .player-info{flex:none}
+	.modalPlayer .player-bar .thum img{border-radius:50%}
+}
+
+/* pagin */
+.pagin {text-align:center; padding:15px; margin-top:40px}
+.pagin a {font-size:15px; font-weight:500; width:26px; height:26px; line-height:1.9; margin:0 4px; display:inline-block; vertical-align:top}
+.pagin a:hover {color:#4B5CFF}
+.pagin strong {border-radius:25px; color:#fff !important; width:26px; height:26px; line-height:1.7; font-size:15px; font-weight:500; background:#4B5CFF; display:inline-block}
+.pagin .pageNext {background:url(https://watvnewsong.org/images/ico_pagin_next.png)center no-repeat; background-size:6px; font-size:0}
+.pagin .pageLast {background:url(https://watvnewsong.org/images/ico_pagin_next_last.png)center no-repeat; background-size:12px; font-size:0}
+.pagin .pagePrev {background:url(https://watvnewsong.org/images/ico_pagin_prev.png)center no-repeat; background-size:6px; font-size:0}
+.pagin .pageFirst {background:url(https://watvnewsong.org/images/ico_pagin_prev_first.png)center no-repeat; background-size:12px; font-size:0}
+.pagin .pageBlind {display:none}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+.pagin .pageNext {background:url(https://watvnewsong.org/images/ico_pagin_next@2x.png)center no-repeat; background-size:6px}
+.pagin .pageLast {background:url(https://watvnewsong.org/images/ico_pagin_next_last@2x.png)center no-repeat; background-size:12px}
+.pagin .pagePrev {background:url(https://watvnewsong.org/images/ico_pagin_prev@2x.png)center no-repeat; background-size:6px}
+.pagin .pageFirst {background:url(https://watvnewsong.org/images/ico_pagin_prev_first@2x.png)center no-repeat; background-size:12px}
+}
+@media(min-width:769px){
+	.pagin strong{line-height:1.9}
+}
+@media(max-width:959px) {
+	.pagin{margin-top:15px}
+}
+
+/* album */
+.album {display:flex; flex-wrap:wrap; box-sizing:border-box; margin-left:-5px; margin-right:-5px}
+.album .play-btn{background-position:top}
+.album label{margin-top:10px}
+.album .thum{margin-top:0}
+.album .thum img{width:100%}
+.album-style .bn-liststyle{flex-direction:row}
+
+/* my add album */
+.my-add a{position:relative}
+.my-add .list-count{color:#fff; position:absolute; right:7px; bottom:3px}
+.my-add span{display:inline-block; position:relative; font-size:14px !important}
+
+.thum-round {border-radius:5px; overflow:hidden}
+.thum span {display:block; position:absolute; font-size:14px; color:#fff}
+
+.album > div {display:block; width:190px; padding:0 7px; margin-bottom:20px}
+.album > div > div{padding-top:10px}
+.album .thum {width:100%; max-width:100%; height:auto; display:block; position:relative; top:auto; padding:0; transition:none}
+.album .thum div{z-index:-1}
+.album .thum div:before{content:''; display:inline-block; width:100%; height:100%; border:1px solid rgba(0,0,0,.02); position:absolute; box-sizing:border-box; background-color:rgba(0,0,0,.05); top:0}
+.album .song-info div{margin-top:0}
+.album .song-info div span{font-size:12px; display:inline; flex:none; padding:0}
+.album > div:hover {background:0}
+.album .song-info {display:block}
+.album .song-info h3{-webkit-line-clamp:2; line-height:1.4; margin-top:1px}
+.album .song-info h3:first-child{margin-top:0}
+.album .song-title-wrap{margin-bottom:4px}R
+
+@media(min-width:769px) {
+	.album > div {margin-bottom:40px}
+	.album{margin-top:10px; margin-left:-7px; margin-right:-7px}
+}
+
+@media (min-width:1281px){
+  .album > div {width:20%; padding:0 7px}
+}
+
+@media (max-width:1280px){
+  .album > div {width:25%; padding:0 5px}
+}
+
+@media(max-width:959px) {
+  .album > div {width:33.3333%; padding:0 5px}
+}
+
+@media(max-width:568px) {
+  .album > div {width:50%; padding:0 5px}
+}
+
+.album-grid2{flex-direction:column; margin-left:-15px; margin-right:-15px; padding:0}
+.album-grid2 > div {padding:8px 15px}
+.album-grid2 div {display:flex; flex-direction:initial; width:100%; margin-bottom:0}
+.album-grid2 > div div {align-items:center;margin-top:0;padding:0}
+.album-grid2 .thum {margin-right:10px; width:80px}
+.album-grid2 .thum img {width:80px}
+.album-grid2 > div:hover {background:rgba(0,0,0,.03)}
+.album-grid2 .notfound:hover{background:0; padding:0 2px; border-bottom:0}
+.album-grid2 .play-btn{margin-right:0; background-position:center}
+.album-grid2 .song-info .song-title-wrap{margin-bottom:1px}
+
+.albumadit a{display:flex; width:100%; align-items:center; padding:5px 0}
+.albumadit img{width:63px; border-radius:3px}
+.albumadit h3{flex:1; margin-left:20px}
+
+.add-new-album .input {position:relative}
+.add-new-album .input input{padding-right:40px}
+.add-new-album .input .bn-cancel{display:inline-block; width:38px; position:absolute; right:0; top:14px}
+
+
+/* thema */
+.thema a img {border-radius:3px}
+.thema a span {width:100%; text-align:center; top:50%; -webkit-transform:translate(-0%,-50%); transform:translate(-0%,-50%); z-index:10}
+.thema .thum::before {content:''; display:inline-block; width:100%; height:100%; border:1px solid rgba(0,0,0,.02); position:absolute; box-sizing:border-box; background-color:rgba(0,0,0,.05)}
+.thema .thum::before {background-color:rgba(0,0,0,.3); border:0; border-radius:3px}
+.thema .thum:hover::before {background-color:rgba(0, 0, 0, .5); -webkit-transition:all 0.3s; -moz-transition:all 0.3s; transition:all 0.3s}
+.thema .list:hover {background:inherit}
+
+@media(min-width:769px) {
+	.album-grid2 {margin:0}
+	.album-grid2 > div {border-bottom:1px solid rgba(0,0,0,.04); padding:8px  0}
+	.album-grid2 .thum{margin-right:20px; width:100px}
+	.album-grid2 .thum img{width:100px}
+	.album-grid2 .song-info{display:flex;flex-flow:column wrap}
+	.album-grid2 .song-info div{padding:0;flex:1 100%}
+	.album-grid2 .song-info .song-title-wrap{margin-bottom:4px}
+	.album-grid2 .song-info div span{font-size:13px}
+	.album-grid2 .song-info div span::after{content:''; display:inline-block; width:1px; height:10px; background-color:rgba(0,0,0,.1); position:relative; right:0; top:1px; margin:0 5px}
+	.album-grid2 .song-info div span:last-child::after{display:none}
+	.album-grid2 .play-btn{flex-basis:50px}
+}
+
+/* main cate */
+.main-cate a {overflow:hidden;display:flex;font-size:0;flex-direction:column;align-items:center}
+.main-cate > * {text-align:center}
+.main-cate img {width:50px; border-radius:50%; max-width:80%}
+.main-cate h3 {font-size:12px; margin-top:10px; display:inline-block; line-height:1.2; word-break:break-word}
+.main-cate span {font-size:12px; color:#7E87AA}
+.main-cate em {color:#4B5CFF}
+
+@media(min-width:769px) {
+  .main-cate{margin-left:-10px; margin-right:-10px}
+  .main-cate img {width:84px}
+  .main-cate h3{font-size:14px}
+  .main-cate span{font-size:13px}
+}
+
+/* like */
+/*
+.album-likeinfo span:after{content:''; display:inline-block; width:1px; height:10px; background-color:rgba(0,0,0,.1); position:relative; right:0; top:1px; margin:0 5px}
+.album-likeinfo span:last-child:after{display:none}
+*/
+.list-count {right:10px; bottom:5px; z-index:1}
+.list-count::before {content:''; display:inline-block; background:url(https://watvnewsong.org/images/ico_count.png)center no-repeat; background-size:9px; width:9px; height:11px; margin-right:4px}
+	@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+	.list-count::before {content:''; display:inline-block; background:url(https://watvnewsong.org/images/ico_count@2x.png)center no-repeat; background-size:9px}
+	}
+
+
+/*
+.like {position:absolute; cursor:pointer; font-size:0; background:url(https://watvnewsong.org/images/ico_heart_dark.png)center no-repeat; background-size:15px; width:36px; height:36px; right:0; top:0; z-index:1}
+.like-light {font-size:0; background:url(https://watvnewsong.org/images/ico_heart_light@2x.png)center no-repeat; background-size:15px; width:36px; height:36px}
+	@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+	.like {position:absolute; cursor:pointer; font-size:0; background:url(https://watvnewsong.org/images/ico_heart_dark@2x.png)center no-repeat; background-size:15px}
+	.like-light {font-size:0; background:url(https://watvnewsong.org/images/ico_heart_light@2x.png)center no-repeat; background-size:15px}
+	}
+*/
+
+
+/*LIKE -----*/
+.like        {background:url(https://watvnewsong.org/images/ico_like_light.png) no-repeat center; background-size:18px; width:44px; height:44px; font-size:0; cursor:pointer}
+.like.dark   {background:url(https://watvnewsong.org/images/ico_like_dark.png) no-repeat center; background-size:18px;  width:36px; height:36px; position:absolute; right:0; top:0; z-index:1}
+.like.on,
+.like.dark.on{background:url(https://watvnewsong.org/images/ico_like_on.png) no-repeat center; background-size:18px}
+/*ÃªÂ³Â¡Ã«ÂªÂ©Ã«Â¡Â*/
+.like.inlist{position:absolute; right:36px}
+/*Ã«Â°ËœÃ¬Â£Â¼Ã«ÂªÂ©Ã«Â¡Â*/
+.like.inlist.accompanist{position:relative; right:0; width:40px}
+	@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+	.like        {background:url(https://watvnewsong.org/images/ico_like_light@2x.png) no-repeat center; background-size:18px}
+	.like.dark   {background:url(https://watvnewsong.org/images/ico_like_dark@2x.png) no-repeat center; background-size:18px}
+	.like.on,
+	.like.dark.on{background:url(https://watvnewsong.org/images/ico_like_on@2x.png) no-repeat center; background-size:18px}
+	}
+
+
+@media(max-width:768px){
+	.mysong-like li label{padding:13px 0 13px 97px; height:68px}
+}
+@media(min-width:769px) {
+	.mysong-like > li label {padding:10px 0 10px 70px}
+	.like.inlist{right:40px}
+	.like.inlist.accompanist{width:40px}
+}
+
+
+
+/* later */
+.later {display:none; z-index:999999; padding:12px 25px 10px; bottom:65px; -ms-word-wrap:break-word; word-wrap:break-word; position:fixed; font-size:14px; color:#fff; background-color:rgba(43,49,70,0.93); -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; margin:0 15px; line-height:1.3}
+.later em {color:#A7B0FF}
+
+
+/* nav */
+body.menu-open, body.open{overflow:hidden}
+
+.nav{padding-bottom:100px}
+.nav .login-contents{max-width:initial; padding:0; width:100%}
+.nav ul{border-bottom:10px solid #F5F5F8; width:100%}
+
+.nav-sub a.newpage{color:rgba(0,0,0,.5)}
+.nav li{border-bottom:1px solid rgba(0,0,0,.05);position:relative;padding-right:15px;padding-left:15px}
+.ico-new span, .newpage span, .ico-lock span{width:16px; height:13px; display:inline-block; margin-left:3px; position:relative; top:-1px; font-size:0; vertical-align:middle}
+.ico-lock span{top:-2px}
+.nav li > a{display:block;color:#333;min-height:20px;line-height:1.3;font-size:16px;margin-right:30px;padding-top:12px;padding-bottom:12px}
+.nav li > a.btn-arrow{
+    margin-right:0;
+    position:absolute;
+    top:12px;
+}
+.nav li.open > a{color:#4B5CFF}
+.nav li div{margin-left:-10px; margin-right:-10px}
+.nav li div a {display:inline-block; padding:5px 10px; font-size:14px}
+.nav .nav-sub{padding:0 0 10px;margin-left:-10px;margin-right:-10px;margin-top:0}
+.nav .nav-2nd li a{font-size:15px; font-weight:500}
+.nav .selectbox{padding:0 15px}
+.nav li > a .ico-new{vertical-align:12px; margin-left:3px}
+
+.ico-new span{background:url(https://watvnewsong.org/images/ico_new.png)center no-repeat; background-size:13px; top:1px}
+.ico-lock span{background:url(https://watvnewsong.org/images/ico_lock.png)center no-repeat; background-size:10px}
+.newpage span{background:url(https://watvnewsong.org/images/ico_newpage.png)center no-repeat; background-size:11px}
+.btn-arrow{display:inline-block; width:40px; background:url(https://watvnewsong.org/images/ico_arrow_btm.png)center no-repeat; background-size:10px; position:absolute; top:0; right:0}
+.open .btn-arrow{display:inline-block; width:40px; background:url(https://watvnewsong.org/images/ico_arrow_top.png)center no-repeat; background-size:10px; position:absolute; top:0; right:0}
+
+.btn-logout{ padding:0 5px; color:rgba(255,255,255,.65); font-size:13px; min-width:90px; text-align:right}
+.btn-logout::before{content:''; display:inline-block; width:13px; height:13px; background:url(https://watvnewsong.org/images/ico_power.png)center no-repeat; background-size:12px; position:relative; margin-right:6px; top:1px}
+
+.nav .ico-my-album .ico-new{margin-left:3px}
+
+@media(min-width:769px){
+  .nav {min-width:190px;display:flex;flex-direction:column;margin-left:40px;margin-right:10px;border-bottom:none}
+  .nav .login-contents {display:none}
+  .nav ul {border-bottom:1px solid #F5F5F8}
+  .nav li {border:none;padding-left:0;padding-right:0}
+  .nav li > a {min-height:19px;line-height:1.2;vertical-align:middle;margin-right:40px;padding-top:8px;padding-bottom:8px}
+  .nav li > a.btn-arrow{
+    position:absolute;
+    top:8px;
+    margin-right:0;
+}
+  .nav .nav-sub {margin:5px 0 0}
+  .nav .nav-my, .nav .nav-1st{padding:10px 0}
+  .nav .nav-2nd {order:2; font-size:13px; border:0; padding-top:15px}
+  .nav ul:nth-child(5) {padding:0}
+  .nav .nav-2nd li {}
+  .nav .nav-2nd li a {font-size:13px;color:rgba(0,0,0,.5);height:auto;line-height:1.2;padding-top:6px;padding-bottom:6px;margin-right:0}
+  .nav .nav-1st {order:0}
+  .nav .nav-my {order:1}
+  .nav .selectbox {order:3; padding:0}
+  .nav li div a {display:block; padding:5px 0}
+  .nav .my-menu .ico-my-music::before,.my-menu .ico-my-album::before,.my-menu .ico-my-heart::before {display:none}
+  .nav .my-menu {flex-direction:column; font-size:14px; min-height:auto}
+  .nav .my-menu a {text-align:left; padding:4px 0; flex:none; -webkit-flex:none}
+  .nav li > a .ico-new{margin-left:3px}
+}
+
+.head-logo{position:absolute; padding:0 0 0 15px; top:0; display:none}
+.head-logo a {font-size:0}
+.head-logo a h2{font-size:0}
+.head-logo .mobile-logo{vertical-align:4px; margin-right:5px; padding:0}
+.head-wrap{display:flex;flex-direction:column;padding:0 15px; overflow:hidden}
+.head_search{order:3; font-size:0}
+.head_nav{order:2; margin-left:-20px; margin-right:-20px}
+.head_title {display:flex; justify-content:flex-end; margin-left:-17px; margin-right:-12px; order:1; overflow:hidden; height:50px}
+.head_title a {display:inline-block; position:relative; width:44px; height:50px; flex-basis:44px; flex-shrink:0; z-index:1}
+.head_title h3 {flex-grow:1; text-align:left; font-size:18px; line-height:3; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin-right:40px}
+.container-body{padding:0 15px}
+.head_search .user-name{display:none}
+.head_search .user-name b{font-weight:500; max-width:80px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:inline-block}
+
+.btn-back{background:url(https://watvnewsong.org/images/ico_arrow_left.png)center no-repeat; background-size:10px}
+.btn-search{background:url(https://watvnewsong.org/images/ico_search.png)center no-repeat; background-size:19px}
+.btn-menu{background:url(https://watvnewsong.org/images/ico_menu.png)center no-repeat; background-size:20px}
+
+@media(min-width:769px){
+  .container-body,
+  .head-wrap{max-width:980px; margin:0 auto; flex-flow:row wrap; padding-top:20px}
+  .container-body{padding:20px 30px 0}
+  .head-wrap{padding-top:55px;padding:40px 30px 0}
+
+  body{margin-left:230px}
+  .head-logo{display:flex;flex-direction:column;width:230px;top:0;left:0;padding:40px 0 40px 40px;background:#fff;z-index:107;position:fixed;font-size:0}
+  .head_search .user-name{display:flex; align-items:center; font-size:13px; position:absolute; right:0; line-height:1; padding:8px 0; cursor:pointer}
+  .head_search .user-name a{border:1px solid #cacaca; padding:4px 5px 3px; font-size:12px; border-radius:3px; margin-left:6px; color:#565656; font-weight:500}
+  .head_search .user-name::after{content:''; display:inline-block; width:24px; height:24px; background:url(https://watvnewsong.org/images/ico_user_light.png)no-repeat; background-size:24px; position:relative;  margin-left:10px; top:-2px}
+
+  /* logo :PC*/
+  .head-logo .mobile-logo{display:none}
+  .head-logo .link_watv{background:url(https://watvnewsong.org/images/watv_logo.svg)no-repeat;background-size:35px;display:block;width:100%;height:23px;padding-top:0;background-position:left center}
+  .head-logo a{width:190px;display:block;padding-top:3px}
+  .head-logo a h1{width:109px;height:25px;display:inline-block;background:url(https://watvnewsong.org/images/main_logo.svg)no-repeat;background-size:106px;position:relative;font-size:0}
+  .head-logo a h2{font-size:11px;font-weight:500;letter-spacing:-0.4px;color:#717171;margin-top:7px}
+  .head_title{order:3;margin:0;overflow:visible;height:auto;flex:1 100%}
+  .head_title a{display:none}
+  .head_title h3{font-size:30px;font-weight:500;letter-spacing:-.03em;text-align:left;padding-top:45px;line-height:1.5;margin:0}
+  .head_search{display:flex; flex:1; position:relative; order:1; overflow:hidden}
+  .head_nav{order:3; margin:0; width:100%; margin-top:5px}
+  .head_nav:lang(ru){margin-top:10px}
+  .head_nav .slide{padding:0; height:auto}
+  .head_search .user-name b{max-width:none}
+}
+
+.page-info .container-body{margin-top:-50px; padding-top:50px}
+.page-info .site-lang,
+.page-info .notice-list,
+.page-info .btn-search,
+.page-info .head-logo{display:none}
+.page-info .head_title h3{margin-left:0}
+
+@media(min-width:769px){
+ .page-info .head-wrap .head_title h3{display:none}
+ .page-info .notice-list,
+ .page-info .head-logo{display:inline-block}
+
+}
+
+@media(min-width:1280px){
+	.container-body, .head-wrap{max-width:980px}
+ 	.page-full .container-body,
+ 	.page-full .footer,
+ 	.page-full .footer .container{max-width:1350px}
+	.page-full .head-wrap{max-width:1350px; margin:0 auto}
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+  .ico-new span{background:url(https://watvnewsong.org/images/ico_new@2x.png)center no-repeat; background-size:13px}
+  .ico-lock span{background:url(https://watvnewsong.org/images/ico_lock@2x.png)center no-repeat; background-size:10px}
+  .newpage span{background:url(https://watvnewsong.org/images/ico_newpage@2x.png)center no-repeat; background-size:11px}
+  .log-out::before{background:url(https://watvnewsong.org/images/ico_power@2x.png)center no-repeat; background-size:12px}
+  .btn-arrow{background:url(https://watvnewsong.org/images/ico_arrow_btm@2x.png)center no-repeat; background-size:10px}
+  .open .btn-arrow{background:url(https://watvnewsong.org/images/ico_arrow_top@2x.png)center no-repeat; background-size:10px}
+  .down::before {background:url(https://watvnewsong.org/images/ico_down_n@3x.png)center no-repeat; background-size:15px}
+  .paper::before {background:url(https://watvnewsong.org/images/ico_paper_n@3x.png)center no-repeat; background-size:15px}
+  .songinfo::before {background:url(https://watvnewsong.org/images/ico_songinfo@3x.png)center no-repeat; background-size:15px}
+  .albumAdd::before {background:url(https://watvnewsong.org/images/ico_albumAdd@2x.png)center no-repeat; background-size:22px}
+  .volume-bar::before{background:url(https://watvnewsong.org/images/ico_vol@2x.png); background-size:17px}
+  .btn-search{background:url(https://watvnewsong.org/images/ico_search@2x.png)center no-repeat; background-size:19px}
+  .btn-menu{background:url(https://watvnewsong.org/images/ico_menu@2x.png)center no-repeat; background-size:20px}
+  .btn-back{background:url(https://watvnewsong.org/images/ico_arrow_left@2x.png)center no-repeat; background-size:10px}
+  .head_search .user-name::after{background:url(https://watvnewsong.org/images/ico_user_light@2x.png)no-repeat; background-size:24px}
+  .btn-mylike a::after{background:url(https://watvnewsong.org/images/ico_mylike_left@2x.png)center no-repeat; background-size:7px}
+  .btn-logout::before{background:url(https://watvnewsong.org/images/ico_power@2x.png)center no-repeat; background-size:12px}
+}
+
+/* footer */
+.footer {padding:40px 0 65px; color:#666}
+.footer .container{max-width:100%}
+.footer div, .footer p {font-size:12px; color:#999}
+.footer span a{padding-right:20px; display:inline-block}
+.footer .selectbox{display:flex}
+.foot-warning {background:#fafafa; display:flex; padding:13px 20px}
+.foot-warning::before {content:''; flex-basis:20px; flex-shrink:0; background:url(https://watvnewsong.org/images/ico_alert.png)center no-repeat; background-size:17px; margin-right:10px}
+.link, .copy{display:block; overflow:hidden; margin-top:10px}
+.link{margin-top:20px}
+.link a{font-size:12px; color:#5D5D5D; float:left}
+.copy *{color:#999; font-size:11px}
+.copy p{display:block}
+
+/*.footer .logo-img{width:225px; height:24px; background:url('https://watvnewsong.org/images/logombe.png')no-repeat; background-size:100%}
+.footer .logo_mbe {margin-top:15px}
+.footer .logo_mbe a{color:#777; display:inline-block; margin-top:5px; font-size:12px}*/
+.footer h3{margin-top:15px;font-weight: 600;font-size: 13px;padding-bottom: 6px;color: #555;letter-spacing: 0.03em;}
+.footer .btn-adress{margin-top:0}
+.footer .on .btn-adress{margin-top:7px}
+.footer .site-link{overflow:hidden}
+.footer .site-link a{display:inline-block; padding-bottom:2px; color:#666; float:left; padding:0}
+.footer .site-link a::after{content:''; display:inline-block; width:1px; height:10px; margin:0 7px; background-color:#DCDCDC}
+.footer .site-link a:last-child::after{display:none}
+.footer .adress{clear:both}
+.footer .adress p, .footer .adress a{font-size:11px; color:#A2A2A2}
+.footer .adress a:hover{color:#777}
+.footer .btn-footer-show{transition: all ease 0.6s; background:url('https://watvnewsong.org/images/footer-arrow-b.png')no-repeat;background-size:100%;width: 8px;height: 8px;display: inline-block;margin-left:3px;background-position: center;}
+.footer .on .btn-footer-show{transform: rotate( -180deg )}
+.footer .site-link,
+.footer .adress{display:none}
+.footer .on .site-link,
+.footer .on .adress{display:block}
+
+@media(min-width:768px){
+	.footer h3{display:none}
+	.footer .site-link,
+	.footer .adress,
+	.footer .on .site-link,
+	.footer .on .adress{display:block}
+	.footer .site-link,
+	.footer .adress{margin-top:15px}
+}
+
+.selectbox{margin-top:0}
+.selectbox div{font-size:12px; position:relative; min-width:140px; z-index:1; border:1px solid #EBEBEB; height:26px; border-radius:2px; background:#fff; display:inline-block; padding:4px 20px 0 8px; margin-top:5px; -webkit-line-clamp:1; overflow:hidden; -webkit-box-orient:vertical; text-overflow:ellipsis; word-wrap:break-word}
+.selectbox div *{color:#777; line-height:1.5}
+.selectbox div::after{content:''; position:absolute; top:11px; right:10px; width:0; height:0; margin-top:-1px; border-left:4px solid transparent; border-right:4px solid transparent; border-top:4px solid #7F7F7F}
+.selectbox select{width:100%;border:0;filter:alpha(opacity=0);-webkit-appearance:none;-moz-appearance:none;appearance:none}
+
+.site-lang {order:2;width:44px;height:50px;position:absolute;right:88px;display:flex;justify-content:center; align-items:center}
+.site-lang > label{display:none}
+.site-lang::after{content:'';z-index:-1;background:url('https://watvnewsong.org/images/ico-sitelang-m.png')no-repeat; background-size:100%; border:0;width:25px;height:24px;position:relative;right:auto;top:auto;display:inline-block;margin-left:5px;margin-top:3px}
+.site-lang > select{height:100%;width:100%;cursor:pointer;position:absolute;top:0;filter:alpha(opacity=0);opacity:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+
+@media (min-width:769px) {
+	.site-lang{display:flex !important; justify-content:center;align-items:center;margin-left:15px;position:relative;right:auto;width:auto;height:32px}
+	.site-lang > label{display:inline-block;color:#333;margin-top:8px;white-space:nowrap;font-size:13px}
+	.site-lang::after{background:url('https://watvnewsong.org/images/ico-sitelang-pc.png')no-repeat; background-size:100%; width:26px;height:24px;margin-left:5px}
+}
+
+/* scroll Top */
+#gotop{position:fixed; bottom:70px; right:20px; display:inline-block; box-shadow:0 0 0 1px rgba(0,0,0,0.06); padding:10px; border-radius:3px; background:rgba(255,255,255,.96) url(https://watvnewsong.org/images/ico_scrolltop.png)center no-repeat; background-size:13px; width:44px; height:44px; z-index:9}
+#gotop a{font-size:0; display:inline-block; width:100%; height:100%; position:absolute; top:0; left:0}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+  .footer .logo-img{background:url('https://watvnewsong.org/images/logombe@2x.png')no-repeat; background-size:100%}
+  .foot-warning::before {background:url(https://watvnewsong.org/images/ico_alert@2x.png) center no-repeat; background-size:17px}
+  #gotop {background:rgba(255,255,255,.96) url(https://watvnewsong.org/images/ico_scrolltop@3x.png)center no-repeat; background-size:13px}
+  .site-lang::after{background:url('https://watvnewsong.org/images/ico-sitelang-m@2x.png')no-repeat; background-size:100%}
+  .footer .btn-footer-show{background:url('https://watvnewsong.org/images/footer-arrow-b@2x.png')no-repeat;background-size:100%; background-position:center}
+
+	@media(min-width:769px) {
+	 .site-lang::after{background:url('https://watvnewsong.org/images/ico-sitelang-pc@2x.png')no-repeat; background-size:100%}
+	}
+}
+
+@media(max-width:768px) {
+	.foot-warning{margin:0 -15px}
+	.selectbox{display:-webkit-box; font-size:0}
+	.selectbox div{margin-right:4px}
+}
+
+@media(min-width:769px){
+	.footer {padding:50px 0 150px; max-width:980px; margin:0 auto}
+	.footer .container{padding:0 30px}
+	.footer div{font-size:13px; line-height:1.6}
+	.footer .selectbox{display:none}
+	.foot-warning {background:0; padding:13px 0}
+	.foot-warning br{display:none}
+	.link{margin-top:5px}
+	.link a{font-size:14px}
+	.copy{margin-top:15px}
+	.copy *{color:#999; font-size:13px}
+	#gotop{bottom:90px}
+	.selectbox div{display:-webkit-box}
+}
+
+
+/* owl */
+.owl-carousel .owl-nav button span{font-size:0}
+.owl-carousel .owl-nav button {width:28px; height:40px}
+.owl-carousel .owl-nav button.owl-prev{background:url(https://watvnewsong.org/images/ico_arrow_left_pc.png)center no-repeat; background-size:16px}
+.owl-carousel .owl-nav button.owl-next{background:url(https://watvnewsong.org/images/ico_arrow_right_pc.png)center no-repeat; background-size:16px}
+.owl-carousel .owl-nav button.disabled{opacity:0.2}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+  .owl-carousel .owl-nav button.owl-prev{background:url(https://watvnewsong.org/images/ico_arrow_left_pc@2x.png)center no-repeat; background-size:16px}
+  .owl-carousel .owl-nav button.owl-next{background:url(https://watvnewsong.org/images/ico_arrow_right_pc@2x.png)center no-repeat; background-size:16px}
+}
+
+.section{padding-top:30px; margin-left:-15px; margin-right:-15px; padding-left:15px}
+.section:first-child{padding-top:10px}
+
+.main-list .list-container > div a {display:block; transition:none}
+.main-list .album > div{margin-bottom:0}
+.page-full .owl-stage-outer{overflow:hidden}
+
+.page-full .thema,
+.page-full .main-cate{padding-top:10px}
+.page-full .my-album{padding-top:5px}
+
+.ui-sortable-helper{background:rgba(255,255,255,.12); box-shadow:0 0px 4px rgba(0,0,0,.06)}
+
+@media (min-width:769px) {
+	.section{padding-top:60px; margin:0; padding-left:0}
+	.section:first-child{padding-top:38px}
+	.main-list .song-info span {font-size:12px; color:rgba(0,0,0,.4); flex:initial}
+	.section .index-banner{display:none}
+
+	/* main, my body full */
+	.page-full .thema,
+	.page-full .main-cate{padding-top:20px}
+	.page-full .my-album{padding-top:10px}
+	.page-full .owl-carousel {padding-top:5px; display:flex; flex-direction:column}
+	.page-full .owl-stage-outer {order:2; padding:0 2px}
+	.owl-nav {position:absolute; display:block; right:-10px; top:-50px}
+	.page-full .round .list-container .thum{margin-right:20px}
+}
+
+.player-list{padding:0 15px 80px}
+.player-blur, .player-blur .modal-content{background-color:transparent}
+.bg-after{position:absolute; top:-20%; left:-20%; right:-20%; bottom:-20%; z-index:-2}
+.bg-after img{width:100%; height:auto; -webkit-filter:blur(25px); -moz-filter:blur(25px); -o-filter:blur(25px); -ms-filter:blur(25px); filter:blur(25px); opacity:0.25; position:absolute; top:50%; transform:translateY(-50%)}
+.player-list .head_title {align-items:center; margin-right:0}
+.player-list .head_title h3 {margin-left:0; padding-top:0}
+.player-list .head_title h3 br{display:none}
+.player-list .container-body {padding-bottom:100px}
+.player-list .head_nav {display:block}
+.player-list .list-container .thum {margin-right:20px}
+.player-list .list-container .song-info h3 {text-align:left}
+.player-list .tab-content {margin-top:10px}
+
+/*.player-list{padding-top:60px !important}*/
+.player-list .head_title{position:fixed; background-color:rgba(255,255,255,0.9); z-index:1; width:100%; top:0; margin-left:-15px; margin-right:-15px}
+.player-list .head_title::after{content:""; display:block; position:absolute; bottom:0; width:100%; height:1px; background-color: rgba(0,0,0,0.05)}
+.player-list .nav-sub .slide{border-bottom:none}
+@media(min-width:769px) {
+  .player-list{padding:75px 20px 80px}
+  .player-list .container-body {padding:70px 0 100px}
+  .player-list .head_title{background:none; position:initial; margin:0}
+  .player-list.open .head_title .btn-back {position:absolute; right:40px; top:20px}
+  .player-list .bn-list-edit {height:30px}
+}
+
+.bg-blur2 {position:absolute; z-index:-2; top:-10%; left:-10%; right:-10%; bottom:-10%}
+.bg-blur2::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(232, 232, 245, 0.04)}
+.bg-blur2 > div{-webkit-filter:blur(25px); -moz-filter:blur(25px); -o-filter:blur(25px); -ms-filter:blur(25px); filter:blur(25px); opacity:0.30}
+
+
+/* nowPlaying */
+.nowPlaying{text-align:center; position:relative}
+.play-song:before{left:-5px; -webkit-animation:play-song10k 7s ease-in-out infinite; animation:play-song10k 1s ease-in-out infinite}
+.play-song{display:inline-block; position:absolute; bottom:0; width:2px; height:12px; -webkit-animation:play-song10m 6s ease-in-out infinite; animation:play-song10m 1.1s ease-in-out infinite; background-color:#fff; margin-left:-2px; border-radius:3px}
+.play-song:after{left:5px; -webkit-animation:play-song10g 7s ease-in-out infinite; animation:play-song10g 1s ease-in-out infinite}
+.nowPlaying:before{left:8px; -webkit-animation:play-song10d 6s ease-in-out infinite; animation:play-song10d .8s ease-in-out infinite}
+.play-song:before,.play-song:after,.nowPlaying:before{content:''; position:absolute; width:2px; height:12px; bottom:0px; background-color:#fff; border-radius:3px}
+.list-container .nowPlaying{flex:none; width:2px; position:absolute; right:50%; top:27px}
+.wide .head-wrap, .wide .container-body{max-width:1339px}
+
+@-webkit-keyframes play-song10k{
+  0%{height:12px}
+  50%{height:4px}
+  100%{height:12px}
+}
+
+@keyframes play-song10k{
+  0%{height:12px}
+  50%{height:4px}
+  100%{height:12px}
+}
+
+@-webkit-keyframes play-song10m{
+  0%{height:4px}
+  50%{height:12px}
+  100%{height:4px}
+}
+
+@keyframes play-song10m{
+  0%{height:4px}
+  50%{height:12px}
+  100%{height:4px}
+}
+
+@-webkit-keyframes play-song10g{
+  0%{height:12px}
+  50%{height:4px}
+  100%{height:12px}
+}
+
+@keyframes play-song10g{
+  0%{height:12px}
+  50%{height:4px}
+  100%{height:12px}
+}
+
+@-webkit-keyframes play-song10d{
+  0%{height:4px}
+  50%{height:12px}
+  100%{height:4px}
+}
+@keyframes play-song10d{
+  0%{height:4px}
+  50%{height:12px}
+  100%{height:4px}
+}
+
+
+/*alertWatch*/
+.alertWatch{z-index:199;max-width:350px; padding:10px 25px; left:0; right:0; bottom:67px; -ms-word-wrap:break-word; word-wrap:break-word; position:fixed; font-size:14px; color:#fff; background-color:rgba(51,51,51,0.90) ; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; margin-left:auto; margin-right:auto; transform:translateY(50px); transition:all ease .3s; opacity:0}
+.alertWatch.on{opacity:1; z-index:9999}
+@media(max-width:375px) {
+	.alertWatch{margin-right:10px; margin-left:10px;bottom:97px}
+}
+@media(max-width:414px) {
+	.alertWatch{bottom:104px}
+}
+@media(max-width:768px) {
+	.alertWatch{bottom:105px}
+}
+@media(min-width:769px) {
+	.alertWatch{min-width:auto; max-width:auto;}
+	.alertWatch.on{transform:translateY(-4px)}
+}
+
+.pl-wrap .nav-sub a .num {display:inline-block}
+.pl-wrap, .pd-wrap{transform:translateY(130%); transition-timing-function:ease; transition:0.25s; width:100%; height:100%; left:0; position:fixed; z-index:190; bottom:0; margin:0; overflow:hidden; background-color:#fff}
+.show_playList .pl-wrap, .show_fullPlayer .pd-wrap{transition:0.30s; transition-timing-function:ease; transform:translateY(0); opacity:1; bottom:0; height:100%}
+.show_fullPlayer, .show-playlist{overflow:hidden}
+.pl-wrap .modal-close, .pd-wrap .modal-close{position:absolute; right:15px; top:10px}
+.pl-wrap .player-wrap{padding-bottom:0; padding-top:70px}
+.pl-wrap .player-list{padding:60px 15px 0; overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch; width:100%; top:0; left:0; height:100%}
+.pl-wrap .head_title, .pl-wrap .head_nav, .pl-wrap .select-list{padding:0; margin-top:0}
+.pl-wrap .select-list{padding:20px 0 15px}
+.pl-wrap .tab-content{margin-top:0;/* padding-bottom:80px */}
+.pl-wrap .tab-pane{max-width:980px; margin:0 auto}
+.pl-wrap .player-wrap .list-container{padding:0; padding-bottom:100px;}
+.pl-wrap .list-container > div{padding:10px 0}
+.pl-wrap .list-container .song-info{flex:6; flex-direction:row}
+.pl-wrap .list-container .time{flex:1}
+/*.show_playList_edit .pl-wrap .list-container .time{display:none}*/
+.pl-wrap .player-list .bn-group{align-items:center; line-height:1.4}
+.pl-wrap .select-list .select-bn{padding-left:10px}
+
+
+@media(min-width:769px) {
+	.pl-wrap .player-list{padding:0 15px}
+	/*.pl-wrap .list-container .time{display:block}*/
+}
+
+
+@media(max-width:768px) {
+	.pl-wrap .player-wrap{padding-top:0}
+	.pl-wrap .list-container > div{padding:10px 15px}
+	.pl-wrap .select-list{padding:10px 0;flex-direction:row}
+	.pl-wrap .select-list .select-bn{margin-left:auto}
+	.pl-wrap .list-container > div{border:0}
+	.pd-wrap .modal-close{position:absolute; right:10px; top:0}
+	.pl-wrap .head_title{margin-left:-15px; margin-right:-15px}
+	.pl-wrap .player-list .head_title h3{padding-left:15px}
+	.pl-wrap .player-wrap .list-container{padding:0; padding-bottom:60px;}
+
+}
+
+@media(max-width:1170px) {
+	.pl-wrap .modal-close{position:relative; right:10px; top:0}
+}
+
+.pd-wrap .pd-info-wrap{display:flex; height:100%; flex-direction:column; justify-content:center; align-items:center; padding-bottom:69px}
+.pd-wrap .pd-jacket{text-align:center}
+.pd-wrap .pd-tit{text-align:center; padding-top:40px; max-width:450px}
+.pd-wrap .pd-jacket img{max-width:320px}
+.pd-wrap .pd-tit h2{font-size:27px; line-height:1.4; letter-spacing:-.03em; margin-bottom:5px}
+.pd-wrap .pd-tit span{color:#777; font-size:16px}
+.pd-wrap .pd-tit span::after{content:''; display:inline-block; width:1px; height:10px; background-color:rgba(0,0,0,.1); position:relative; right:0; top:1px; margin:0 5px}
+.pd-wrap .pd-tit span:last-child::after{display:none}
+.pd-wrap .pd-tit span span{padding:0 5px; opacity:0.4; display:none}
+.pd-wrap .pd-ctl{display:flex; width:100%; left:0; padding-top:20px; align-items:center; text-align:center}
+.pd-wrap .pd-ctl a{flex-basis:44px; align-items:center; width:44px; height:44px; display:inline-block; margin:0 5px}
+.pd-wrap .pd-ctl span {flex-grow:1; font-size:0}
+
+@media(max-width:768px) {
+	.pd-wrap .pd-info-wrap{padding-bottom:52px}
+	.pd-wrap .pd-jacket{overflow:hidden; width:100%}
+	.pd-wrap .pd-info-wrap .playerBackImg{width:70%; height:auto; border-radius:50%; padding-top:0; padding-left:0; padding-right:0; padding-bottom:70%; margin:0 auto}
+	.pd-wrap .pd-tit{padding-top:25px}
+	.pd-wrap .pd-tit h2{font-size:19px; margin-bottom:0}
+	.pd-wrap .pd-tit span{font-size:13px}
+	.pd-wrap .pd-ctl{padding-top:15px}
+}
+
+/* search */
+.container-body .search{width:100%; display:block; margin:0}
+.search .hd-search{color:#777}
+.search .hd-search span{color:#FF3A30}
+.search .desc{margin-top:10px}
+.search .desc li{color:#999; margin-bottom:4px}
+.search .desc li:before{content:''; margin-right:4px}
+
+@media(min-width:769px) {
+	.container-body .notfound{margin-top:20px}
+	.search .hd-search{font-size:24px}
+	.search .desc{font-size:16px; margin-top:20px}
+	.search .desc li{margin-bottom:8px}
+}
+
+.main-chart .list-container .thum{margin-right:0}
+.spot{flex-basis:46px; flex-shrink:0; text-align:center}
+
+.playerBackImg{background-size:cover; background-position:center; background-repeat:no-repeat}
+.pd-info-wrap .playerBackImg{width:324px; height:324px; border-radius:3px}
+.player-bar .playerBackImg{width:42px; height:42px; border-radius:4px}
+.bg-blur2 .playerBackImg{width:100%; height:100%}
+.bg-blur2 .playerBackImg:after{content:''; padding-bottom:90%; display:block}
+
+@media(min-width:769px) {
+	.player-bar .playerBackImg{width:52px; height:52px; border-radius:4px}
+}
+
+/*loding*/
+.spinner-wrap{height:100%; position:absolute; width:100%}
+.spinner {margin-left:auto; margin-right:auto;width:51px; height:40px;text-align:center; position:relative;top:50%;margin-top:-40px}
+.spinner > div {background-color:#afbbf5; margin:0; height:100%; width:6px; display:inline-block; -webkit-animation:sk-stretchdelay 1.2s infinite ease-in-out; animation:sk-stretchdelay 1.2s infinite ease-in-out}
+.spinner .rect2 {-webkit-animation-delay:-1.1s; animation-delay:-1.1s; background-color:#6d83f5}
+.spinner .rect3 {-webkit-animation-delay:-1.0s; animation-delay:-1.0s; background-color:#3958F6}
+.spinner .rect4 {-webkit-animation-delay:-0.9s; animation-delay:-0.9s; background-color:#6d83f5}
+.spinner .rect5 {-webkit-animation-delay:-0.8s; animation-delay:-0.8s; background-color:#afbbf5}
+
+@media(min-width:769px) {
+	.spinner-wrap{margin-left:-200px}
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform:scaleY(0.4) }
+  20% { -webkit-transform:scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {transform:scaleY(0.4); -webkit-transform:scaleY(0.4)}
+	20% {transform:scaleY(1.0); -webkit-transform:scaleY(1.0)}
+}
+
+
+/* error */
+.wrap {height:100%; width:100%; display:block; position:absolute; left:0; top:0}
+.error{margin:0 auto; max-width:430px; text-align:center;  vertical-align:middle; padding:0 15px;position:relative;top:50%;margin-top:-255px}
+.error h1{font-size:20px; font-weight:600; letter-spacing:-0.02em; margin-top:30px; color:#333}
+.error p{font-size:15px; line-height:1.6; margin-top:12px; color:#666}
+.error .btn-group{margin-top:30px}
+.error .btn{display:inline-block; border:1px solid #00000014; min-width:120px; font-size:14px; padding:16px 16px 14px 14px; border-radius:2px; background-color:#fff; text-decoration:none}
+.error .btn-color{background-color:#3958F6; color:#fff; border:none}
+.error .icon{margin:0 auto; position:relative; width:160px; height:160px; z-index:99; border-radius:100%; overflow:hidden; background-color:#F0F2F4}
+.error .icon img{width:85px; height:60px; position:absolute; top:50%; left:0px; margin-top:-30px;
+-webkit-animation:move 1.5s linear 0.1s infinite alternate; /*normal;  Chrome, Safari, Opera */
+animation:move 1.5s linear 0.1s infinite alternate; /*normal;  Standard syntax */}
+
+@media(min-width:769px){
+  .wrap {padding:0 0 0 210px}
+	.error h1{font-size:28px; letter-spacing:-0.02em; margin-top:30px}
+  .error p{font-size:16px; margin-top:16px}
+  .error .btn{min-width:150px; padding:18px 18px 16px 18px; font-size:16px}
+}
+
+@keyframes move {
+	from {transform:translateX(0)}
+	to {transform:translateX(400px)}
+}
+
+@keyframes move{
+	from {transform:translateX(-65px); animation-timing-function:cubic-bezier(5, 0, 0.8, 1)}
+	to {transform:translateX(160px)}
+}
+
+/*old*/
+.nav ul.old-version,
+.nav ul.old-version li{border:0}
+.old-version li > a{display:inline-block;margin-top:10px;border:1px solid #3f4ee4;border-radius:2px;font-size:13px;text-align:center;padding:5px 15px;background:#4b5cff;color:#fff}
+.old-version li > a:lang(ja){font-size:12px}
+@media(min-width:769px){
+	.nav ul.old-version{order:4}
+	.old-version li > a{width:100%}
+}
+
+/*inaccessible*/
+.inaccessible{position:fixed; height:100%; flex-flow:row wrap; max-width:980px; align-content:center; display:flex; padding-bottom:87px}
+.inaccessible p{font-size:28px; letter-spacing:-0.02em; font-weight:600; line-height:1.4}
+.inaccessible span{opacity:0.7; margin-top:7px}
+.inaccessible p,
+.inaccessible span,
+.inaccessible div{flex:1 100%; text-align:center}
+.inaccessible div a{flex:1 100%; background:#4b5cff; color:#fff; text-align:center; min-width:170px; border-radius:2px; display:inline-block; padding:15px 10px; margin-top:30px}
+
+.player-bar .repeat{font-size:0; display:none}
+.show_playList .player-bar .playList span{color:#3d5cf6}
+.show_playList .player-info,
+.show_fullPlayer .player-info{display:none}
+.show_playList .repeat,
+.show_fullPlayer .repeat{display:inline-block}
+.show_playList .play-control,
+.show_fullPlayer .play-control{margin:0 auto}
+.show_playList .play-control2 button,
+.show_playList .play-control2,
+.show_playList .fp-controls > a,
+.show_playList .playBtnWrap,
+.show_playList .play-control span,
+.show_playList .play-control a,
+.show_fullPlayer .play-control2,
+.show_fullPlayer .play-control2 button,
+.show_fullPlayer .fp-controls > a,
+.show_fullPlayer .play-control span,
+.show_fullPlayer .playBtnWrap,
+.show_fullPlayer .play-control a{height:38px}
+
+@media(min-width:769px){
+	.show_playList .player-info,
+	.show_fullPlayer .player-info,
+	.player-bar .repeat{display:flex}
+}
+
+
+/* --- mr-Video--- */
+/*logo*/
+.mrVideo .head-logo{position:absolute; padding:0 0 0 15px; top:0; display:none; display:inline-block; left:0}
+.mrVideo .head-logo a{font-size:0; padding-top:16px; display:inline-block}
+.mrVideo .head-logo a h1{width:99px; height:29px; display:inline-block; background:url(https://watvnewsong.org/images/main_logo.svg) no-repeat; background-size: 98px; position:relative; font-size:0}
+.mrVideo .head-logo .link_watv{background:url(https://watvnewsong.org/images/watv_logo.svg) no-repeat; background-size:39px; display:inline-block; width:40px; height:40px; padding-top:0; background-position:left center}
+@media(min-width:1080px){
+  .mrVideo .head-logo{padding:20px 35px}
+}
+/*video*/
+.mrVideo a{transition:none}
+.mrVideo{width:100%; height:100%; display:flex; align-items:initial; justify-content:center;  position:relative; padding-top:50px}
+.mrVideo .close{position:absolute; top:3px; right:3px; height:44px; width:44px; background:url(https://watvnewsong.org/images/ico_close_light@3x.png)center no-repeat; background-size:16px}
+.playerwrap{width:100%}
+.videowrap{position:relative; width:100%; height:0; overflow:hidden; padding-bottom:56.26%}
+.videowrap .videoplayer{position:absolute; top:0; left:0; width:100%; height:100%; background:#222}
+.video-title{font-size:15px; padding:15px}
+@media(min-width:1080px){
+  .mrVideo{align-items:center; padding-top:0}
+  .mrVideo .close{top:26px; right:26px; padding:6px 20px;}
+  .playerwrap{width:1024px}
+  .video-title{font-size:18px; padding-left:0; padding-right:0}
+}
+
+/*ie11*/
+.owl-carousel .owl-item img{height:100%}
+
+/*loader*/
+#loader {display:block;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background:rgba(0,0,0,0.6);text-align:center;z-index: 10000;padding-top:150px;}
+#loader > div{padding:60px; background:#fff; display:inline-block; border-radius:10px; min-width:300px}
+#loader > div > img{width:60px}
+
+@media(min-width:1080px){
+	#loader{padding-top:300px}
+}
+
+/*layer*/
+.albumShow .layer-overlay{display:block;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background:transparent;text-align:center;z-index:9998;padding-top:300px}
+.layer-basic{opacity:0}
+.albumShow .layer-basic{position:fixed; opacity:1; background-color:#fff; z-index:9999; height:100%; top:0; width:100%}
+.layer-basic .close{padding:0; margin:0; height:44px; width:44px; margin-right:-15px}
+.layer-basic .layer-header{padding:5px 15px; border-bottom:1px solid #F4F4F4; font-size:18px; font-weight:500; display:flex; justify-content:space-between; align-items:center}
+.layer-basic .layer-body{padding: 0 15px 60px;}
+.layer-basic .bn-common {position:absolute; bottom:0; width:100%}
+.albumShow .layer-basic .layer-scroll{overflow-y:scroll; -ms-overflow-style:none; scrollbar-width:none}
+.albumShow .layer-basic .layer-scroll::-webkit-scrollbar{display:none}
+.myAlbumList .song-title-wrap{text-align:left}
+.albumadit .myAlbumList h3{margin:0}
+
+@media (min-width: 769px){
+	.layer-basic .layer-header{padding:20px 30px 10px; font-size:23px; border:0}
+	.layer-basic .layer-body{padding:0 30px 60px}
+	.albumShow .layer-basic{max-width:490px; height:650px; border-radius:8px; overflow:hidden; box-shadow: 0 0 16px 0 rgba(0,0,0,.08); left:50%; margin-left:-245px; top:100px}
+	.albumShow .layer-basic .layer-scroll{height:650px}
+	.layer-basic .bn-common .bn-wrap{width:100%; border-radius:0}
+}
+
+
+/* Ã¬Æ’Ë† Ã¬â€¢Â¨Ã«Â²â€ Ã«Â²â€žÃ­Å Â¼ */
+.space-between{justify-content:space-between}
+.btn-newAlbum{justify-content:center; padding:12px 18px; height:42px; border-radius:6px; border:1px solid #4B5CFF; font-size:16px; line-height:19px; cursor:pointer}
+.btn-newAlbum::before{content:''; display:inline-block; margin-right:8px; width:12px; height:12px; background-image:url(https://watvnewsong.org/images/ico_add.png); background-repeat:no-repeat; background-size:12px; background-position:center}
+
+.myalbum .bn-group{position:relative; align-items:center; flex-direction:row; padding:12px 0}
+.input-newAlbum{width:100%; position:absolute; top:0; left:0; display:none; padding:6px 0; background-color:#fff}
+.newAlbumInput{flex-grow:9; position:relative; background-color:#F6F6F6; border-radius:6px; margin-right:5px}
+.newAlbumInput input{height:42px; padding:15px; padding-right:50px; margin:0; background-color:transparent; border:0; font-size:14px}
+.btn-add{flex-grow:1; padding:8px; background-color:#4B5CFF; height:42px; border-radius:6px; color:#fff; cursor:pointer; font-size:14px; line-height:26px; text-align:center; white-space:nowrap}
+.btn-add:lang(ko){min-width:55px}
+@media(min-width:560px){
+	.input-newAlbum{width:auto; min-width:350px}
+}
+@media(min-width:769px){
+	.newAlbumInput{width:228px}
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi){
+	.btn-newAlbum::before{background-image:url(https://watvnewsong.org/images/ico_add@3x.png)}
+}
+
+
+.newAlbumInput .search-close{height:auto; text-align:right; padding-top:3px; color:#888; font-size:0; max-width:72px;min-width:24px;width:45px;height:16px;background:url(https://watvnewsong.org/images/ico_search_close.png);background-size:16px;background-position:center;background-repeat:no-repeat; position:absolute; top:50%; right:6px; margin-top:-8px}
+.newAlbumInput .search-close:hover{opacity:1}
+@media(min-width:769px){
+	.newAlbumInput .search-close{margin-right:0}
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
+	.newAlbumInput .search-close {background:url(https://watvnewsong.org/images/ico_search_close@2x.png)center no-repeat; background-size:16px}
+}
+
+
+/* Ã¬Â¶â€ÃªÂ°â‚¬ */
+.albumPop .header{text-align:center}
+.albumPop .contents{overflow-x:hidden; overflow-y:auto; margin-top:42px; height: calc(100% - 64px); padding-bottom: 30px}
+.albumPop .btn-wrap{position:relative; padding:0 20px; margin-top:15px}
+.albumPop .btn-newAlbum{display:inline-block}
+.albumPop .input-newAlbum{width:100%; padding:0 20px}
+.albumPop .newAlbumInput{width:100%}
+/* .albumPop ul{padding:0 30px} */
+/* .albumPop li:hover{background-color:#ddd} */
+.albumPop ul{margin-top:15px}
+.albumPop li input{display:none}
+.albumPop li label{position:relative; display:flex; align-items:center; padding:8px 0; cursor:pointer}
+.albumPop li .thum{min-width:63px; max-width:63px; height:63px; display:inline-block; margin:0 15px 0 20px; font-size:0;cursor:pointer; background-color:#f8f9fa}
+.albumPop li .thum:before{content:''; position:absolute; top:0; left:0; border:1px solid #00000004; width:100%; height:100%; box-sizing:border-box}
+.albumPop li h3{margin-right:20px}
+@media(min-width:769px){
+	.albumPop .contents{margin-top:0}
+	.albumPop .btn-wrap{padding:0 30px; margin-top:30px}
+	.albumPop .input-newAlbum{padding:0 30px}
+	.albumPop li .thum{margin:0 20px 0 30px}
+	.albumPop li label{padding:10px 0}
+	.albumPop li label:hover:after{content:''; background:rgba(0,0,0,.02); width:100%; height:101%; position:absolute; left:0; top:0px}
+	.albumPop li h3{margin-right:30px}
+	/* .albumPop li label:before{content:''; display:block; width:100%; height:1px; position:absolute; bottom:-1px; left:0; background-color:rgba(0,0,0,.04)} */
+}
+
+
+/* Layer popup ÃªÂ³ÂµÃ­â€ Âµ */
+.layerPop{display:none; position:fixed; top:0; left:0; z-index:9998; width:100%; height:100%; align-items:flex-start; /*background-color:rgba(0,0,0,0.2)*/}
+.layerPop .layerin{position:relative; overflow:hidden; background:#FFF; width:100%; height:100%}
+/* .layerPop .layerCon{padding:25px 20px 35px; overflow-x:hidden; overflow-y:auto; height:100%} */
+.layerPop .layerCon{height:100%}
+.layerCon .header{padding:15px 15px 0; position:fixed; width:100%; background-color:#fff; top:0; left:0; z-index:15}
+.layerCon h5{display:inline-block; font-size:18px; font-weight:500}
+.layerCon .close{width:16px; height:16px; background-image:url('https://watvnewsong.org/images/ico_close_light@3x.png'); background-size:16px; background-repeat:no-repeat; text-indent:-9999px; z-index:10}
+.layerCon .tab-content{padding:94px 15px 68px 15px; overflow-x:hidden; overflow-y:auto; height:100%}
+
+
+@media(min-width:769px){
+  .layerPop{justify-content:center; align-items:center}
+  .layerPop .layerin{width:490px; min-height:670px; max-height:700px; top:0; border-radius:15px; -webkit-box-shadow:0 0 16px 0 rgba(0,0,0,.08); box-shadow:0 0 16px 0 rgba(0,0,0,.08)}
+  /* .layerPop .layerCon{min-height:670px; max-height:700px} */
+	.layerCon .header{padding:30px 30px 0; position:relative}
+	.layerCon h5{font-size:23px; border:0}
+	.layerCon .tab-content{padding:0 30px; padding-top:12px; margin-top:0; height:520px}
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi){
+  .layerCon .close{background-image:url('https://watvnewsong.org/images/ico_close_light@3x.png')}
+}
+
+
+/* My Album */
+html.albumShow,
+html.albumShow body{height:100%; overflow:hidden}
+.albumShow .albumPop{display:flex}
+.albumShow .albumPop .list-container li{z-index:10}
+@media(min-width:769px){
+	.albumShow .albumPop .song-info{flex-direction:column}
+	.albumShow .albumPop .song-info span{padding:0; top:0; display:inline}
+	/* .albumShow .song-info h3,
+	.albumShow .song-info > div{display:block} */
+}
+
+.show_playList_edit .album-edit .select-play{display:none !important}
+
+.btn-songInfo{flex-direction:row; padding:0; margin-top:5px}
+.btn-songInfo a{max-width:150px; padding:2px 10px 2px 0; display:inline-block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.btn-songInfo a::before{content:''; width:14px; height:12px; display:inline-block; vertical-align:-2px; margin-right:4px; background-repeat:no-repeat; background-size:14px; background-position:center}
+.btn-songInfo .list::before{background-image:url(https://watvnewsong.org/images/btn_songInfo_list@2x.png)}
+.btn-songInfo .myalbum::before{background-image:url(https://watvnewsong.org/images/btn_songInfo_myalbum@2x.png)}
+@media(min-width:769px){
+	.btn-songInfo{margin-top:10px}
+	.btn-songInfo a{margin-right:3px; padding:4px 12px; border-radius:25px; border:1px solid rgba(0,0,0,.11); vertical-align:-1px}
+}
+
+
+/* info-box */
+.info-box{font-size:13px; color:#777}
+@media(max-width:768px){
+	.info-box{margin-top:30px}
+	.info-box br{display:none}
+}
+
+@media(min-width:769px){
+	.info-box{font-size:15px; margin-bottom:30px}
+}
+
+/* Radio */
+label input[type="radio"] + span 		 {color:#777}
+label input[type="radio"]:checked + span {color:#4B5CFF}
+input[type="radio"] 		{position:relative; border:1px solid #c5c5c5; background:#fff; clear:none; cursor:pointer; display:inline-block; line-height:0; height:20px; margin:-3px 2px 0 0; border-radius:20px; outline:0; padding:0 !important; text-align:center; vertical-align:middle; width:20px; min-width:20px; -webkit-appearance:none; transition:0.05s border-color ease-in-out; margin-right:6px}
+input[type="radio"]:checked {background:#fff; border-color:#4B5CFF}
+input[type="radio"]:checked:before {content:"";	position:absolute; top:4px; left:4px; background:#4B5CFF; width:10px; height:10px; border-radius:10px}
+
+/* webkit input autofill bg */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {-webkit-box-shadow: 0 0 0 30px white inset !important}
+
+/* warning text */
+.collect-warning{color:red}
+.collect-warning::before {content:''; flex-basis:20px; flex-shrink:0; background:url(https://watvnewsong.org/images/ico_alert.png)center no-repeat; background-size:17px; margin-right:10px}
+
+/* ì•¨ë²”ì´ ë¹„ì–´ìžˆìŠµë‹ˆë‹¤ */
+.album-empty{flex-direction:column; justify-content:center; color:#666; margin:60px 0}
+.album-empty::before{content:''; display:block; width:52px; height:34px; background-image:url(https://watvnewsong.org/images/ico_albumEmpty.png); background-size:100%; background-repeat:no-repeat; background-position:center; margin-bottom:20px}
+
+.album-empty.myalbum::before{width:47px; height:42px; background-image:url(https://watvnewsong.org/images/ico_myalbumEmpty.png)}
+.album-empty.myalbum .btn{padding:10px 15px; margin-top:20px; font-size:15px; background-color:#4B5CFF; color:#fff; border-radius:6px}
+.album-empty.myalbum .btn::after{content:''; display:inline-block; width:6px; height:10px; margin-left:8px; background-image:url(https://watvnewsong.org/images/ico_arrow_right_dark.png); background-size:100%; background-repeat:no-repeat; background-position:center}
+@media(min-width:769px){
+	.album-empty::before{margin-bottom:30px}
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi){
+  .album-empty::before{background-image:url(https://watvnewsong.org/images/ico_albumEmpty@2x.png)}
+  .album-empty.myalbum::before{background-image:url(https://watvnewsong.org/images/ico_myalbumEmpty@2x.png)}
+  .album-empty.myalbum .btn::after{background-image:url(https://watvnewsong.org/images/ico_arrow_right_dark@2x.png)}
+}
